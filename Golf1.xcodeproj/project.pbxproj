@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		90E3F20F1E005F1C008BFEFE /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3F20E1E005F1C008BFEFE /* Round.swift */; };
+		BD12CF0B1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = BD12CF0A1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png */; };
 		F405620F1E005D8F00010B32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405620E1E005D8F00010B32 /* AppDelegate.swift */; };
 		F40562111E005D8F00010B32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40562101E005D8F00010B32 /* ViewController.swift */; };
 		F40562141E005D8F00010B32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40562121E005D8F00010B32 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		90E3F20E1E005F1C008BFEFE /* Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
+		BD12CF0A1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png"; sourceTree = "<group>"; };
 		F405620B1E005D8F00010B32 /* Golf1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Golf1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F405620E1E005D8F00010B32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F40562101E005D8F00010B32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		F405620D1E005D8F00010B32 /* Golf1 */ = {
 			isa = PBXGroup;
 			children = (
+				BD12CF0A1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png */,
 				F405620E1E005D8F00010B32 /* AppDelegate.swift */,
 				F40562101E005D8F00010B32 /* ViewController.swift */,
 				90E3F20E1E005F1C008BFEFE /* Round.swift */,
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F40562191E005D8F00010B32 /* LaunchScreen.storyboard in Resources */,
+				BD12CF0B1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png in Resources */,
 				F40562161E005D8F00010B32 /* Assets.xcassets in Resources */,
 				F40562141E005D8F00010B32 /* Main.storyboard in Resources */,
 			);
