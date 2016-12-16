@@ -10,6 +10,7 @@
 		90E3F20F1E005F1C008BFEFE /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3F20E1E005F1C008BFEFE /* Round.swift */; };
 		BD12CF0B1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = BD12CF0A1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png */; };
 		BD12CF0D1E01B0A00060E136 /* trackRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12CF0C1E01B0A00060E136 /* trackRoundViewController.swift */; };
+		BDE6914D1E044C250010D32B /* seocndTrackRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6914C1E044C250010D32B /* seocndTrackRoundViewController.swift */; };
 		F405620F1E005D8F00010B32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405620E1E005D8F00010B32 /* AppDelegate.swift */; };
 		F40562111E005D8F00010B32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40562101E005D8F00010B32 /* ViewController.swift */; };
 		F40562141E005D8F00010B32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40562121E005D8F00010B32 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		90E3F20E1E005F1C008BFEFE /* Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
 		BD12CF0A1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png"; sourceTree = "<group>"; };
 		BD12CF0C1E01B0A00060E136 /* trackRoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trackRoundViewController.swift; sourceTree = "<group>"; };
+		BDE6914C1E044C250010D32B /* seocndTrackRoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seocndTrackRoundViewController.swift; sourceTree = "<group>"; };
 		F405620B1E005D8F00010B32 /* Golf1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Golf1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F405620E1E005D8F00010B32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F40562101E005D8F00010B32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				F405620E1E005D8F00010B32 /* AppDelegate.swift */,
 				F40562101E005D8F00010B32 /* ViewController.swift */,
 				BD12CF0C1E01B0A00060E136 /* trackRoundViewController.swift */,
+				BDE6914C1E044C250010D32B /* seocndTrackRoundViewController.swift */,
 				90E3F20E1E005F1C008BFEFE /* Round.swift */,
 				F40562121E005D8F00010B32 /* Main.storyboard */,
 				F45D710A1E02FCCF0055B8CD /* GlobalData.swift */,
@@ -277,6 +280,7 @@
 				BD12CF0D1E01B0A00060E136 /* trackRoundViewController.swift in Sources */,
 				90E3F20F1E005F1C008BFEFE /* Round.swift in Sources */,
 				F405620F1E005D8F00010B32 /* AppDelegate.swift in Sources */,
+				BDE6914D1E044C250010D32B /* seocndTrackRoundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
