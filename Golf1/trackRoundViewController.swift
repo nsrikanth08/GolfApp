@@ -21,6 +21,11 @@ class trackRoundViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var date: UITextField!
+    @IBOutlet weak var weather: UITextField!
+    @IBOutlet weak var location: UITextField!
     
     
     var info = [matchInfo]()
