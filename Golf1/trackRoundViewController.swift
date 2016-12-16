@@ -33,5 +33,9 @@ class trackRoundViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    var info = [Round]()
+    
 
 }
