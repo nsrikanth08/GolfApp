@@ -27,8 +27,10 @@ class trackRoundViewController: UIViewController {
     @IBOutlet weak var weather: UITextField!
     @IBOutlet weak var location: UITextField!
     
-    
-    var info = [matchInfo]()
+    @IBAction func infoSubmit(_ sender: AnyObject) {
+        var info = [matchInfo]()
+        //info = [firstName: String = firstName.text, lastName: String = lastName.text, date: String = date.text, weather: String = weather.text, location: String = location.text]
+    }
     
     
 
