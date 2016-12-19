@@ -9,11 +9,16 @@
 import UIKit
 
 class trackRoundViewController: UIViewController {
-
-    override func viewDidLoad() {
+    
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var date: UITextField!
+    @IBOutlet weak var weather: UITextField!
+    @IBOutlet weak var location: UITextField!
+    
+    override func viewDidLoad(){
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(trackRoundViewController.dismissKeyboard)))
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,11 +26,9 @@ class trackRoundViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBOutlet weak var firstName: UITextField!
-    @IBOutlet weak var lastName: UITextField!
-    @IBOutlet weak var date: UITextField!
-    @IBOutlet weak var weather: UITextField!
-    @IBOutlet weak var location: UITextField!
+    func dismissKeyboard() {
+        firstName.resignFirstResponder()
+    }
     
     @IBAction func infoSubmit(_ sender: AnyObject) {
         var info = [matchInfo]()
