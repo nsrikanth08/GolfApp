@@ -11,7 +11,6 @@ import Foundation
 class matchInfo {
     
     
-    
     let firstName, lastName, date, weather, location: String
     
     init(firstName: String, lastName: String, date: String, weather: String, location: String) {
