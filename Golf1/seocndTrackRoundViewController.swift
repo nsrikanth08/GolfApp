@@ -9,9 +9,21 @@
 import UIKit
 
 class seocndTrackRoundViewController: UIViewController {
+    
+    @IBOutlet weak var putts: UITextField!
+    @IBOutlet weak var fairways: UITextField!
+    @IBOutlet weak var penalties: UITextField!
+    @IBOutlet weak var updownAttempts: UITextField!
+    @IBOutlet weak var updownCompletes: UITextField!
+    @IBOutlet weak var scoringClub: UITextField!
+    @IBOutlet weak var finishRank: UITextField!
+    @IBOutlet weak var score: UITextField!
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(seocndTrackRoundViewController.dismissKeyboard)))
 
         // Do any additional setup after loading the view.
     }
@@ -20,16 +32,17 @@ class seocndTrackRoundViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func dismissKeyboard()
+    {
+        putts.resignFirstResponder()
+        fairways.resignFirstResponder()
+        penalties.resignFirstResponder()
+        updownAttempts.resignFirstResponder()
+        updownCompletes.resignFirstResponder()
+        scoringClub.resignFirstResponder()
+        finishRank.resignFirstResponder()
+        score.resignFirstResponder()
+        
     }
-    */
-
 }
