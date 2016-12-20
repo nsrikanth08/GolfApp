@@ -28,6 +28,10 @@ class trackRoundViewController: UIViewController {
     
     func dismissKeyboard() {
         firstName.resignFirstResponder()
+        lastName.resignFirstResponder()
+        date.resignFirstResponder()
+        weather.resignFirstResponder()
+        location.resignFirstResponder()
     }
     
     @IBAction func infoSubmit(_ sender: AnyObject) {
