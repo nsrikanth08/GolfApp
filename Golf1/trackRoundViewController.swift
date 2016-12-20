@@ -26,7 +26,8 @@ class trackRoundViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func dismissKeyboard() {
+    func dismissKeyboard()
+    {
         firstName.resignFirstResponder()
         lastName.resignFirstResponder()
         date.resignFirstResponder()
