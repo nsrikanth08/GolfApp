@@ -11,9 +11,10 @@ import Foundation
 class matchInfo {
     
     
-    let firstName, lastName, date, weather, location: String
+    let firstName, lastName, weather, location: String
+    let date: NSDate
     
-    init(firstName: String, lastName: String, date: String, weather: String, location: String) {
+    init(firstName: String, lastName: String, date: NSDate, weather: String, location: String) {
         self.firstName = firstName
         self.lastName = lastName
         self.date = date
