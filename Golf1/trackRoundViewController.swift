@@ -35,9 +35,10 @@ class trackRoundViewController: UIViewController {
         location.resignFirstResponder()
     }
      
-    @IBAction func infoSubmit(_ sender: AnyObject) {
+    /*@IBAction func infoSubmit(_ sender: AnyObject) {
         _ = matchInfo(firstName: firstName.text!, lastName: lastName.text!, date: date.text!, weather: weather.text!, location: location.text!)
     }
+     */
     
     
     
