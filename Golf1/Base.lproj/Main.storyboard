@@ -222,7 +222,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Submit "/>
                                 <connections>
-                                    <action selector="infoSubmit:" destination="cbO-LM-5el" eventType="touchUpInside" id="Jer-fc-s2o"/>
                                     <segue destination="gVR-g9-r4n" kind="show" id="LCU-8h-vYS"/>
                                 </connections>
                             </button>
@@ -305,8 +304,8 @@
         <image name="M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VSW-It-D9J"/>
-        <segue reference="Xio-XO-IvK"/>
+        <segue reference="zIu-c4-lZo"/>
         <segue reference="0T1-LJ-BF7"/>
+        <segue reference="Xio-XO-IvK"/>
     </inferredMetricsTieBreakers>
 </document>
