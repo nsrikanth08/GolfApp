@@ -12,7 +12,6 @@ class trackRoundViewController: UIViewController {
     
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
-    @IBOutlet weak var date: UITextField!
     @IBOutlet weak var weather: UITextField!
     @IBOutlet weak var location: UITextField!
     
@@ -30,7 +29,6 @@ class trackRoundViewController: UIViewController {
     {
         firstName.resignFirstResponder()
         lastName.resignFirstResponder()
-        date.resignFirstResponder()
         weather.resignFirstResponder()
         location.resignFirstResponder()
     }
