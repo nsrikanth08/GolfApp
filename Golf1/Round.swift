@@ -14,6 +14,7 @@ class Round {
     let isPracticeRound = false
     
     let score, fairways, penalties, putts, greens, upDownAtt, upDownComp: Int
+    let date: NSDate
     
     init(score: Int, fairways: Int, penalties: Int, putts: Int, greens: Int, upDownAtt: Int, upDownComp: Int) {
         self.score = score
@@ -23,5 +24,6 @@ class Round {
         self.greens = greens
         self.upDownAtt = upDownAtt
         self.upDownComp = upDownComp
+        self.date = NSDate()
     }
 }
