@@ -11,12 +11,13 @@ import Foundation
 class Round {
     
     
-    let isPracticeRound = false
+    let isPracticeRound: Bool
     
     let score, fairways, penalties, putts, greens, upDownPerc: Int
     let date: NSDate
     
     init(score: Int, fairways: Int, penalties: Int, putts: Int, greens: Int, upDownAtt: Double, upDownComp: Double) {
+        self.isPracticeRound = false
         self.score = score
         self.fairways = fairways
         self.penalties = penalties
