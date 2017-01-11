@@ -11,19 +11,19 @@ import Foundation
 class Round {
     
     
-    let isPracticeRound = false
+    let isPracticeRound: Bool
     
-    let score, fairways, penalties, putts, greens, upDownAtt, upDownComp: Int
+    let score, fairways, penalties, putts, greens, upDownPerc: Int
     let date: NSDate
     
-    init(score: Int, fairways: Int, penalties: Int, putts: Int, greens: Int, upDownAtt: Int, upDownComp: Int) {
+    init(score: Int, fairways: Int, penalties: Int, putts: Int, greens: Int, upDownAtt: Double, upDownComp: Double) {
+        self.isPracticeRound = false
         self.score = score
         self.fairways = fairways
         self.penalties = penalties
         self.putts = putts
         self.greens = greens
-        self.upDownAtt = upDownAtt
-        self.upDownComp = upDownComp
+        self.upDownPerc = (Int)((upDownComp / upDownAtt) * 100.0)
         self.date = NSDate()
     }
 }
