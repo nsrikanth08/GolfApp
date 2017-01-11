@@ -19,4 +19,7 @@ class matchInfo {
         self.weather = weather
         self.location = location
     }
+    
+    
+    
 }

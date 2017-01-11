@@ -20,6 +20,7 @@
 		F40562241E005D8F00010B32 /* Golf1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40562231E005D8F00010B32 /* Golf1Tests.swift */; };
 		F405622F1E005D8F00010B32 /* Golf1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405622E1E005D8F00010B32 /* Golf1UITests.swift */; };
 		F443FA431E044ED800A10695 /* MatchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443FA421E044ED800A10695 /* MatchInfo.swift */; };
+		F4DEC4171E26950100D5F052 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DEC4161E26950100D5F052 /* DataStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		F405622E1E005D8F00010B32 /* Golf1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Golf1UITests.swift; sourceTree = "<group>"; };
 		F40562301E005D8F00010B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F443FA421E044ED800A10695 /* MatchInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInfo.swift; sourceTree = "<group>"; };
+		F4DEC4161E26950100D5F052 /* DataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				BDE6914E1E0454CA0010D32B /* previousRoundsViewController.swift */,
 				90E3F20E1E005F1C008BFEFE /* Round.swift */,
 				F443FA421E044ED800A10695 /* MatchInfo.swift */,
+				F4DEC4161E26950100D5F052 /* DataStorage.swift */,
 				F40562121E005D8F00010B32 /* Main.storyboard */,
 				F40562151E005D8F00010B32 /* Assets.xcassets */,
 				F40562171E005D8F00010B32 /* LaunchScreen.storyboard */,
@@ -282,6 +285,7 @@
 				F40562111E005D8F00010B32 /* ViewController.swift in Sources */,
 				F443FA431E044ED800A10695 /* MatchInfo.swift in Sources */,
 				BD12CF0D1E01B0A00060E136 /* trackRoundViewController.swift in Sources */,
+				F4DEC4171E26950100D5F052 /* DataStorage.swift in Sources */,
 				90E3F20F1E005F1C008BFEFE /* Round.swift in Sources */,
 				F405620F1E005D8F00010B32 /* AppDelegate.swift in Sources */,
 				BDE6914F1E0454CA0010D32B /* previousRoundsViewController.swift in Sources */,
