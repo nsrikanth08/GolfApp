@@ -39,6 +39,8 @@ class Round {
     }
     
     //Create a framework that allows the user to change the instance variables in case of a user input error.
+    
+    
     func setScore(newScore: Int) {
         self.score = newScore
     }
@@ -59,8 +61,8 @@ class Round {
         self.upDownPerc = Int((Double(newUpDownComp) / Double(newUpDownAtt)) * 100.0)
     }
     
-    func setFairwayPerc(newScore: Int, newFairways: Double) {
-        self.fairwayPerc = Int((newFairways / Double(newScore)) * 100.0)
+    func setFairwayPerc(newScore: Int, newFairways: Int) {
+        self.fairwayPerc = Int((Double(newFairways) / Double(newScore)) * 100.0)
     }
     
 }
