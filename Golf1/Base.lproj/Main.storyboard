@@ -231,6 +231,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Submit "/>
                                 <connections>
+                                    <action selector="StoreData:" destination="cbO-LM-5el" eventType="touchUpInside" id="NZj-PR-kaq"/>
                                     <segue destination="gVR-g9-r4n" kind="show" id="LCU-8h-vYS"/>
                                 </connections>
                             </button>
