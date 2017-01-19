@@ -8,8 +8,14 @@
 
 import UIKit
 
+var allRound = [Round]()
+
 class seocndTrackRoundViewController: UIViewController {
     
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var weather: UITextField!
+    @IBOutlet weak var location: UITextField!
     @IBOutlet weak var putts: UITextField!
     @IBOutlet weak var fairways: UITextField!
     @IBOutlet weak var penalties: UITextField!
@@ -35,6 +41,10 @@ class seocndTrackRoundViewController: UIViewController {
 
     func dismissKeyboard()
     {
+        firstName.resignFirstResponder()
+        lastName.resignFirstResponder()
+        weather.resignFirstResponder()
+        location.resignFirstResponder()
         putts.resignFirstResponder()
         fairways.resignFirstResponder()
         penalties.resignFirstResponder()
@@ -45,4 +55,31 @@ class seocndTrackRoundViewController: UIViewController {
         score.resignFirstResponder()
         
     }
+    
+    var currentInfo: Round? = nil
+    
+    @IBAction func storeData(_ sender: AnyObject) {
+   
+    //This function puts all entered fields into an object and then appends that to the master array
+    
+        currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: scoringClub.text!, finishRank: Int(finishRank.text!)!)
+    
+    allRound.append(currentInfo!)
+    
+    firstName.text = ""
+    lastName.text = ""
+    weather.text = ""
+    location.text = ""
+    score.text = ""
+    fairways.text = ""
+    penalties.text = ""
+    putts.text = ""
+    updownAttempts.text = ""
+    updownCompletes.text = ""
+    scoringClub.text = ""
+    finishRank.text = ""
+        
+        
+    }
+
 }

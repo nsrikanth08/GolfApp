@@ -12,9 +12,11 @@ class Round {
     
     //practice round boolean that will need to be implemented after the practice round mode is created.
     private let isPracticeRound: Bool
+    private var firstName, lastName, weather, location, scoringClub: String
+    
     
     //Initialize the class instance variables
-    private var score, fairwayPerc, penalties, putts, greens, upDownPerc: Int
+   private var score, fairwayPerc, penalties, putts, upDownPerc, finishRank: Int
     private var date: NSDate
     
     /* Constructor for the Round class. Creates a storage device for all match information that the user would require.
@@ -27,16 +29,23 @@ class Round {
      * @param int upDownAtt.  This is a user input int that reflects the total amount of up down attempts taken.
      * @param int upDownComp.  This is a user input int that reflects the total amount of up downs that are completed.
      */
-    init(score: Int, fairways: Int, penalties: Int, putts: Int, greens: Int, upDownAtt: Int, upDownComp: Int) {
+    init(firstName: String, lastName: String, weather: String, location: String, score: Int, fairways: Int, penalties: Int, putts: Int, upDownAtt: Int, upDownComp: Int, scoringClub: String, finishRank: Int) {
         self.isPracticeRound = false
+        self.firstName = firstName
+        self.lastName = lastName
+        self.weather = weather
+        self.location = location
         self.score = score
         self.fairwayPerc = Int((Double(fairways) / Double(score)) * 100.0)
         self.penalties = penalties
         self.putts = putts
-        self.greens = greens
         self.upDownPerc = Int((Double(upDownComp) / Double(upDownAtt)) * 100.0)
+        self.scoringClub = scoringClub
+        self.finishRank = finishRank
         self.date = NSDate()
+        
     }
+    
     
     //Create a framework that allows the user to change the instance variables in case of a user input error.
     
@@ -68,9 +77,7 @@ class Round {
      *
      * @param int newGreens. It is the new greens value that the user would like to change the round to.
      */
-    func setGreens(newGreens: Int) {
-        self.greens = newGreens
-    }
+    
     
     func setUpDown(newUpDownAtt: Int, newUpDownComp: Int) {
         self.upDownPerc = Int((Double(newUpDownComp) / Double(newUpDownAtt)) * 100.0)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-var allMatchInfo = [matchInfo]()
+var allRound = [Round]()
 //Master array that holds all matchInfo objects that are entered
 
 class trackRoundViewController: UIViewController {
@@ -38,15 +38,15 @@ class trackRoundViewController: UIViewController {
         location.resignFirstResponder()
     }
     
-    var currentInfo: matchInfo? = nil
+    var currentInfo: Round? = nil
     //Initialize a variable for the object to be temporarily placed in the MatchInfo page
 
     @IBAction func storeInfo(_ sender: AnyObject) {
         //This function puts all entered fields into an object and then appends that to the master array
         
-        currentInfo = matchInfo(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!)
+        currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!)
         
-        allMatchInfo.append(currentInfo!)
+        allRound.append(currentInfo!)
         
         firstName.text = ""
         lastName.text = ""

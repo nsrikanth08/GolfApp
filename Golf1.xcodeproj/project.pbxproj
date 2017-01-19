@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		90E3F20F1E005F1C008BFEFE /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3F20E1E005F1C008BFEFE /* Round.swift */; };
 		BD12CF0B1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = BD12CF0A1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png */; };
-		BD12CF0D1E01B0A00060E136 /* trackRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD12CF0C1E01B0A00060E136 /* trackRoundViewController.swift */; };
 		BDE6914D1E044C250010D32B /* secondTrackRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6914C1E044C250010D32B /* secondTrackRoundViewController.swift */; };
 		BDE6914F1E0454CA0010D32B /* previousRoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6914E1E0454CA0010D32B /* previousRoundsViewController.swift */; };
 		F405620F1E005D8F00010B32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405620E1E005D8F00010B32 /* AppDelegate.swift */; };
@@ -19,7 +18,6 @@
 		F40562191E005D8F00010B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40562171E005D8F00010B32 /* LaunchScreen.storyboard */; };
 		F40562241E005D8F00010B32 /* Golf1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40562231E005D8F00010B32 /* Golf1Tests.swift */; };
 		F405622F1E005D8F00010B32 /* Golf1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405622E1E005D8F00010B32 /* Golf1UITests.swift */; };
-		F443FA431E044ED800A10695 /* MatchInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443FA421E044ED800A10695 /* MatchInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +40,6 @@
 /* Begin PBXFileReference section */
 		90E3F20E1E005F1C008BFEFE /* Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
 		BD12CF0A1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png"; sourceTree = "<group>"; };
-		BD12CF0C1E01B0A00060E136 /* trackRoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = trackRoundViewController.swift; sourceTree = "<group>"; };
 		BDE6914C1E044C250010D32B /* secondTrackRoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondTrackRoundViewController.swift; sourceTree = "<group>"; };
 		BDE6914E1E0454CA0010D32B /* previousRoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = previousRoundsViewController.swift; sourceTree = "<group>"; };
 		F405620B1E005D8F00010B32 /* Golf1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Golf1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,7 +55,6 @@
 		F405622A1E005D8F00010B32 /* Golf1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Golf1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F405622E1E005D8F00010B32 /* Golf1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Golf1UITests.swift; sourceTree = "<group>"; };
 		F40562301E005D8F00010B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F443FA421E044ED800A10695 /* MatchInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +108,9 @@
 				BD12CF0A1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png */,
 				F405620E1E005D8F00010B32 /* AppDelegate.swift */,
 				F40562101E005D8F00010B32 /* ViewController.swift */,
-				BD12CF0C1E01B0A00060E136 /* trackRoundViewController.swift */,
 				BDE6914C1E044C250010D32B /* secondTrackRoundViewController.swift */,
 				BDE6914E1E0454CA0010D32B /* previousRoundsViewController.swift */,
 				90E3F20E1E005F1C008BFEFE /* Round.swift */,
-				F443FA421E044ED800A10695 /* MatchInfo.swift */,
 				F40562121E005D8F00010B32 /* Main.storyboard */,
 				F40562151E005D8F00010B32 /* Assets.xcassets */,
 				F40562171E005D8F00010B32 /* LaunchScreen.storyboard */,
@@ -280,8 +274,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F40562111E005D8F00010B32 /* ViewController.swift in Sources */,
-				F443FA431E044ED800A10695 /* MatchInfo.swift in Sources */,
-				BD12CF0D1E01B0A00060E136 /* trackRoundViewController.swift in Sources */,
 				90E3F20F1E005F1C008BFEFE /* Round.swift in Sources */,
 				F405620F1E005D8F00010B32 /* AppDelegate.swift in Sources */,
 				BDE6914F1E0454CA0010D32B /* previousRoundsViewController.swift in Sources */,
