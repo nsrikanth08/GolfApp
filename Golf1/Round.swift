@@ -39,18 +39,35 @@ class Round {
     }
     
     //Create a framework that allows the user to change the instance variables in case of a user input error.
+    
+    /* Sets the score value to a new value in order to update the round.
+     *
+     * @param int newScore. It is the new score value that the user would like to change the round to.
+     */
     func setScore(newScore: Int) {
         self.score = newScore
     }
 
+    /* Sets the penalties value to a new value in order to update the round.
+     *
+     * @param int newPenalties. It is the new penalties value that the user would like to change the round to.
+     */
     func setPenalties(newPenalties: Int) {
         self.penalties = newPenalties
     }
     
+    /* Sets the putts value to a new value in order to update the round.
+     *
+     * @param int newPutts. It is the new putts value that the user would like to change the round to.
+     */
     func setPutts(newPutts: Int) {
         self.putts = newPutts
     }
     
+    /* Sets the greens value to a new value in order to update the round.
+     *
+     * @param int newGreens. It is the new greens value that the user would like to change the round to.
+     */
     func setGreens(newGreens: Int) {
         self.greens = newGreens
     }
@@ -59,8 +76,8 @@ class Round {
         self.upDownPerc = Int((Double(newUpDownComp) / Double(newUpDownAtt)) * 100.0)
     }
     
-    func setFairwayPerc(newScore: Int, newFairways: Double) {
-        self.fairwayPerc = Int((newFairways / Double(newScore)) * 100.0)
+    func setFairwayPerc(newScore: Int, newFairways: Int) {
+        self.fairwayPerc = Int((Double(newFairways) / Double(newScore)) * 100.0)
     }
     
 }
