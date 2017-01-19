@@ -8,6 +8,9 @@
 
 import UIKit
 
+var allMatchInfo = [matchInfo]()
+//Master array that holds all matchInfo objects that are entered
+
 class trackRoundViewController: UIViewController {
     
     @IBOutlet weak var firstName: UITextField!
@@ -25,6 +28,8 @@ class trackRoundViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
     func dismissKeyboard()
     {
         firstName.resignFirstResponder()
@@ -32,6 +37,27 @@ class trackRoundViewController: UIViewController {
         weather.resignFirstResponder()
         location.resignFirstResponder()
     }
+    
+    var currentInfo: matchInfo? = nil
+    //Initialize a variable for the object to be temporarily placed in the MatchInfo page
+
+    @IBAction func storeInfo(_ sender: AnyObject) {
+        //This function puts all entered fields into an object and then appends that to the master array
+        
+        currentInfo = matchInfo(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!)
+        
+        allMatchInfo.append(currentInfo!)
+        
+        firstName.text = ""
+        lastName.text = ""
+        weather.text = ""
+        location.text = ""
+    
+        
+        
+    }
+    
+    
 
     
 

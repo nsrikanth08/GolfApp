@@ -231,8 +231,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Submit "/>
                                 <connections>
-                                    <action selector="StoreData:" destination="cbO-LM-5el" eventType="touchUpInside" id="NZj-PR-kaq"/>
-                                    <segue destination="gVR-g9-r4n" kind="show" id="LCU-8h-vYS"/>
+                                    <action selector="storeInfo:" destination="cbO-LM-5el" eventType="touchUpInside" id="Cp1-50-HiX"/>
+                                    <segue destination="gVR-g9-r4n" kind="show" id="R2s-5X-XzH"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gPW-9f-ZCI">
@@ -297,8 +297,8 @@
         <image name="M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="0T1-LJ-BF7"/>
-        <segue reference="Xio-XO-IvK"/>
         <segue reference="zIu-c4-lZo"/>
+        <segue reference="u9s-db-RDl"/>
+        <segue reference="5XR-AV-wgl"/>
     </inferredMetricsTieBreakers>
 </document>
