@@ -18,6 +18,7 @@
 		F40562191E005D8F00010B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40562171E005D8F00010B32 /* LaunchScreen.storyboard */; };
 		F40562241E005D8F00010B32 /* Golf1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40562231E005D8F00010B32 /* Golf1Tests.swift */; };
 		F405622F1E005D8F00010B32 /* Golf1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405622E1E005D8F00010B32 /* Golf1UITests.swift */; };
+		F49E068F1E366D49002C1633 /* DataProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E068E1E366D49002C1633 /* DataProcessing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		F405622A1E005D8F00010B32 /* Golf1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Golf1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F405622E1E005D8F00010B32 /* Golf1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Golf1UITests.swift; sourceTree = "<group>"; };
 		F40562301E005D8F00010B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F49E068E1E366D49002C1633 /* DataProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProcessing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				BDE6914C1E044C250010D32B /* secondTrackRoundViewController.swift */,
 				BDE6914E1E0454CA0010D32B /* previousRoundsViewController.swift */,
 				90E3F20E1E005F1C008BFEFE /* Round.swift */,
+				F49E068E1E366D49002C1633 /* DataProcessing.swift */,
 				F40562121E005D8F00010B32 /* Main.storyboard */,
 				F40562151E005D8F00010B32 /* Assets.xcassets */,
 				F40562171E005D8F00010B32 /* LaunchScreen.storyboard */,
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F40562111E005D8F00010B32 /* ViewController.swift in Sources */,
+				F49E068F1E366D49002C1633 /* DataProcessing.swift in Sources */,
 				90E3F20F1E005F1C008BFEFE /* Round.swift in Sources */,
 				F405620F1E005D8F00010B32 /* AppDelegate.swift in Sources */,
 				BDE6914F1E0454CA0010D32B /* previousRoundsViewController.swift in Sources */,
