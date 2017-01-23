@@ -21,13 +21,17 @@ class Round {
     
     /* Constructor for the Round class. Creates a storage device for all match information that the user would require.
      *
+     * @param String firstName.  This is a string that is the athlete's first name.
+     * @param String lastName. This is a string that is the athlete's last name.
+     * @param String weather.  This is a string that gives a vague description of the weather conditions during a round.
+     * @param String location.  This is a string that gives the name of the course played at during the round.
      * @param int score. This is a user input int that reflects the total amount of shots taken during a round.
      * @param int fairways. This is a user input int that reflects the total amount of fairways hit during play.
      * @param int penalties. This is a user input int that reflects the total amount of penalties recieved during play.
-     * @param int putts.  This is a user input int that reflects the total amount of putts taken during the round.
-     * @param int greens.  This is a user input int that reflects the total amount of greens hit during play.
      * @param int upDownAtt.  This is a user input int that reflects the total amount of up down attempts taken.
      * @param int upDownComp.  This is a user input int that reflects the total amount of up downs that are completed.
+     * @param String scoringClub. This is a user input int that shows the best scoring club during the round.
+     * @param int finishRank.  This is a user input integer that displays the finish rank of the athlete.
      */
     init(firstName: String, lastName: String, weather: String, location: String, score: Int, fairways: Int, penalties: Int, putts: Int, upDownAtt: Int, upDownComp: Int, scoringClub: String, finishRank: Int) {
         self.isPracticeRound = false
@@ -72,12 +76,6 @@ class Round {
     func setPutts(newPutts: Int) {
         self.putts = newPutts
     }
-    
-    /* Sets the greens value to a new value in order to update the round.
-     *
-     * @param int newGreens. It is the new greens value that the user would like to change the round to.
-     */
-    
     
     func setUpDown(newUpDownAtt: Int, newUpDownComp: Int) {
         self.upDownPerc = Int((Double(newUpDownComp) / Double(newUpDownAtt)) * 100.0)

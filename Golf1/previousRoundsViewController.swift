@@ -10,10 +10,13 @@ import UIKit
 
 class previousRoundsViewController: UIViewController {
 
+    @IBOutlet weak var roundView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +34,5 @@ class previousRoundsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
