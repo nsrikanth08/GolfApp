@@ -24,21 +24,21 @@ class seocndTrackRoundViewController: UIViewController {
     @IBOutlet weak var scoringClub: UITextField!
     @IBOutlet weak var finishRank: UITextField!
     @IBOutlet weak var score: UITextField!
-
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(seocndTrackRoundViewController.dismissKeyboard)))
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func dismissKeyboard()
     {
         firstName.resignFirstResponder()
@@ -56,28 +56,32 @@ class seocndTrackRoundViewController: UIViewController {
         
     }
     
+    //set the currentInfo to nil so that the variable can be changed inside the method.
     var currentInfo: Round? = nil
+    
     /*
      * This function puts all entered fields into an object and then appends that to the master array.
      */
     @IBAction func storeData(_ sender: AnyObject) {
-    currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: scoringClub.text!, finishRank: Int(finishRank.text!)!)
+        
     
-    allRound.append(currentInfo!)
-    
-    firstName.text = ""
-    lastName.text = ""
-    weather.text = ""
-    location.text = ""
-    score.text = ""
-    fairways.text = ""
-    penalties.text = ""
-    putts.text = ""
-    updownAttempts.text = ""
-    updownCompletes.text = ""
-    scoringClub.text = ""
-    finishRank.text = ""
+        currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: scoringClub.text!, finishRank: Int(finishRank.text!)!)
+        
+        allRound.append(currentInfo!)
+        
+        firstName.text = ""
+        lastName.text = ""
+        weather.text = ""
+        location.text = ""
+        score.text = ""
+        fairways.text = ""
+        penalties.text = ""
+        putts.text = ""
+        updownAttempts.text = ""
+        updownCompletes.text = ""
+        scoringClub.text = ""
+        finishRank.text = ""
         
     }
-
+    
 }
