@@ -57,12 +57,11 @@ class seocndTrackRoundViewController: UIViewController {
     }
     
     var currentInfo: Round? = nil
-    
+    /*
+     * This function puts all entered fields into an object and then appends that to the master array.
+     */
     @IBAction func storeData(_ sender: AnyObject) {
-   
-    //This function puts all entered fields into an object and then appends that to the master array
-    
-        currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: scoringClub.text!, finishRank: Int(finishRank.text!)!)
+    currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: scoringClub.text!, finishRank: Int(finishRank.text!)!)
     
     allRound.append(currentInfo!)
     
@@ -78,7 +77,6 @@ class seocndTrackRoundViewController: UIViewController {
     updownCompletes.text = ""
     scoringClub.text = ""
     finishRank.text = ""
-        
         
     }
 
