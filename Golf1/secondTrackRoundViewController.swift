@@ -25,11 +25,19 @@ class seocndTrackRoundViewController: UIViewController {
     @IBOutlet weak var finishRank: UITextField!
     @IBOutlet weak var score: UITextField!
     
+    
+    @IBOutlet weak var scrollview: UIScrollView!
+    var height = UIScreen.main.bounds.height
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(seocndTrackRoundViewController.dismissKeyboard)))
+        
+        scrollview.isScrollEnabled = true
+        scrollview.contentSize.height = height * 1.4
         
         // Do any additional setup after loading the view.
     }
