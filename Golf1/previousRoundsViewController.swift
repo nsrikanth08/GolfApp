@@ -11,6 +11,7 @@ import UIKit
 class previousRoundsViewController: UIViewController {
 
     @IBOutlet weak var roundView: UITableView!
+    @IBOutlet weak var previousInfo: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +25,9 @@ class previousRoundsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    var newArray : NSArray = userdefaults.valueForKey("matchInfo") as NSArray
    
+    let defaults = UserDefaults.standard
+    
 
     /*
     // MARK: - Navigation
