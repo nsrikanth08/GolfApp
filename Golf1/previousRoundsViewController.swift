@@ -24,6 +24,8 @@ class previousRoundsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    var newArray : NSArray = userdefaults.valueForKey("matchInfo") as NSArray
+   
 
     /*
     // MARK: - Navigation
