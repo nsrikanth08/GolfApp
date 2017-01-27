@@ -10,6 +10,7 @@ import UIKit
 
 var allRound = [Round]()
 
+
 class seocndTrackRoundViewController: UIViewController {
     
     
@@ -92,10 +93,10 @@ class seocndTrackRoundViewController: UIViewController {
         currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: scoringClub.text!, finishRank: Int(finishRank.text!)!)
     
     allRound.append(currentInfo!)
-        
-   let userdefaults = UserDefaults.standard
-        userdefaults.setValue(allRound, forKey: "matchInfo")
-        userdefaults.synchronize()
+    
+    let defaults = UserDefaults.standard
+    defaults.setValue(allRound, forKey: "matchInfo")
+    defaults.synchronize()
         
     
     firstName.text = ""
@@ -111,20 +112,8 @@ class seocndTrackRoundViewController: UIViewController {
     scoringClub.text = ""
     finishRank.text = ""
         
-        allRound.append(currentInfo!)
+    allRound.append(currentInfo!)
         
-        firstName.text = ""
-        lastName.text = ""
-        weather.text = ""
-        location.text = ""
-        score.text = ""
-        fairways.text = ""
-        penalties.text = ""
-        putts.text = ""
-        updownAttempts.text = ""
-        updownCompletes.text = ""
-        scoringClub.text = ""
-        finishRank.text = ""
         
     }
     
