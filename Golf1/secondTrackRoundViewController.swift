@@ -20,12 +20,13 @@ class seocndTrackRoundViewController: UIViewController {
         updatePracticeSwitch()
     }
     
+    // Chenges label beneath switch so user can see if they are selecting practice or competition
     func updatePracticeSwitch() {
         if practiceSwitch.isOn{
-            practiceLabel.text = "Practice"
+            practiceLabel.text = "Competition"
         }
         else {
-            practiceLabel.text = "Competition"
+            practiceLabel.text = "Practice"
         }
         
     }

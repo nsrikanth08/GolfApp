@@ -179,7 +179,7 @@
                                             <action selector="practiceSwitchTapped:" destination="gVR-g9-r4n" eventType="valueChanged" id="35D-E0-0Rh"/>
                                         </connections>
                                     </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Practice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQi-3f-W4L">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Competition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQi-3f-W4L">
                                         <rect key="frame" x="219" y="104" width="128" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -289,7 +289,7 @@
         <image name="M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VSW-It-D9J"/>
+        <segue reference="bFa-3a-KjP"/>
         <segue reference="Xio-XO-IvK"/>
     </inferredMetricsTieBreakers>
 </document>
