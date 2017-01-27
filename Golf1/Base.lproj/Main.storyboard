@@ -172,6 +172,20 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFP-iL-Qxz">
+                                        <rect key="frame" x="259" y="56" width="51" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="practiceSwitchTapped:" destination="gVR-g9-r4n" eventType="valueChanged" id="35D-E0-0Rh"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Practice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQi-3f-W4L">
+                                        <rect key="frame" x="219" y="104" width="128" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lx8-MA-7jI">
@@ -203,6 +217,8 @@
                         <outlet property="lastName" destination="gPW-9f-ZCI" id="muV-dV-b3L"/>
                         <outlet property="location" destination="0Dk-iY-hbX" id="nEI-wN-ZnL"/>
                         <outlet property="penalties" destination="bjq-Id-FfE" id="3si-CX-gGb"/>
+                        <outlet property="practiceLabel" destination="SQi-3f-W4L" id="c73-pc-rv8"/>
+                        <outlet property="practiceSwitch" destination="EFP-iL-Qxz" id="MkG-xX-BIf"/>
                         <outlet property="putts" destination="uvC-sI-ftA" id="idb-3g-0JH"/>
                         <outlet property="score" destination="I29-MV-qMd" id="kec-Ka-lIi"/>
                         <outlet property="scoringClub" destination="Q4x-fD-YBI" id="hEt-uK-CzG"/>

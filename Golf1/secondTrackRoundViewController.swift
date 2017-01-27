@@ -12,6 +12,22 @@ var allRound = [Round]()
 
 class seocndTrackRoundViewController: UIViewController {
     
+    
+    @IBOutlet weak var practiceSwitch: UISwitch!
+    @IBOutlet weak var practiceLabel: UILabel!
+    @IBAction func practiceSwitchTapped(_ sender: AnyObject) {
+        updatePracticeSwitch()
+    }
+    
+    func updatePracticeSwitch() {
+        if practiceSwitch.isOn{
+            practiceLabel.text = "Practice"
+        }
+        else {
+            practiceLabel.text = "Competition"
+        }
+        
+    }
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var weather: UITextField!
