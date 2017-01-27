@@ -63,6 +63,12 @@ class seocndTrackRoundViewController: UIViewController {
         score.resignFirstResponder()
         
     }
+    /*
+    let alert = UIAlertController()
+    alert.title = "Error"
+    alert.message = "Enter data for every data field"
+    alert.addButtonWithTitle("Close")
+    */
     
     //set the currentInfo to nil so that the variable can be changed inside the method.
     var currentInfo: Round? = nil
@@ -72,10 +78,16 @@ class seocndTrackRoundViewController: UIViewController {
      */
     @IBAction func storeData(_ sender: AnyObject) {
         
-    
+        if (firstName == nil || lastName == nil || weather == nil || putts == nil || fairways == nil || penalties == nil || updownAttempts == nil || updownCompletes == nil || scoringClub == nil || finishRank == nil || score == nil)
+        {
+            // alert.show()
+        }
+        
+        else {
         currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: scoringClub.text!, finishRank: Int(finishRank.text!)!)
         
         allRound.append(currentInfo!)
+        }
         
         firstName.text = ""
         lastName.text = ""
