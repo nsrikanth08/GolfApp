@@ -16,19 +16,6 @@ class seocndTrackRoundViewController: UIViewController {
     
     @IBOutlet weak var practiceSwitch: UISwitch!
     @IBOutlet weak var practiceLabel: UILabel!
-    @IBAction func practiceSwitchTapped(_ sender: AnyObject) {
-        updatePracticeSwitch()
-    }
-    
-    func updatePracticeSwitch() {
-        if practiceSwitch.isOn{
-            practiceLabel.text = "Practice"
-        }
-        else {
-            practiceLabel.text = "Competition"
-        }
-        
-    }
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var weather: UITextField!
@@ -80,12 +67,29 @@ class seocndTrackRoundViewController: UIViewController {
         score.resignFirstResponder()
         
     }
+    
+    @IBAction func practiceSwitchTapped(_ sender: AnyObject) {
+        updatePracticeSwitch()
+    }
+    
+    
+    func updatePracticeSwitch() {
+        if practiceSwitch.isOn{
+            practiceLabel.text = "Practice"
+        }
+        else {
+            practiceLabel.text = "Competition"
+        }
+    }
+    
+    
+    
     /*
-    let alert = UIAlertController()
-    alert.title = "Error"
-    alert.message = "Enter data for every data field"
-    alert.addButtonWithTitle("Close")
-    */
+     let alert = UIAlertController()
+     alert.title = "Error"
+     alert.message = "Enter data for every data field"
+     alert.addButtonWithTitle("Close")
+     */
     
     //set the currentInfo to nil so that the variable can be changed inside the method.
     var currentInfo: Round? = nil
@@ -99,32 +103,30 @@ class seocndTrackRoundViewController: UIViewController {
         {
             // alert.show()
         }
-        
+            
         else {
-        currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: scoringClub.text!, finishRank: Int(finishRank.text!)!)
-    
-    allRound.append(currentInfo!)
-    
-    let defaults = UserDefaults.standard
-    defaults.setValue(allRound, forKey: "matchInfo")
-    defaults.synchronize()
+            currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: scoringClub.text!, finishRank: Int(finishRank.text!)!)
+            
+            allRound.append(currentInfo!)
+        }
         
-    
-    firstName.text = ""
-    lastName.text = ""
-    weather.text = ""
-    location.text = ""
-    score.text = ""
-    fairways.text = ""
-    penalties.text = ""
-    putts.text = ""
-    updownAttempts.text = ""
-    updownCompletes.text = ""
-    scoringClub.text = ""
-    finishRank.text = ""
+        let defaults = UserDefaults.standard
+        defaults.setValue(allRound, forKey: "matchInfo")
+        defaults.synchronize()
         
-        
+        firstName.text = ""
+        lastName.text = ""
+        weather.text = ""
+        location.text = ""
+        score.text = ""
+        fairways.text = ""
+        penalties.text = ""
+        putts.text = ""
+        updownAttempts.text = ""
+        updownCompletes.text = ""
+        scoringClub.text = ""
+        finishRank.text = ""
     }
     
 }
-}
+
