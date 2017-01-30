@@ -11,6 +11,7 @@ import UIKit
 class previousRoundsViewController: UIViewController {
 
     @IBOutlet weak var roundView: UITableView!
+    @IBOutlet weak var previousInfo: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,10 @@ class previousRoundsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+   
+    let defaults = UserDefaults.standard
     
 
     /*

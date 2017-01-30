@@ -8,10 +8,4 @@
 
 import Foundation
 
-let defaults = UserDefaults.standard
-
-func storeMasterArray (_ name: Array<Round>)
-{
-    defaults.setValue(name, forKey: "matchInfo")
-    defaults.synchronize()
-}
+static let defaults = UserDefaults.standard
