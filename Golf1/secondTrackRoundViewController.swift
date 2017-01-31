@@ -98,7 +98,7 @@ class seocndTrackRoundViewController: UIViewController {
      * This function puts all entered fields into an object and then appends that to the master array.
      */
     @IBAction func storeData(_ sender: AnyObject) {
-        
+
         if (firstName == nil || lastName == nil || weather == nil || putts == nil || fairways == nil || penalties == nil || updownAttempts == nil || updownCompletes == nil || scoringClub == nil || finishRank == nil || score == nil)
         {
             // alert.show()
@@ -109,24 +109,24 @@ class seocndTrackRoundViewController: UIViewController {
             
             allRound.append(currentInfo!)
         }
-        
-        let defaults = UserDefaults.standard
-        defaults.setValue(allRound, forKey: "matchInfo")
-        defaults.synchronize()
-        
-        firstName.text = ""
-        lastName.text = ""
-        weather.text = ""
-        location.text = ""
-        score.text = ""
-        fairways.text = ""
-        penalties.text = ""
-        putts.text = ""
-        updownAttempts.text = ""
-        updownCompletes.text = ""
-        scoringClub.text = ""
-        finishRank.text = ""
-    }
     
+    //This saves the allRound array locally to the disk so that it may be referenced again at a later time after terminations
+    let defaults = UserDefaults.standard
+    defaults.setValue(allRound, forKey: "matchInfo")
+    defaults.synchronize()
+        
+    
+    firstName.text = ""
+    lastName.text = ""
+    weather.text = ""
+    location.text = ""
+    score.text = ""
+    fairways.text = ""
+    penalties.text = ""
+    putts.text = ""
+    updownAttempts.text = ""
+    updownCompletes.text = ""
+    scoringClub.text = ""
+    finishRank.text = ""
+    }
 }
-
