@@ -27,7 +27,6 @@ class previousRoundsViewController: UIViewController {
     
     
    
-    let defaults = UserDefaults.standard
     
 
     /*

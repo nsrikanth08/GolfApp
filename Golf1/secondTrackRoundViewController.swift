@@ -95,10 +95,6 @@ class seocndTrackRoundViewController: UIViewController {
     
     allRound.append(currentInfo!)
     
-    //This saves the allRound array locally to the disk so that it may be referenced again at a later time after terminations
-    let defaults = UserDefaults.standard
-    defaults.setValue(allRound, forKey: "matchInfo")
-    defaults.synchronize()
         
     
     firstName.text = ""
@@ -114,7 +110,7 @@ class seocndTrackRoundViewController: UIViewController {
     scoringClub.text = ""
     finishRank.text = ""
         
-    allRound.append(currentInfo!)
+    
         
         
     }
