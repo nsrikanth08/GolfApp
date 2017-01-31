@@ -104,11 +104,17 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="gVR-g9-r4n" id="17J-Oj-gXK"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Dk-iY-hbX">
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="gVR-g9-r4n" id="Jn9-1G-cgZ"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Score" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I29-MV-qMd">
                                         <nil key="textColor"/>
@@ -160,6 +166,22 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MBk-rS-DmQ">
+                                        <rect key="frame" x="8" y="141" width="150" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="gVR-g9-r4n" id="q5j-yV-lA3"/>
+                                            <outlet property="delegate" destination="gVR-g9-r4n" id="FYp-Fj-WlB"/>
+                                        </connections>
+                                    </pickerView>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B1K-yM-Ivo">
+                                        <rect key="frame" x="9" y="104" width="150" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="gVR-g9-r4n" id="r6V-XD-Esq"/>
+                                            <outlet property="delegate" destination="gVR-g9-r4n" id="uuM-2W-Rkw"/>
+                                        </connections>
+                                    </pickerView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="0Dk-iY-hbX" firstAttribute="leading" secondItem="I29-MV-qMd" secondAttribute="leading" id="1QK-c6-guF"/>
@@ -246,6 +268,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dropdown1" destination="B1K-yM-Ivo" id="ZKA-BU-jf4"/>
+                        <outlet property="dropdown2" destination="MBk-rS-DmQ" id="sJV-Vo-fgD"/>
                         <outlet property="fairways" destination="its-DA-TCO" id="9hd-7e-npT"/>
                         <outlet property="finishRank" destination="1X3-0l-Igq" id="z1h-Wc-RqS"/>
                         <outlet property="firstName" destination="EyQ-fw-Oof" id="VT3-Hx-TuJ"/>

@@ -11,7 +11,7 @@ import UIKit
 var allRound = [Round]()
 
 
-class seocndTrackRoundViewController: UIViewController {
+class seocndTrackRoundViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     
     @IBOutlet weak var practiceSwitch: UISwitch!
@@ -32,6 +32,59 @@ class seocndTrackRoundViewController: UIViewController {
     
     @IBOutlet weak var scrollview: UIScrollView!
     var height = UIScreen.main.bounds.height
+    
+    @IBOutlet weak var dropdown1: UIPickerView!
+    @IBOutlet weak var dropdown2: UIPickerView!
+    var weatheroptions = ["1","2","3"]
+    var locationsoptions = ["4","5","6"]
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        var countrows : Int = weatheroptions.count
+        if pickerView == dropdown2 {
+            countrows = self.locationsoptions.count
+        }
+        
+        return countrows
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == dropdown1 {
+            let titleRow = weatheroptions[row]
+            return titleRow
+        }
+        else if pickerView == dropdown2 {
+            let titleRow = locationsoptions[row]
+            return titleRow
+            
+        }
+        return ""
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView == dropdown1 {
+            self.weather.text = self.weatheroptions[row]
+            self.dropdown1.isHidden = true
+        }
+        else if pickerView == dropdown2 {
+            self.location.text = self.locationsoptions[row]
+            self.dropdown2.isHidden = true
+            
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if (textField == self.weather) {
+            self.dropdown1.isHidden = false
+        }
+        else if (textField == self.location) {
+            self.dropdown2.isHidden = false
+        }
+    }
+    
     
     
     override func viewDidLoad()
@@ -110,10 +163,6 @@ class seocndTrackRoundViewController: UIViewController {
             allRound.append(currentInfo!)
         }
     
-    //This saves the allRound array locally to the disk so that it may be referenced again at a later time after terminations
-    let defaults = UserDefaults.standard
-    defaults.setValue(allRound, forKey: "matchInfo")
-    defaults.synchronize()
         
     
     firstName.text = ""
@@ -128,5 +177,6 @@ class seocndTrackRoundViewController: UIViewController {
     updownCompletes.text = ""
     scoringClub.text = ""
     finishRank.text = ""
+
     }
 }
