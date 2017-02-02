@@ -142,7 +142,7 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDelegate, UI
      alert.title = "Error"
      alert.message = "Enter data for every data field"
      alert.addButtonWithTitle("Close")
-     */
+    */
     
     //set the currentInfo to nil so that the variable can be changed inside the method.
     var currentInfo: Round? = nil

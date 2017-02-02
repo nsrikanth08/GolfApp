@@ -8,13 +8,31 @@
 
 import UIKit
 
-class previousRoundsViewController: UIViewController {
+class previousRoundsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var roundView: UITableView!
     @IBOutlet weak var previousInfo: UILabel!
     
+    func numberOfSections(in TableView: UITableView) -> Int {
+        return 1
+    }
+    
+    //table view will return int for how many rows
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return allRound.count
+    }
+    
+    //what is in the table
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let roundName  = allRound[indexPath.row].getLocation()
+        cell.textLabel?.text = roundName
+        return cell
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        roundView.reloadData()
         
         // Do any additional setup after loading the view.
         

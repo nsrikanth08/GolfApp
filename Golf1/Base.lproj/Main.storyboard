@@ -167,7 +167,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MBk-rS-DmQ">
-                                        <rect key="frame" x="8" y="141" width="150" height="30"/>
+                                        <rect key="frame" x="8" y="95" width="152" height="30"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <outlet property="dataSource" destination="gVR-g9-r4n" id="q5j-yV-lA3"/>
@@ -175,7 +175,7 @@
                                         </connections>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B1K-yM-Ivo">
-                                        <rect key="frame" x="9" y="104" width="150" height="38"/>
+                                        <rect key="frame" x="8" y="129" width="152" height="38"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <outlet property="dataSource" destination="gVR-g9-r4n" id="r6V-XD-Esq"/>
@@ -319,23 +319,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="en1-3i-gEv">
+                                <frame key="frameInset" minX="336" minY="20" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <segue destination="gVR-g9-r4n" kind="show" id="D0G-q9-XCE"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="npg-rc-I0s">
-                                <frame key="frameInset" minX="53" minY="127" width="240" height="128"/>
+                                <frame key="frameInset" minX="45" minY="100" width="285" height="466"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5pP-hR-fwn" id="1lX-Qk-XZ7"/>
+                                    <outlet property="delegate" destination="5pP-hR-fwn" id="KmN-eu-CWQ"/>
+                                </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUW-AS-PP8">
-                                <frame key="frameInset" minX="151" minY="266" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.98039215686274506" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="previousInfo" destination="kUW-AS-PP8" id="FAt-Hk-H5F"/>
                         <outlet property="roundView" destination="npg-rc-I0s" id="RCM-iq-Box"/>
                     </connections>
                 </viewController>
@@ -348,7 +353,8 @@
         <image name="M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bFa-3a-KjP"/>
+        <segue reference="VSW-It-D9J"/>
         <segue reference="Xio-XO-IvK"/>
+        <segue reference="D0G-q9-XCE"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -50,6 +50,9 @@ class Round {
         
     }
     
+    func getLocation() -> String {
+        return location
+    }
     
     //Create a framework that allows the user to change the instance variables in case of a user input error.
     
