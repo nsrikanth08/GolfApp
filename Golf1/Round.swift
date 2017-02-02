@@ -10,9 +10,6 @@ import Foundation
 
 class Round {
     
-    //practice round boolean that will need to be implemented after the practice round mode is created.
-    private let isPracticeRound: Bool
-    private var firstName, lastName, weather, location, scoringClub: String
     
     
     //Initialize the class instance variables
