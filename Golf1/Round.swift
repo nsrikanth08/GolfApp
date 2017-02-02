@@ -10,10 +10,12 @@ import Foundation
 
 class Round {
     
-    
+    //practice round boolean that will need to be implemented after the practice round mode is created.
+    private let isPracticeRound: Bool
+    private var firstName, lastName, weather, location, scoringClub: String
     
     //Initialize the class instance variables
-   private var score, fairwayPerc, penalties, putts, upDownPerc, finishRank: Int
+    private var score, fairwayPerc, penalties, putts, upDownPerc, finishRank: Int
     private var date: NSDate
     
     /* Constructor for the Round class. Creates a storage device for all match information that the user would require.
@@ -60,7 +62,7 @@ class Round {
     func setScore(newScore: Int) {
         self.score = newScore
     }
-
+    
     /* Sets the penalties value to a new value in order to update the round.
      *
      * @param int newPenalties. It is the new penalties value that the user would like to change the round to.
