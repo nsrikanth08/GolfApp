@@ -152,7 +152,7 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDelegate, UI
      */
     @IBAction func storeData(_ sender: AnyObject) {
 
-        if (firstName == nil || lastName == nil || weather == nil || putts == nil || fairways == nil || penalties == nil || updownAttempts == nil || updownCompletes == nil || scoringClub == nil || finishRank == nil || score == nil)
+        if (firstName.text == "" || lastName.text == "" || weather.text == "" || putts.text == "" || fairways.text == "" || penalties.text == "" || updownAttempts.text == "" || updownCompletes.text == "" || scoringClub.text == "" || finishRank.text == "" || score.text == "")
         {
             // alert.show()
         }
