@@ -39,6 +39,28 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDelegate, UI
     var weatheroptions = ["1","2","3"]
     var locationsoptions = ["4","5","6"]
     
+    @IBAction func submit1Pressed(_ sender: AnyObject) {
+        if practiceLabel.text == "" {
+            submit1Tapped()
+        }
+    }
+    
+    @IBAction func submit1Tapped() {
+        
+        // create the alert
+        let alert = UIAlertController(title: "You have left a text field empty", message: "Make sure to completely fill statistics", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { action in
+            // ...
+        }
+        alert.addAction(OKAction)
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
