@@ -33,9 +33,10 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     //what is in the table
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        var locationName  = allRounds[indexPath.row].location
+        let locationName  = allRounds[indexPath.row].location
         var matchDate = allRounds[indexPath.row].date.description
-        let dateSub = matchDate.substring(from: <#T##String.Index#>)
+        let endVal = matchDate.index(matchDate.startIndex, offsetBy: 10)
+        let dateSub = matchDate.substring(to: endVal)
         matchDate = dateSub
         let roundName = locationName + "\t" + matchDate
         cell.textLabel?.text = roundName
