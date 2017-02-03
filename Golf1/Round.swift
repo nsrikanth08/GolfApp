@@ -92,14 +92,6 @@ class Round: NSObject, NSCoding {
         aCoder.encode(finishRank, forKey: PropertyKey.finishRank)
         aCoder.encode(date, forKey: PropertyKey.date)
     }
-<<<<<<< Updated upstream
-    
-=======
-    func getDate() -> NSDate {
-        return date
-    }
-    //Create a framework that allows the user to change the instance variables in case of a user input error.
->>>>>>> Stashed changes
     
     required convenience init?(coder aDecoder: NSCoder) {
         

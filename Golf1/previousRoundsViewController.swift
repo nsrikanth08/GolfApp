@@ -33,28 +33,21 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     //what is in the table
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-<<<<<<< Updated upstream
-        let roundName  = allRounds[indexPath.row].location
-=======
-        let locationName  = allRound[indexPath.row].getLocation()
-        var matchDate = allRound[indexPath.row].getDate().description
-        
+        var locationName  = allRounds[indexPath.row].location
+        var matchDate = allRounds[indexPath.row].date.description
         let dateSub = matchDate.substring(from: <#T##String.Index#>)
         matchDate = dateSub
         let roundName = locationName + "\t" + matchDate
->>>>>>> Stashed changes
         cell.textLabel?.text = roundName
         return cell
     }
     
     
-<<<<<<< Updated upstream
-=======
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var cellx = tableView.cellForRow(at: indexPath)
         
     }
->>>>>>> Stashed changes
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         roundView.reloadData()
