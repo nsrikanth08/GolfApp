@@ -5,8 +5,10 @@
 //  Created by SRIKANTH, NIKHIL on 12/13/16.
 //  Copyright © 2016 SRIKANTH, NIKHIL. All rights reserved.
 //
-
+import Foundation
 import UIKit
+import os.log
+
 
 class ViewController: UIViewController {
 

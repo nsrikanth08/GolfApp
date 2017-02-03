@@ -6,9 +6,10 @@
 //  Copyright © 2016 SRIKANTH, NIKHIL. All rights reserved.
 //
 
+import Foundation
 import UIKit
+import os.log
 
-var allRound = [Round]()
 
 
 class seocndTrackRoundViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
@@ -158,9 +159,7 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDelegate, UI
         }
             
         else {
-            currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: scoringClub.text!, finishRank: Int(finishRank.text!)!)
-            
-            allRound.append(currentInfo!)
+            saveRounds()
         }
     
         

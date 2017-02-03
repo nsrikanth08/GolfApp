@@ -6,7 +6,9 @@
 //  Copyright © 2016 SRIKANTH, NIKHIL. All rights reserved.
 //
 
+import Foundation
 import UIKit
+import os.log
 
 class previousRoundsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -17,19 +19,26 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
         return 1
     }
     
+    var allRounds: [Round] = loadRounds()!
+    
+    
     //table view will return int for how many rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return allRound.count
+        return allRounds.count
     }
+    
+    
     
     //what is in the table
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        let roundName  = allRound[indexPath.row].getLocation()
+        let roundName  = allRounds[indexPath.row].location
         cell.textLabel?.text = roundName
         return cell
     }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         roundView.reloadData()

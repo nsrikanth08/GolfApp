@@ -6,85 +6,122 @@
 //  Copyright © 2016 SRIKANTH, NIKHIL. All rights reserved.
 //
 
-import Foundation
+//CHANGE INITIALIZER AND ENCODERS
 
-class Round {
+
+
+
+import Foundation
+import UIKit
+import os.log
+
+class Round: NSObject, NSCoding {
     
-    //practice round boolean that will need to be implemented after the practice round mode is created.
-    private let isPracticeRound: Bool
-    private var firstName, lastName, weather, location, scoringClub: String
     
-    //Initialize the class instance variables
-    private var score, fairwayPerc, penalties, putts, upDownPerc, finishRank: Int
-    private var date: NSDate
+    //MARK: Properties
     
-    /* Constructor for the Round class. Creates a storage device for all match information that the user would require.
-     *
-     * @param String firstName.  This is a string that is the athlete's first name.
-     * @param String lastName. This is a string that is the athlete's last name.
-     * @param String weather.  This is a string that gives a vague description of the weather conditions during a round.
-     * @param String location.  This is a string that gives the name of the course played at during the round.
-     * @param int score. This is a user input int that reflects the total amount of shots taken during a round.
-     * @param int fairways. This is a user input int that reflects the total amount of fairways hit during play.
-     * @param int penalties. This is a user input int that reflects the total amount of penalties recieved during play.
-     * @param int upDownAtt.  This is a user input int that reflects the total amount of up down attempts taken.
-     * @param int upDownComp.  This is a user input int that reflects the total amount of up downs that are completed.
-     * @param String scoringClub. This is a user input int that shows the best scoring club during the round.
-     * @param int finishRank.  This is a user input integer that displays the finish rank of the athlete.
-     */
-    init(firstName: String, lastName: String, weather: String, location: String, score: Int, fairways: Int, penalties: Int, putts: Int, upDownAtt: Int, upDownComp: Int, scoringClub: String, finishRank: Int) {
+    var isPracticeRound: Bool
+    var firstName, lastName, weather, location: String
+    var score, fairways, penalties, putts, upDownAtt, upDownComp, finishRank, scoringClub: Int
+    var date: NSDate
+    
+    //MARK: Archiving Paths
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("rounds")
+    
+    //MARK: Types
+    
+    struct PropertyKey {
+        static let isPracticeRound = "isPracticeRound"
+        static let firstName = "firstName"
+        static let lastName = "lastName"
+        static let weather = "weather"
+        static let location = "location"
+        static let score = "score"
+        static let fairways = "fairways"
+        //static let fairwayPerc = "fairwayPerc"
+        static let penalties = "penalties"
+        static let putts = "putts"
+        static let upDownAtt = "upDownAtt"
+        static let upDownComp = "upDownComp"
+        //static let upDownPerc = "upDownPerc"
+        static let finishRank = "finishRank"
+        static let date = "date"
+        static let scoringClub = "scoringClub"
+    }
+    
+    //MARK: Initialization
+    
+    init(firstName: String, lastName: String, weather: String, location: String, score: Int, fairways: Int, penalties: Int, putts: Int, upDownAtt: Int,upDownComp: Int, scoringClub: Int, finishRank: Int, date: NSDate) {
+        
         self.isPracticeRound = false
         self.firstName = firstName
         self.lastName = lastName
         self.weather = weather
         self.location = location
         self.score = score
-        self.fairwayPerc = Int((Double(fairways) / Double(score)) * 100.0)
+        self.fairways = fairways
+        //self.fairwayPerc = Int((Double(fairways) / Double(score)) * 100.0)
         self.penalties = penalties
         self.putts = putts
-        self.upDownPerc = Int((Double(upDownComp) / Double(upDownAtt)) * 100.0)
+        self.upDownAtt = upDownAtt
+        self.upDownComp = upDownComp
+        //self.upDownPerc = Int((Double(upDownComp) / Double(upDownAtt)) * 100.0)
         self.scoringClub = scoringClub
         self.finishRank = finishRank
         self.date = NSDate()
         
     }
+    //MARK: NSCoding
     
-    func getLocation() -> String {
-        return location
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(isPracticeRound, forKey: PropertyKey.isPracticeRound)
+        aCoder.encode(firstName, forKey: PropertyKey.firstName)
+        aCoder.encode(lastName, forKey: PropertyKey.lastName)
+        aCoder.encode(weather, forKey: PropertyKey.weather)
+        aCoder.encode(location, forKey: PropertyKey.location)
+        aCoder.encode(score, forKey: PropertyKey.score)
+        aCoder.encode(fairways, forKey: PropertyKey.fairways)
+        //aCoder.encode(fairwayPerc, forKey: PropertyKey.fairwayPerc)
+        aCoder.encode(penalties, forKey: PropertyKey.penalties)
+        aCoder.encode(putts, forKey: PropertyKey.putts)
+        aCoder.encode(upDownAtt, forKey: PropertyKey.upDownAtt)
+        aCoder.encode(upDownComp, forKey: PropertyKey.upDownComp)
+        //aCoder.encode(upDownPerc, forKey: PropertyKey.upDownPerc)
+        aCoder.encode(scoringClub, forKey: PropertyKey.scoringClub)
+        aCoder.encode(finishRank, forKey: PropertyKey.finishRank)
+        aCoder.encode(date, forKey: PropertyKey.date)
     }
     
-    //Create a framework that allows the user to change the instance variables in case of a user input error.
     
-    /* Sets the score value to a new value in order to update the round.
-     *
-     * @param int newScore. It is the new score value that the user would like to change the round to.
-     */
-    func setScore(newScore: Int) {
-        self.score = newScore
+    required convenience init?(coder aDecoder: NSCoder) {
+        
+        // This makes it fail if it can't decode the name.
+        guard let firstName = aDecoder.decodeObject(forKey: PropertyKey.firstName) as? String else {
+            os_log("Unable to decode the first name for a Round object.", log: OSLog.default, type: .debug)
+            return nil
+        }
+        
+        
+        let lastName = aDecoder.decodeObject(forKey: PropertyKey.lastName) as! String
+        let weather = aDecoder.decodeObject(forKey: PropertyKey.weather) as! String
+        let location = aDecoder.decodeObject(forKey: PropertyKey.location) as! String
+        
+        let score = aDecoder.decodeInteger(forKey: PropertyKey.score)
+        //let fairwayPerc = aDecoder.decodeInteger(forKey: PropertyKey.fairwayPerc)
+        let fairways = aDecoder.decodeInteger(forKey: PropertyKey.fairways)
+        let penalties = aDecoder.decodeInteger(forKey: PropertyKey.penalties)
+        let putts = aDecoder.decodeInteger(forKey: PropertyKey.putts)
+        let upDownAtt = aDecoder.decodeInteger(forKey: PropertyKey.upDownAtt)
+        let upDownComp = aDecoder.decodeInteger(forKey: PropertyKey.upDownComp)
+        //let upDownPerc = aDecoder.decodeInteger(forKey: PropertyKey.upDownPerc)
+        let scoringClub = aDecoder.decodeInteger(forKey: PropertyKey.scoringClub)
+        let finishRank = aDecoder.decodeInteger(forKey: PropertyKey.finishRank)
+        
+        let date = aDecoder.decodeObject(forKey: PropertyKey.date) as! NSDate
+        
+        // Must call designated initializer.
+        self.init(firstName: firstName, lastName: lastName, weather: weather, location: location, score: score, fairways: fairways, penalties: penalties, putts: putts, upDownAtt: upDownAtt, upDownComp: upDownComp, scoringClub: scoringClub, finishRank: finishRank, date: date)
+        
     }
-    
-    /* Sets the penalties value to a new value in order to update the round.
-     *
-     * @param int newPenalties. It is the new penalties value that the user would like to change the round to.
-     */
-    func setPenalties(newPenalties: Int) {
-        self.penalties = newPenalties
-    }
-    
-    /* Sets the putts value to a new value in order to update the round.
-     *
-     * @param int newPutts. It is the new putts value that the user would like to change the round to.
-     */
-    func setPutts(newPutts: Int) {
-        self.putts = newPutts
-    }
-    
-    func setUpDown(newUpDownAtt: Int, newUpDownComp: Int) {
-        self.upDownPerc = Int((Double(newUpDownComp) / Double(newUpDownAtt)) * 100.0)
-    }
-    
-    func setFairwayPerc(newScore: Int, newFairways: Int) {
-        self.fairwayPerc = Int((Double(newFairways) / Double(newScore)) * 100.0)
-    }
-    
 }
