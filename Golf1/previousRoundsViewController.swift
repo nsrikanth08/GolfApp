@@ -15,11 +15,11 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet weak var roundView: UITableView!
     @IBOutlet weak var previousInfo: UILabel!
     
+    var roundList: [Round] = loadRounds()!
+    
     func numberOfSections(in TableView: UITableView) -> Int {
         return 1
     }
-    
-    var allRounds: [Round] = loadRounds()!
     
     
     //table view will return int for how many rows
@@ -33,8 +33,8 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     //what is in the table
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        let locationName  = allRounds[indexPath.row].location
-        var matchDate = allRounds[indexPath.row].date.description
+        let locationName  = roundList[indexPath.row].location
+        var matchDate = roundList[indexPath.row].date.description
         let endVal = matchDate.index(matchDate.startIndex, offsetBy: 10)
         let dateSub = matchDate.substring(to: endVal)
         matchDate = dateSub
@@ -45,7 +45,7 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var cellx = tableView.cellForRow(at: indexPath)
+        //var cellx = tableView.cellForRow(at: indexPath)
         
     }
     

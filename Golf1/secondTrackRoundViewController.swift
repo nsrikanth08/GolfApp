@@ -33,82 +33,7 @@ class seocndTrackRoundViewController: UIViewController {
     @IBOutlet weak var scrollview: UIScrollView!
     var height = UIScreen.main.bounds.height
     
-    @IBOutlet weak var dropdown1: UIPickerView!
-    @IBOutlet weak var dropdown2: UIPickerView!
-    var weatheroptions = ["1","2","3"]
-    var locationsoptions = ["4","5","6"]
-    
-    @IBAction func submit1Pressed(_ sender: AnyObject) {
-        if practiceLabel.text == "" {
-            submit1Tapped()
-        }
-    }
-    
-    @IBAction func submit1Tapped() {
-        
-        // create the alert
-        let alert = UIAlertController(title: "You have left a text field empty", message: "Make sure to completely fill statistics", preferredStyle: UIAlertControllerStyle.alert)
-        
-        // add an action (button)
-        let OKAction = UIAlertAction(title: "OK", style: .default) { action in
-            // ...
-        }
-        alert.addAction(OKAction)
-        
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        var countrows : Int = weatheroptions.count
-        if pickerView == dropdown2 {
-            countrows = self.locationsoptions.count
-        }
-        
-        return countrows
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if pickerView == dropdown1 {
-            let titleRow = weatheroptions[row]
-            return titleRow
-        }
-        else if pickerView == dropdown2 {
-            let titleRow = locationsoptions[row]
-            return titleRow
-            
-        }
-        return ""
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView == dropdown1 {
-            self.weather.text = self.weatheroptions[row]
-            self.dropdown1.isHidden = true
-        }
-        else if pickerView == dropdown2 {
-            self.location.text = self.locationsoptions[row]
-            self.dropdown2.isHidden = true
-            
-        }
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if (textField == self.weather) {
-            self.dropdown1.isHidden = false
-        }
-        else if (textField == self.location) {
-            self.dropdown2.isHidden = false
-        }
-    }
-    
-    
-    
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -157,15 +82,6 @@ class seocndTrackRoundViewController: UIViewController {
         }
     }
     
-    
-    
-    /*
-     let alert = UIAlertController()
-     alert.title = "Error"
-     alert.message = "Enter data for every data field"
-     alert.addButtonWithTitle("Close")
-    */
-    
     //set the currentInfo to nil so that the variable can be changed inside the method.
     var currentInfo: Round? = nil
     
@@ -176,8 +92,17 @@ class seocndTrackRoundViewController: UIViewController {
 
         if (firstName.text == "" || lastName.text == "" || weather.text == "" || putts.text == "" || fairways.text == "" || penalties.text == "" || updownAttempts.text == "" || updownCompletes.text == "" || scoringClub.text == "" || finishRank.text == "" || score.text == "")
         {
-            // alert.show()
-        }
+            // create the alert
+            let alert = UIAlertController(title: "You have left a text field empty", message: "Make sure to completely fill statistics", preferredStyle: UIAlertControllerStyle.alert)
+            
+            // add an action (button)
+            let OKAction = UIAlertAction(title: "OK", style: .default) { action in
+                // ...
+            }
+            alert.addAction(OKAction)
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)        }
             
         else {
             saveRounds()
