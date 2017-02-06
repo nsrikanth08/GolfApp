@@ -12,7 +12,7 @@ import os.log
 
 
 
-class seocndTrackRoundViewController: UIViewController {
+class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var practiceSwitch: UISwitch!
     @IBOutlet weak var practiceLabel: UILabel!
@@ -33,6 +33,8 @@ class seocndTrackRoundViewController: UIViewController {
     @IBOutlet weak var scrollview: UIScrollView!
     var height = UIScreen.main.bounds.height
     
+    var locationdata = ["Braemar GC", "Wilds GC", "Hazeltine CC", "Eagle Valley GC", "Indian Hills CC", "Pokegama GC", "Eagle Ridge GC", "Stillwater CC", "St. Cloud CC", "Southern Hills GC", "Bunker Hills GC (East-West)", "Bunker HIlls GC (North-East-West)", "Inver Wood GC", "Valleywood GC", "Emerald Greens (Gold) GC", "Emerald Greens (Silver) GC", "Fountain Valley GC", "Bracketts Crossing CC", "Stonebrooke GC", "Dwan GC", "Crystal Lake GC", "Heritage Links GC", "Legacy GC", "Boulder Pointe GC", "Eastwood GC", "Chaska Town Course", "Dahlgren GC", "Bent Creek GC", "Mendakota CC", "Prestwick CC", "Creeks Bend GC", "Dakota Pines GC", "Bellwood Oaks GC", "Meadows at Mystic Lake", "Keller GC", "Goodrich GC", "Olympic Hills CC", "Midland Hills CC", "Minnesota Valley CC", "Southview CC", "Mississippi Dunes", "River Oaks GC"]
+    var picker = UIPickerView ()
 
     override func viewDidLoad()
     {
@@ -43,12 +45,32 @@ class seocndTrackRoundViewController: UIViewController {
         scrollview.isScrollEnabled = true
         scrollview.contentSize.height = height * 1.15
         
+        picker.delegate = self
+        picker.dataSource = self
+        location.inputView = picker
+        
         // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return locationdata.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        location.text = locationdata[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return locationdata[row]
     }
     
     func dismissKeyboard()
