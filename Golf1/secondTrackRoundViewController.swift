@@ -29,6 +29,28 @@ class seocndTrackRoundViewController: UIViewController {
     @IBOutlet weak var finishRank: UITextField!
     @IBOutlet weak var score: UITextField!
     
+    @IBAction func submit1(_ sender: AnyObject) {
+        if firstName.text == "" {
+            submit1Tapped()
+        }
+    }
+    
+    func submit1Tapped() {
+        // create the alert
+        let alert = UIAlertController(title: "You have left a text field empty", message: "Make sure to completely fill statistics", preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { action in
+            // ...
+        }
+        alert.addAction(OKAction)
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
+
+    }
+    
+    
     
     @IBOutlet weak var scrollview: UIScrollView!
     var height = UIScreen.main.bounds.height
