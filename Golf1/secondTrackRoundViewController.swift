@@ -149,24 +149,23 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, 
             self.present(alert, animated: true, completion: nil)        }
             
             else {
+            currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: Int(scoringClub.text!)!, finishRank: Int(finishRank.text!)!, date: NSDate())
             
+            allRounds.append(currentInfo!)
             saveRounds()
+            firstName.text = ""
+            lastName.text = ""
+            weather.text = ""
+            location.text = ""
+            score.text = ""
+            fairways.text = ""
+            penalties.text = ""
+            putts.text = ""
+            updownAttempts.text = ""
+            updownCompletes.text = ""
+            scoringClub.text = ""
+            finishRank.text = ""
+            self.present(previousRoundsViewController(), animated: true)
         }
-    
-        
-    
-    firstName.text = ""
-    lastName.text = ""
-    weather.text = ""
-    location.text = ""
-    score.text = ""
-    fairways.text = ""
-    penalties.text = ""
-    putts.text = ""
-    updownAttempts.text = ""
-    updownCompletes.text = ""
-    scoringClub.text = ""
-    finishRank.text = ""
-
     }
 }

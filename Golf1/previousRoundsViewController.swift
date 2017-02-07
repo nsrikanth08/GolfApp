@@ -11,9 +11,8 @@ import UIKit
 import os.log
 
 class previousRoundsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var roundView: UITableView!
-    @IBOutlet weak var previousInfo: UILabel!
     
     var roundList: [Round] = loadRounds()!
     
@@ -24,7 +23,6 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     
     //table view will return int for how many rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return roundList.count
     }
     
@@ -38,7 +36,7 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
         let endVal = matchDate.index(matchDate.startIndex, offsetBy: 10)
         let dateSub = matchDate.substring(to: endVal)
         matchDate = dateSub
-        let roundName = locationName + "\t" + matchDate
+        let roundName = locationName + "\t\t" + matchDate
         cell.textLabel?.text = roundName
         return cell
     }
@@ -53,27 +51,28 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
         super.viewDidLoad()
         roundView.reloadData()
         
+        
         // Do any additional setup after loading the view.
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     
-   
     
-
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
 }

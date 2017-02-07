@@ -13,18 +13,20 @@ import os.log
 
 //SAVING FUNCTIONS AND DECLARATION
 internal var allRounds: [Round] = []
+let defaults = UserDefaults.standard
+let kDataKey = "allRounds"
 
 func saveRounds() {
-    let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(allRounds, toFile: Round.ArchiveURL.path)
-    if isSuccessfulSave {
-        os_log("Rounds successfully saved.", log: OSLog.default, type: .debug)
-    } else {
-        os_log("Failed to save groups...", log: OSLog.default, type: .error)
-    }
-}
+    let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: allRounds)
+    defaults.set(encodedData, forKey: kDataKey)
+    defaults.synchronize()}
 
 func loadRounds() -> [Round]? {
-    return NSKeyedUnarchiver.unarchiveObject(withFile: Round.ArchiveURL.path) as? [Round]
-    
+    if let _ = defaults.object(forKey: kDataKey)
+    {
+        let decoded = defaults.object(forKey: kDataKey) as! Data
+        let testAuth = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [Round]
+        return testAuth
+    }
+    return []
 }
-

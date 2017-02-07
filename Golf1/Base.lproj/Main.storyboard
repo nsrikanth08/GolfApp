@@ -272,6 +272,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <state key="normal" title="+"/>
+                                <connections>
+                                    <segue destination="gVR-g9-r4n" kind="show" id="tde-bJ-s6R"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="npg-rc-I0s">
                                 <frame key="frameInset" minX="45" minY="100" width="285" height="466"/>
@@ -286,7 +289,7 @@
                         <color key="backgroundColor" red="0.94509803921568625" green="0.98039215686274506" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="roundView" destination="npg-rc-I0s" id="RCM-iq-Box"/>
+                        <outlet property="roundView" destination="npg-rc-I0s" id="okd-WK-CtN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vb-Nj-eJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -298,7 +301,8 @@
         <image name="M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bFa-3a-KjP"/>
+        <segue reference="VSW-It-D9J"/>
         <segue reference="cng-iE-UJh"/>
+        <segue reference="tde-bJ-s6R"/>
     </inferredMetricsTieBreakers>
 </document>
