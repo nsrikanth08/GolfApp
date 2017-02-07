@@ -25,7 +25,7 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     //table view will return int for how many rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return allRounds.count
+        return roundList.count
     }
     
     

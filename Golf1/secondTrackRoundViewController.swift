@@ -104,7 +104,8 @@ class seocndTrackRoundViewController: UIViewController {
             // show the alert
             self.present(alert, animated: true, completion: nil)        }
             
-        else {
+            else {
+            
             saveRounds()
         }
     
