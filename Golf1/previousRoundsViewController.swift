@@ -12,7 +12,7 @@ import os.log
 
 class previousRoundsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var roundView: UITableView!
+    @IBOutlet weak var roundTableView: UITableView!
     
     var roundList: [Round] = loadRounds()!
     
@@ -49,7 +49,7 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        roundView.reloadData()
+        roundTableView.reloadData()
         
         
         // Do any additional setup after loading the view.

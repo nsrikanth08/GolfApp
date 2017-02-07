@@ -289,7 +289,7 @@
                         <color key="backgroundColor" red="0.94509803921568625" green="0.98039215686274506" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="roundView" destination="npg-rc-I0s" id="okd-WK-CtN"/>
+                        <outlet property="roundTableView" destination="npg-rc-I0s" id="NXa-MI-6hb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vb-Nj-eJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
