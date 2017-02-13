@@ -55,7 +55,8 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, 
     @IBOutlet weak var scrollview: UIScrollView!
     var height = UIScreen.main.bounds.height
     
-    var locationdata = ["Braemar GC", "Wilds GC", "Hazeltine CC", "Eagle Valley GC", "Indian Hills CC", "Pokegama GC", "Eagle Ridge GC", "Stillwater CC", "St. Cloud CC", "Southern Hills GC", "Bunker Hills GC (East-West)", "Bunker HIlls GC (North-East-West)", "Inver Wood GC", "Valleywood GC", "Emerald Greens (Gold) GC", "Emerald Greens (Silver) GC", "Fountain Valley GC", "Bracketts Crossing CC", "Stonebrooke GC", "Dwan GC", "Crystal Lake GC", "Heritage Links GC", "Legacy GC", "Boulder Pointe GC", "Eastwood GC", "Chaska Town Course", "Dahlgren GC", "Bent Creek GC", "Mendakota CC", "Prestwick CC", "Creeks Bend GC", "Dakota Pines GC", "Bellwood Oaks GC", "Meadows at Mystic Lake", "Keller GC", "Goodrich GC", "Olympic Hills CC", "Midland Hills CC", "Minnesota Valley CC", "Southview CC", "Mississippi Dunes", "River Oaks GC"]
+    var locationdata = ["Bellwood Oaks GC", "Bent Creek GC", "Boulder Pointe GC", "Bracketts Crossing CC", "Braemar GC", "Bunker HIlls GC (North-East-West)", "Bunker Hills GC (East-West)", "Chaska Town Course", "Creeks Bend GC", "Crystal Lake GC", "Dahlgren GC", "Dakota Pines GC", "Dwan GC", "Eagle Ridge GC", "Eagle Valley GC", "Eastwood GC", "Emerald Greens (Gold) GC", "Emerald Greens (Silver) GC", "Fountain Valley GC", "Goodrich GC", "Hazeltine CC", "Heritage Links GC", "Indian Hills CC", "Inver Wood GC", "Keller GC", "Legacy GC", "Meadows at Mystic Lake", "Mendakota CC", "Midland Hills CC", "Minnesota Valley CC", "Mississippi Dunes", "Olympic Hills CC", "Pokegama GC", "Prestwick CC", "River Oaks GC", "Southern Hills GC", "Southview CC", "St. Cloud CC", "Stillwater CC", "Stonebrooke GC", "Valleywood GC", "Wilds GC"]
+    
     var picker = UIPickerView ()
 
     override func viewDidLoad()
@@ -154,7 +155,6 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, 
             allRounds.append(currentInfo!)
             saveRounds()
             performSegue(withIdentifier: "showPreviousRoundsVC", sender: self)
-            //
             //self.present(previousRoundsViewController(), animated: false, completion: nil)
         }
         /*firstName.text = ""
