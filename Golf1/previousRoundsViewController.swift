@@ -49,11 +49,10 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        roundTableView.reloadData()
-        
-        
+        //roundTableView.reloadData()
         // Do any additional setup after loading the view.
-        
+        roundList = loadRounds()!
+
     }
     
     override func didReceiveMemoryWarning() {

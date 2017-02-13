@@ -51,7 +51,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="View Previous Rounds"/>
                                 <connections>
-                                    <segue destination="5pP-hR-fwn" kind="show" id="5XR-AV-wgl"/>
+                                    <segue destination="5pP-hR-fwn" kind="show" identifier="" id="5XR-AV-wgl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -211,7 +211,6 @@
                                 <connections>
                                     <action selector="storeData:" destination="gVR-g9-r4n" eventType="touchUpInside" id="eZo-oK-NnE"/>
                                     <action selector="submit1:" destination="gVR-g9-r4n" eventType="touchUpInside" id="0Rx-sg-B3U"/>
-                                    <segue destination="5pP-hR-fwn" kind="show" id="cng-iE-UJh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -233,11 +232,12 @@
                         <outlet property="updownAttempts" destination="SXN-Pn-2Mt" id="fqQ-bT-1Sj"/>
                         <outlet property="updownCompletes" destination="VtI-aF-F2o" id="8p1-Sr-HCx"/>
                         <outlet property="weather" destination="XGb-y7-pst" id="OCg-5u-N44"/>
+                        <segue destination="5pP-hR-fwn" kind="show" identifier="showPreviousRoundsVC" id="awC-Ko-hx5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vvb-vm-lbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2.3999999999999999" y="693.10344827586209"/>
+            <point key="canvasLocation" x="-63" y="725"/>
         </scene>
         <!--Previous Rounds View Controller-->
         <scene sceneID="LQk-3v-61I">
@@ -301,8 +301,8 @@
         <image name="M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VSW-It-D9J"/>
-        <segue reference="cng-iE-UJh"/>
         <segue reference="tde-bJ-s6R"/>
+        <segue reference="awC-Ko-hx5"/>
+        <segue reference="bFa-3a-KjP"/>
     </inferredMetricsTieBreakers>
 </document>
