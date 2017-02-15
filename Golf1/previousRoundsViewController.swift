@@ -60,6 +60,19 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
         // Dispose of any resources that can be recreated.
     }
     
+    //Enables swipe to delete functionality
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete
+        {
+            roundList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            allRounds = roundList
+            saveRounds()
+        }
+        
+    }
+    
     
     
     
