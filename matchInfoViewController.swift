@@ -2,7 +2,7 @@
 //  matchInfoViewController.swift
 //  Golf1
 //
-//  Created by WILARY, BRANDON on 2/15/17.
+//  Created by KINNY, JASON on 2/15/17.
 //  Copyright © 2017 SRIKANTH, NIKHIL. All rights reserved.
 //
 
