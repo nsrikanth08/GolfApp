@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90625ABB1E54B848008D8C9D /* matchInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90625ABA1E54B848008D8C9D /* matchInfoViewController.swift */; };
 		90E3F20F1E005F1C008BFEFE /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3F20E1E005F1C008BFEFE /* Round.swift */; };
 		BD12CF0B1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = BD12CF0A1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png */; };
 		BDE6914D1E044C250010D32B /* secondTrackRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6914C1E044C250010D32B /* secondTrackRoundViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90625ABA1E54B848008D8C9D /* matchInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = matchInfoViewController.swift; path = ../matchInfoViewController.swift; sourceTree = "<group>"; };
 		90E3F20E1E005F1C008BFEFE /* Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
 		BD12CF0A1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png"; sourceTree = "<group>"; };
 		BDE6914C1E044C250010D32B /* secondTrackRoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondTrackRoundViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				F40562101E005D8F00010B32 /* ViewController.swift */,
 				BDE6914C1E044C250010D32B /* secondTrackRoundViewController.swift */,
 				BDE6914E1E0454CA0010D32B /* previousRoundsViewController.swift */,
+				90625ABA1E54B848008D8C9D /* matchInfoViewController.swift */,
 				90E3F20E1E005F1C008BFEFE /* Round.swift */,
 				F478F65D1E44ECA200A0456E /* Global.swift */,
 				F40562121E005D8F00010B32 /* Main.storyboard */,
@@ -280,6 +283,7 @@
 				90E3F20F1E005F1C008BFEFE /* Round.swift in Sources */,
 				F478F65E1E44ECA200A0456E /* Global.swift in Sources */,
 				F405620F1E005D8F00010B32 /* AppDelegate.swift in Sources */,
+				90625ABB1E54B848008D8C9D /* matchInfoViewController.swift in Sources */,
 				BDE6914F1E0454CA0010D32B /* previousRoundsViewController.swift in Sources */,
 				BDE6914D1E044C250010D32B /* secondTrackRoundViewController.swift in Sources */,
 			);
