@@ -10,6 +10,19 @@ import UIKit
 
 class matchInfoViewController: UIViewController {
 
+    @IBOutlet weak var dateData: UILabel!
+    @IBOutlet weak var courseData: UILabel!
+    @IBOutlet weak var weatherData: UILabel!
+    @IBOutlet weak var scoreData: UILabel!
+    @IBOutlet weak var puttsData: UILabel!
+    @IBOutlet weak var fairwaysData: UILabel!
+    @IBOutlet weak var penaltiesData: UILabel!
+    @IBOutlet weak var attemptsData: UILabel!
+    @IBOutlet weak var completesData: UILabel!
+    @IBOutlet weak var clubData: UILabel!
+    @IBOutlet weak var rankData: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
