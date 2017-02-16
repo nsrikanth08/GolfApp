@@ -48,8 +48,19 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //var cellx = tableView.cellForRow(at: indexPath)
+        //let indexPath = tableView.indexPathForSelectedRow!
+        //let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
         
+        //let currentGroupName = currentCell.textLabel?.text
+        
+        /*for i in allGroups {
+            if ( i.name == currentGroupName )
+            {
+                groupToPass = i
+            }
+        }*/
+        //var secondVC = GroupPageController()
+        performSegue(withIdentifier: "presentRound" , sender: self )
     }
     
     override func viewDidLoad() {
