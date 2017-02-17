@@ -48,7 +48,9 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let indexPath = tableView.indexPathForSelectedRow!
+        let indexPath = tableView.indexPathForSelectedRow
+        
+        passedRound = roundList[(indexPath?[1])!]
         //let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
         
         //let currentGroupName = currentCell.textLabel?.text

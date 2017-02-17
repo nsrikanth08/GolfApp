@@ -25,7 +25,7 @@ class matchInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        dateData.text = passedRound.location
         // Do any additional setup after loading the view.
     }
 
@@ -35,6 +35,7 @@ class matchInfoViewController: UIViewController {
     }
     
 
+    
     /*
     // MARK: - Navigation
 
