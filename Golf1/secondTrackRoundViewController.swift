@@ -154,27 +154,30 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, 
             alert.addAction(OKAction)
             
             // show the alert
-            self.present(alert, animated: true, completion: nil)        }
+            self.present(alert, animated: true, completion: nil)
+        }
         
         //Check if number is entered in letter value
-        if ((isAnInt(string: firstName.text!)) || (isAnInt(string: lastName.text!)) || (isAnInt(string: weather.text!))) {
+        else if ((isAnInt(string: firstName.text!)) || (isAnInt(string: lastName.text!)) || (isAnInt(string: weather.text!))) {
             
-            let alert = UIAlertController(title: "You have entered the wrong data type", message: "Make sure to enter letters", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "You have entered the wrong data type", message: "Make sure to remove any numbers from names, weather descriptions and locations.", preferredStyle: UIAlertControllerStyle.alert)
             let OKAction = UIAlertAction(title: "OK", style: .default) { action in
                 // ...
             }
             alert.addAction(OKAction)
-            self.present(alert, animated: true, completion: nil)    }
+            self.present(alert, animated: true, completion: nil)
+        }
         
         //Checks if letters are entered in numeric value
-        if (!(isAnInt(string: putts.text!)) || !(isAnInt(string: fairways.text!)) || !(isAnInt(string: penalties.text!)) || !(isAnInt(string: updownAttempts.text!)) || !(isAnInt(string: updownCompletes.text!)) || !(isAnInt(string: scoringClub.text!)) || !(isAnInt(string: finishRank.text!)) || !(isAnInt(string: score.text!))) {
+        else if (!(isAnInt(string: putts.text!)) || !(isAnInt(string: fairways.text!)) || !(isAnInt(string: penalties.text!)) || !(isAnInt(string: updownAttempts.text!)) || !(isAnInt(string: updownCompletes.text!)) || !(isAnInt(string: scoringClub.text!)) || !(isAnInt(string: finishRank.text!)) || !(isAnInt(string: score.text!))) {
             
-            let alert = UIAlertController(title: "You have entered the wrong data type", message: "Make sure to enter numeric values", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "You have entered the wrong data type", message: "Make sure to enter numeric values for all of the round statistics.", preferredStyle: UIAlertControllerStyle.alert)
             let OKAction = UIAlertAction(title: "OK", style: .default) { action in
                 // ...
             }
             alert.addAction(OKAction)
-            self.present(alert, animated: true, completion: nil)    }
+            self.present(alert, animated: true, completion: nil)
+        }
             
         else {
             currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: Int(scoringClub.text!)!, finishRank: Int(finishRank.text!)!, date: NSDate())
