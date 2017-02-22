@@ -37,7 +37,7 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
         let endVal = matchDate.index(matchDate.startIndex, offsetBy: 10)
         let dateSub = matchDate.substring(to: endVal)
         matchDate = dateSub
-        let label1 = UILabel(frame: CGRect(x: 0, y: 0, width: cell.frame.width/2, height: cell.frame.height))
+        let label1 = UILabel(frame: CGRect(x: 15, y: 0, width: cell.frame.width/2, height: cell.frame.height))
         let label2 = UILabel(frame: CGRect(x: cell.frame.width/2, y: 0, width: cell.frame.width/2, height: cell.frame.height))
         label1.text = locationName
         label2.text = matchDate
