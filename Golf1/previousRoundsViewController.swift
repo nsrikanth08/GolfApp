@@ -62,7 +62,7 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
             }
         }*/
         //var secondVC = GroupPageController()
-        performSegue(withIdentifier: "presentRound" , sender: self )
+        performSegue(withIdentifier: "showRound" , sender: self )
     }
     
     override func viewDidLoad() {

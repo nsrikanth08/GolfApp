@@ -290,7 +290,7 @@
                     </view>
                     <connections>
                         <outlet property="roundTableView" destination="npg-rc-I0s" id="NXa-MI-6hb"/>
-                        <segue destination="jvQ-oJ-IMC" kind="show" identifier="presentRound" id="6nC-TO-1Cy"/>
+                        <segue destination="jvQ-oJ-IMC" kind="show" identifier="showRound" id="2Pv-pC-a85"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0vb-Nj-eJ9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -395,13 +395,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Weather" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GH4-1O-oVV">
+                                <frame key="frameInset" minX="242" minY="109" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.89803921568627454" green="0.94117647058823528" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="courseData" destination="W3b-wK-Yh0" id="ioM-kP-Jff"/>
-                        <outlet property="dateData" destination="R4o-uQ-3I5" id="zyM-tr-llm"/>
                         <outlet property="name" destination="R4o-uQ-3I5" id="csE-Ea-MEV"/>
+                        <outlet property="weatherData" destination="GH4-1O-oVV" id="OYv-ZJ-kwG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41o-R3-9wr" userLabel="First Responder" sceneMemberID="firstResponder"/>

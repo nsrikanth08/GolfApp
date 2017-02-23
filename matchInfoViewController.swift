@@ -12,6 +12,7 @@ class matchInfoViewController: UIViewController {
 
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var courseData: UILabel!
+    @IBOutlet weak var weatherData: UITextField!
     
     
     
@@ -23,7 +24,7 @@ class matchInfoViewController: UIViewController {
         let endVal = matchDate.index(matchDate.startIndex, offsetBy: 10)
         let dateSub = matchDate.substring(to: endVal)
         courseData.text = " at " + passedRound.location + " on " + dateSub
- 
+        weatherData.text = passedRound.weather
         
     }
 
