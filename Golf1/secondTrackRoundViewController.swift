@@ -143,7 +143,7 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, 
 
         //Checks for blank text fields
         if (firstName.text == "" || lastName.text == "" || weather.text == "" || putts.text == "" || fairways.text == "" || penalties.text == "" || updownAttempts.text == "" || updownCompletes.text == "" || scoringClub.text == "" || finishRank.text == "" || score.text == "")
-        {
+          {
             // create the alert
             let alert = UIAlertController(title: "You have left a text field empty", message: "Make sure to completely fill statistics", preferredStyle: UIAlertControllerStyle.alert)
             
