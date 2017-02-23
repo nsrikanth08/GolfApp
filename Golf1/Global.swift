@@ -11,6 +11,8 @@ import Foundation
 import UIKit
 import os.log
 
+var passedRound: Round!
+
 //SAVING FUNCTIONS AND DECLARATION
 internal var allRounds: [Round] = []
 let defaults = UserDefaults.standard

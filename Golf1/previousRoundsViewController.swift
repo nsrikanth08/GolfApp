@@ -37,7 +37,7 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
         let endVal = matchDate.index(matchDate.startIndex, offsetBy: 10)
         let dateSub = matchDate.substring(to: endVal)
         matchDate = dateSub
-        let label1 = UILabel(frame: CGRect(x: 0, y: 0, width: cell.frame.width/2, height: cell.frame.height))
+        let label1 = UILabel(frame: CGRect(x: 15, y: 0, width: cell.frame.width/2, height: cell.frame.height))
         let label2 = UILabel(frame: CGRect(x: cell.frame.width/2, y: 0, width: cell.frame.width/2, height: cell.frame.height))
         label1.text = locationName
         label2.text = matchDate
@@ -48,8 +48,21 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //var cellx = tableView.cellForRow(at: indexPath)
+        let indexPath = tableView.indexPathForSelectedRow
         
+        passedRound = roundList[(indexPath?[1])!]
+        //let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
+        
+        //let currentGroupName = currentCell.textLabel?.text
+        
+        /*for i in allGroups {
+            if ( i.name == currentGroupName )
+            {
+                groupToPass = i
+            }
+        }*/
+        //var secondVC = GroupPageController()
+        performSegue(withIdentifier: "showRound" , sender: self )
     }
     
     override func viewDidLoad() {
