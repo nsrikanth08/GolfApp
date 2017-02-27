@@ -49,19 +49,8 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let indexPath = tableView.indexPathForSelectedRow
-        
+        //Index value is manually set to 1 because the index value pressed on the table view is stored here
         passedRound = roundList[(indexPath?[1])!]
-        //let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
-        
-        //let currentGroupName = currentCell.textLabel?.text
-        
-        /*for i in allGroups {
-            if ( i.name == currentGroupName )
-            {
-                groupToPass = i
-            }
-        }*/
-        //var secondVC = GroupPageController()
         performSegue(withIdentifier: "showRound" , sender: self )
     }
     

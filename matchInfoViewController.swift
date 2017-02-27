@@ -13,19 +13,36 @@ class matchInfoViewController: UIViewController {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var courseData: UILabel!
     @IBOutlet weak var weatherData: UITextField!
-    
+    @IBOutlet weak var scoreData: UITextField!
+    @IBOutlet weak var puttData: UITextField!
+    @IBOutlet weak var fairwayData: UITextField!
+    @IBOutlet weak var penaltyData: UITextField!
+    @IBOutlet weak var upDownAttData: UITextField!
+    @IBOutlet weak var upDownCompData: UITextField!
+    @IBOutlet weak var scoringClubData: UITextField!
+    @IBOutlet weak var finishData: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Create the name of golfer to be displayed
         name.text = passedRound.firstName + " " + passedRound.lastName
+        //Create the match information using the course and date
         let matchDate = passedRound.date.description
         let endVal = matchDate.index(matchDate.startIndex, offsetBy: 10)
         let dateSub = matchDate.substring(to: endVal)
         courseData.text = " at " + passedRound.location + " on " + dateSub
+        //Set the text fields to the information from the passed round
         weatherData.text = passedRound.weather
-        
+        //Change the int variables back to a string
+        scoreData.text = String(passedRound.score)
+        puttData.text = String(passedRound.putts)
+        fairwayData.text = String(passedRound.fairways)
+        penaltyData.text = String(passedRound.penalties)
+        upDownAttData.text = String(passedRound.upDownAtt)
+        upDownCompData.text = String(passedRound.upDownComp)
+        scoringClubData.text = String(passedRound.scoringClub)
+        finishData.text = String(passedRound.finishRank)
     }
 
     override func didReceiveMemoryWarning() {
