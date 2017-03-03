@@ -41,6 +41,7 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
         let label2 = UILabel(frame: CGRect(x: cell.frame.width/2, y: 0, width: cell.frame.width/2, height: cell.frame.height))
         label1.text = locationName
         label2.text = matchDate
+        label2.textAlignment = .right
         cell.addSubview(label1)
         cell.addSubview(label2)
         return cell
