@@ -20,7 +20,7 @@ class Round: NSObject, NSCoding {
     
     //MARK: Properties
     
-    var isPracticeRound: Bool
+    var isPracticeRound, holesPlayed: Bool
     var firstName, lastName, weather, location: String
     var score, fairways, penalties, putts, upDownAtt, upDownComp, finishRank, scoringClub: Int
     var date: NSDate
@@ -33,6 +33,7 @@ class Round: NSObject, NSCoding {
     
     struct PropertyKey {
         static let isPracticeRound = "isPracticeRound"
+        static let holesPlayes = "holesPlayed"
         static let firstName = "firstName"
         static let lastName = "lastName"
         static let weather = "weather"
@@ -54,7 +55,8 @@ class Round: NSObject, NSCoding {
     
     init(firstName: String, lastName: String, weather: String, location: String, score: Int, fairways: Int, penalties: Int, putts: Int, upDownAtt: Int,upDownComp: Int, scoringClub: Int, finishRank: Int, date: NSDate) {
         
-        self.isPracticeRound = false
+        self.isPracticeRound = true
+        self.holesPlayed = true
         self.firstName = firstName
         self.lastName = lastName
         self.weather = weather
