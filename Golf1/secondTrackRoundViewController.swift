@@ -14,6 +14,8 @@ import os.log
 
 class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    @IBOutlet weak var numHolesSwitch: UISwitch!
+    @IBOutlet weak var numHolesLabel: UILabel!
     @IBOutlet weak var practiceSwitch: UISwitch!
     @IBOutlet weak var practiceLabel: UILabel!
     @IBOutlet weak var firstName: UITextField!
@@ -113,6 +115,23 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, 
         
     }
     
+    
+    
+    @IBAction func numHoleSwitchTapped(_ sender: AnyObject) {
+        updateNumHoleSwitch()
+    }
+    
+    func updateNumHoleSwitch() {
+        if numHolesSwitch.isOn {
+            numHolesLabel.text = "18 Holes"
+        }
+        else {
+            numHolesLabel.text = "9 Holes"
+            passedRound.holesPlayed = false
+        }
+    }
+    
+    
     @IBAction func practiceSwitchTapped(_ sender: AnyObject) {
         updatePracticeSwitch()
     }
@@ -120,16 +139,18 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, 
     
     func updatePracticeSwitch() {
         if practiceSwitch.isOn{
-            practiceLabel.text = "Practice"
+            practiceLabel.text = "Competition"
         }
         else {
-            practiceLabel.text = "Competition"
+            practiceLabel.text = "Practice"
+            passedRound.isPracticeRound = false
         }
     }
     
     func isAnInt(string: String) -> Bool {
         return Int(string) != nil
     }
+    
     
     
     
@@ -143,7 +164,7 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, 
 
         //Checks for blank text fields
         if (firstName.text == "" || lastName.text == "" || weather.text == "" || putts.text == "" || fairways.text == "" || penalties.text == "" || updownAttempts.text == "" || updownCompletes.text == "" || scoringClub.text == "" || finishRank.text == "" || score.text == "")
-        {
+          {
             // create the alert
             let alert = UIAlertController(title: "You have left a text field empty", message: "Make sure to completely fill statistics", preferredStyle: UIAlertControllerStyle.alert)
             

@@ -21,6 +21,8 @@ class matchInfoViewController: UIViewController {
     @IBOutlet weak var upDownCompData: UITextField!
     @IBOutlet weak var scoringClubData: UITextField!
     @IBOutlet weak var finishData: UITextField!
+    @IBOutlet weak var roundTypeData: UITextField!
+    @IBOutlet weak var holesPlayedData: UITextField!
     
     
     override func viewDidLoad() {
@@ -43,6 +45,20 @@ class matchInfoViewController: UIViewController {
         upDownCompData.text = String(passedRound.upDownComp)
         scoringClubData.text = String(passedRound.scoringClub)
         finishData.text = String(passedRound.finishRank)
+        
+        if (passedRound.isPracticeRound) {
+            roundTypeData.text = "Competition"
+        }
+        else {
+            roundTypeData.text = "Practice"
+        }
+        
+        if (passedRound.holesPlayed) {
+            holesPlayedData.text = "18 Holes"
+        }
+        else {
+            holesPlayedData.text = "9 Holes"
+        }
     }
 
     override func didReceiveMemoryWarning() {
