@@ -127,7 +127,7 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, 
         }
         else {
             numHolesLabel.text = "9 Holes"
-            passedRound.holesPlayed = false
+            //passedRound.holesPlayed = false
         }
     }
     
@@ -143,7 +143,6 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, 
         }
         else {
             practiceLabel.text = "Practice"
-            passedRound.isPracticeRound = false
         }
     }
     
@@ -161,7 +160,25 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, 
      * This function puts all entered fields into an object and then appends that to the master array.
      */
     @IBAction func storeData(_ sender: AnyObject) {
+        
+        var is18Holes, isPracticeRound: Bool
+        
+        if numHolesSwitch.isOn {
+            is18Holes = true
+        }
+        
+        else {
+            is18Holes = false
+        }
+        
+        if practiceSwitch.isOn {
+            isPracticeRound = true
+        }
 
+        else {
+            isPracticeRound = false
+        }
+        
         //Checks for blank text fields
         if (firstName.text == "" || lastName.text == "" || weather.text == "" || putts.text == "" || fairways.text == "" || penalties.text == "" || updownAttempts.text == "" || updownCompletes.text == "" || scoringClub.text == "" || finishRank.text == "" || score.text == "")
           {
@@ -201,7 +218,7 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, 
         }
             
         else {
-            currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: Int(scoringClub.text!)!, finishRank: Int(finishRank.text!)!, date: NSDate())
+            currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: Int(scoringClub.text!)!, finishRank: Int(finishRank.text!)!, date: NSDate(), holesPlayed: is18Holes, isPracticeRound: isPracticeRound)
             
             allRounds.append(currentInfo!)
             saveRounds()
