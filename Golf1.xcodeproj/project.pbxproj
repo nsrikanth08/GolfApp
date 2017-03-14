@@ -211,7 +211,7 @@
 				TargetAttributes = {
 					F405620A1E005D8F00010B32 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 4MH3XU3V5H;
+						DevelopmentTeam = 886L5N5HCN;
 						ProvisioningStyle = Automatic;
 					};
 					F405621E1E005D8F00010B32 = {
@@ -439,10 +439,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4MH3XU3V5H;
+				DEVELOPMENT_TEAM = 886L5N5HCN;
 				INFOPLIST_FILE = Golf1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.Golf1;
+				PRODUCT_BUNDLE_IDENTIFIER = Jack.Golf1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -452,10 +452,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4MH3XU3V5H;
+				DEVELOPMENT_TEAM = 886L5N5HCN;
 				INFOPLIST_FILE = Golf1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.Golf1;
+				PRODUCT_BUNDLE_IDENTIFIER = Jack.Golf1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
