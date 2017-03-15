@@ -271,10 +271,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xj-rl-L5I">
-                                <rect key="frame" x="8" y="20" width="52" height="30"/>
+                                <rect key="frame" x="8" y="20" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Home"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="VSW-It-D9J"/>
                                 </connections>
@@ -544,8 +544,8 @@
         <image name="M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7KA-CI-V5s"/>
-        <segue reference="bFa-3a-KjP"/>
+        <segue reference="tde-bJ-s6R"/>
         <segue reference="awC-Ko-hx5"/>
+        <segue reference="VSW-It-D9J"/>
     </inferredMetricsTieBreakers>
 </document>
