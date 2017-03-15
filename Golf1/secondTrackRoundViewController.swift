@@ -163,6 +163,7 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, 
         
         var is18Holes, isPracticeRound: Bool
         
+        
         if numHolesSwitch.isOn {
             is18Holes = true
         }
@@ -215,6 +216,17 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, 
             }
             alert.addAction(OKAction)
             self.present(alert, animated: true, completion: nil)
+        }
+            
+        //Checks if Up/Down attempts are greater than Up/Down completes
+        else if (Int(updownAttempts.text!)! < Int(updownCompletes.text!)!) {
+            let alert = UIAlertController(title: "Data doesn't make sense", message: "Make sure attempts are not less than completes", preferredStyle: UIAlertControllerStyle.alert)
+            let OKAction = UIAlertAction(title: "OK", style: .default) { action in
+                // ...
+            }
+            alert.addAction(OKAction)
+            self.present(alert, animated: true, completion: nil)
+            
         }
             
         else {
