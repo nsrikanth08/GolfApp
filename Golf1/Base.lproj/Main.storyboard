@@ -517,9 +517,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfg-AK-HTh">
-                                <rect key="frame" x="135" y="568" width="46" height="30"/>
+                                <rect key="frame" x="137" y="558" width="68" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Export"/>
                                 <connections>
                                     <action selector="exportFile:" destination="jvQ-oJ-IMC" eventType="touchUpInside" id="7Hq-yQ-oQZ"/>
                                 </connections>
@@ -552,7 +553,7 @@
         <image name="M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="awC-Ko-hx5"/>
+        <segue reference="GSu-gB-Hmh"/>
         <segue reference="tde-bJ-s6R"/>
         <segue reference="bFa-3a-KjP"/>
     </inferredMetricsTieBreakers>
