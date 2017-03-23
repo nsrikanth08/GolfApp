@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class matchInfoViewController: UIViewController {
+class matchInfoViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var courseData: UILabel!
@@ -66,16 +67,38 @@ class matchInfoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func exportFile(_ sender: Any) {
+        let matchExport: [String] = [",First Name,Last Name,Date,Location,Weather,Score,Putts,Fairways,Penalties,UpDownAtt,UpDownComp,ScoringClub,Rank\r\n",passedRound.firstName.description,passedRound.lastName.description,passedRound.date.description,passedRound.location.description,weatherData.text!,scoreData.text!,puttData.text!,fairwayData.text!,penaltyData.text!,upDownAttData.text!,upDownCompData.text!,scoringClubData.text!,finishData.text!]
+        
+        let inputString = matchExport.joined(separator: ",")
+        
+        let data = inputString.data(using: String.Encoding.utf8, allowLossyConversion: false)
+        if let content = data {
+            print("NSData: \(content)")
+        }
+        
+        // Generating the email controller.
+        func configuredMailComposeViewController() -> MFMailComposeViewController {
+            let emailController = MFMailComposeViewController()
+            emailController.mailComposeDelegate = self
+            emailController.setSubject("CSV File")
+            emailController.setMessageBody("", isHTML: false)
+            
+            // Attaching the .CSV file to the email.
+            emailController.addAttachmentData(data!, mimeType: "text/csv", fileName: "Round.csv")
+            
+            return emailController
+        }
+        
+        // If the view controller can send the email.
+        // This will show an email-style popup that allows you to enter
+        // Who to send the email to, the subject, the cc's and the message.
+        // As the .CSV is already attached, you can simply add an email
+        // and press send.
+        let emailViewController = configuredMailComposeViewController()
+        if MFMailComposeViewController.canSendMail() {
+            self.present(emailViewController, animated: true, completion: nil)
+            Swift.print(MFMailComposeViewController.canSendMail())
+        }
     }
-    */
-
 }
