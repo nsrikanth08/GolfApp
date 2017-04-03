@@ -29,12 +29,12 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         // Create the name of golfer to be displayed
-        name.text = passedRound.firstName + " " + passedRound.lastName
+        name.text = "\(passedRound.firstName) \(passedRound.lastName)"
         //Create the match information using the course and date
         let matchDate = passedRound.date.description
         let endVal = matchDate.index(matchDate.startIndex, offsetBy: 10)
         let dateSub = matchDate.substring(to: endVal)
-        courseData.text = " at " + passedRound.location + " on " + dateSub
+        courseData.text = " at \(passedRound.location) on \(dateSub)"
         //Set the text fields to the information from the passed round
         weatherData.text = passedRound.weather
         //Change the int variables back to a string
@@ -81,8 +81,9 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
         func configuredMailComposeViewController() -> MFMailComposeViewController {
             let emailController = MFMailComposeViewController()
             emailController.mailComposeDelegate = self
-            emailController.setSubject("CSV File")
-            emailController.setMessageBody("", isHTML: false)
+            emailController.setSubject("Round Report for \(name.text!)")
+            emailController.setMessageBody("Round Report for \(name.text!) golfing \(holesPlayedData.text!)\(courseData.text!)", isHTML: false)
+            emailController.setToRecipients(["brian.johnson@district196.org", "david.loeffler@district196.org"])
             
             // Attaching the .CSV file to the email.
             emailController.addAttachmentData(data!, mimeType: "text/csv", fileName: "Round.csv")
