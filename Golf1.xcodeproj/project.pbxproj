@@ -10,6 +10,7 @@
 		90625ABB1E54B848008D8C9D /* matchInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90625ABA1E54B848008D8C9D /* matchInfoViewController.swift */; };
 		90E3F20F1E005F1C008BFEFE /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3F20E1E005F1C008BFEFE /* Round.swift */; };
 		BD12CF0B1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = BD12CF0A1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png */; };
+		BD4648B11E9D2C0700FF5D47 /* averagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4648B01E9D2C0700FF5D47 /* averagesViewController.swift */; };
 		BDE6914D1E044C250010D32B /* secondTrackRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6914C1E044C250010D32B /* secondTrackRoundViewController.swift */; };
 		BDE6914F1E0454CA0010D32B /* previousRoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6914E1E0454CA0010D32B /* previousRoundsViewController.swift */; };
 		F405620F1E005D8F00010B32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405620E1E005D8F00010B32 /* AppDelegate.swift */; };
@@ -43,6 +44,7 @@
 		90625ABA1E54B848008D8C9D /* matchInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = matchInfoViewController.swift; path = ../matchInfoViewController.swift; sourceTree = "<group>"; };
 		90E3F20E1E005F1C008BFEFE /* Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
 		BD12CF0A1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png"; sourceTree = "<group>"; };
+		BD4648B01E9D2C0700FF5D47 /* averagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = averagesViewController.swift; path = ../averagesViewController.swift; sourceTree = "<group>"; };
 		BDE6914C1E044C250010D32B /* secondTrackRoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondTrackRoundViewController.swift; sourceTree = "<group>"; };
 		BDE6914E1E0454CA0010D32B /* previousRoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = previousRoundsViewController.swift; sourceTree = "<group>"; };
 		F405620B1E005D8F00010B32 /* Golf1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Golf1.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,7 @@
 				BDE6914C1E044C250010D32B /* secondTrackRoundViewController.swift */,
 				BDE6914E1E0454CA0010D32B /* previousRoundsViewController.swift */,
 				90625ABA1E54B848008D8C9D /* matchInfoViewController.swift */,
+				BD4648B01E9D2C0700FF5D47 /* averagesViewController.swift */,
 				90E3F20E1E005F1C008BFEFE /* Round.swift */,
 				F478F65D1E44ECA200A0456E /* Global.swift */,
 				F40562121E005D8F00010B32 /* Main.storyboard */,
@@ -284,6 +287,7 @@
 				90E3F20F1E005F1C008BFEFE /* Round.swift in Sources */,
 				F478F65E1E44ECA200A0456E /* Global.swift in Sources */,
 				F405620F1E005D8F00010B32 /* AppDelegate.swift in Sources */,
+				BD4648B11E9D2C0700FF5D47 /* averagesViewController.swift in Sources */,
 				90625ABB1E54B848008D8C9D /* matchInfoViewController.swift in Sources */,
 				BDE6914F1E0454CA0010D32B /* previousRoundsViewController.swift in Sources */,
 				BDE6914D1E044C250010D32B /* secondTrackRoundViewController.swift in Sources */,
