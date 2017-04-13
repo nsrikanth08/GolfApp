@@ -46,7 +46,7 @@ func average18Comp(roundArray: [Round]) -> Round {
     var totalRounds = 0.0
     
     for currentRound in roundArray {
-        if currentRound.holesPlayed && !currentRound.isPracticeRound {
+        if currentRound.holesPlayed && currentRound.isPracticeRound {
             totalRounds += 1
             scoreAverage += currentRound.score
             fairwayAverage += currentRound.fairways
