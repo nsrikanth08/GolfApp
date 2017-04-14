@@ -65,6 +65,7 @@ func average18Comp(roundArray: [Round]) -> Round {
     puttAverage = Int(Double(puttAverage * 10)/totalRounds + 0.5)
     scoringClubAverage = Int(Double(scoringClubAverage * 10)/totalRounds + 0.5)
     finishRankAverage = Int(Double(finishRankAverage * 10)/totalRounds + 0.5)
+    upDownCompTotal = upDownCompTotal * 1000
     
     averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, date: NSDate(), holesPlayed: true, isPracticeRound: false)
     
