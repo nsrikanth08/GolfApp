@@ -56,13 +56,23 @@ class averagesViewController: UIViewController {
         if practiceSwitch.isOn && holeSwitch.isOn {
             averages = average18Comp(roundArray: allRounds)
         }
+        else if practiceSwitch.isOn && !holeSwitch.isOn{
+            averages = average9Comp(roundArray: allRounds)
+        }
+        else if !practiceSwitch.isOn && !holeSwitch.isOn{
+            averages = average9Prac(roundArray: allRounds)
+        }
+        else {
+            averages = average18Prac(roundArray: allRounds)
+        }
+        
         averageScores.text = String(Double(averages.score) / 10.0)
         averagePutts.text = String(Double(averages.putts) / 10.0)
         averageFairways.text = String(Double(averages.fairways) / 10.0)
         averagePenalties.text = String(Double(averages.penalties) / 10.0)
         averageScoreClub.text = String(Double(averages.scoringClub) / 10.0)
         averageFinishRank.text = String(Double(averages.finishRank) / 10.0)
-        upDownPerc.text = String(Double(averages.upDownComp)/Double(averages.upDownAtt)/10.0) + "%"
+        upDownPerc.text = String(Double(Int(Double(averages.upDownComp)/Double(averages.upDownAtt)))/10.0) + "%"
     }
     
     override func didReceiveMemoryWarning() {
