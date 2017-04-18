@@ -58,14 +58,16 @@ func average18Comp(roundArray: [Round]) -> Round {
             finishRankAverage += currentRound.finishRank
         }
     }
-     //MUST DIVIDE BY 10 ON THE AVERAGES GUI TO GET A DECIMAL
-    scoreAverage = Int(Double(scoreAverage * 10)/totalRounds + 0.5)
-    fairwayAverage = Int(Double(fairwayAverage * 10)/totalRounds + 0.5)
-    penaltyAverage = Int(Double(penaltyAverage * 10)/totalRounds + 0.5)
-    puttAverage = Int(Double(puttAverage * 10)/totalRounds + 0.5)
-    scoringClubAverage = Int(Double(scoringClubAverage * 10)/totalRounds + 0.5)
-    finishRankAverage = Int(Double(finishRankAverage * 10)/totalRounds + 0.5)
-    upDownCompTotal = upDownCompTotal * 1000
+    //MUST DIVIDE BY 10 ON THE AVERAGES GUI TO GET A DECIMAL
+    if totalRounds != 0 {
+        scoreAverage = Int(Double(scoreAverage * 10)/totalRounds + 0.5)
+        fairwayAverage = Int(Double(fairwayAverage * 10)/totalRounds + 0.5)
+        penaltyAverage = Int(Double(penaltyAverage * 10)/totalRounds + 0.5)
+        puttAverage = Int(Double(puttAverage * 10)/totalRounds + 0.5)
+        scoringClubAverage = Int(Double(scoringClubAverage * 10)/totalRounds + 0.5)
+        finishRankAverage = Int(Double(finishRankAverage * 10)/totalRounds + 0.5)
+        upDownCompTotal = upDownCompTotal * 1000
+    }
     
     averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, date: NSDate(), holesPlayed: true, isPracticeRound: true)
     
@@ -98,13 +100,15 @@ func average9Comp(roundArray: [Round]) -> Round {
         }
     }
     //MUST DIVIDE BY 10 ON THE AVERAGES GUI TO GET A DECIMAL
-    scoreAverage = Int(Double(scoreAverage * 10)/totalRounds + 0.5)
-    fairwayAverage = Int(Double(fairwayAverage * 10)/totalRounds + 0.5)
-    penaltyAverage = Int(Double(penaltyAverage * 10)/totalRounds + 0.5)
-    puttAverage = Int(Double(puttAverage * 10)/totalRounds + 0.5)
-    scoringClubAverage = Int(Double(scoringClubAverage * 10)/totalRounds + 0.5)
-    finishRankAverage = Int(Double(finishRankAverage * 10)/totalRounds + 0.5)
-    upDownCompTotal = upDownCompTotal * 1000
+    if totalRounds != 0 {
+        scoreAverage = Int(Double(scoreAverage * 10)/totalRounds + 0.5)
+        fairwayAverage = Int(Double(fairwayAverage * 10)/totalRounds + 0.5)
+        penaltyAverage = Int(Double(penaltyAverage * 10)/totalRounds + 0.5)
+        puttAverage = Int(Double(puttAverage * 10)/totalRounds + 0.5)
+        scoringClubAverage = Int(Double(scoringClubAverage * 10)/totalRounds + 0.5)
+        finishRankAverage = Int(Double(finishRankAverage * 10)/totalRounds + 0.5)
+        upDownCompTotal = upDownCompTotal * 1000
+    }
     
     averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, date: NSDate(), holesPlayed: false, isPracticeRound: true)
     
@@ -137,13 +141,15 @@ func average9Prac(roundArray: [Round]) -> Round {
         }
     }
     //MUST DIVIDE BY 10 ON THE AVERAGES GUI TO GET A DECIMAL
-    scoreAverage = Int(Double(scoreAverage * 10)/totalRounds + 0.5)
-    fairwayAverage = Int(Double(fairwayAverage * 10)/totalRounds + 0.5)
-    penaltyAverage = Int(Double(penaltyAverage * 10)/totalRounds + 0.5)
-    puttAverage = Int(Double(puttAverage * 10)/totalRounds + 0.5)
-    scoringClubAverage = Int(Double(scoringClubAverage * 10)/totalRounds + 0.5)
-    finishRankAverage = Int(Double(finishRankAverage * 10)/totalRounds + 0.5)
-    upDownCompTotal = upDownCompTotal * 1000
+    if totalRounds != 0 {
+        scoreAverage = Int(Double(scoreAverage * 10)/totalRounds + 0.5)
+        fairwayAverage = Int(Double(fairwayAverage * 10)/totalRounds + 0.5)
+        penaltyAverage = Int(Double(penaltyAverage * 10)/totalRounds + 0.5)
+        puttAverage = Int(Double(puttAverage * 10)/totalRounds + 0.5)
+        scoringClubAverage = Int(Double(scoringClubAverage * 10)/totalRounds + 0.5)
+        finishRankAverage = Int(Double(finishRankAverage * 10)/totalRounds + 0.5)
+        upDownCompTotal = upDownCompTotal * 1000
+    }
     
     averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, date: NSDate(), holesPlayed: false, isPracticeRound: false)
     
@@ -176,13 +182,15 @@ func average18Prac(roundArray: [Round]) -> Round {
         }
     }
     //MUST DIVIDE BY 10 ON THE AVERAGES GUI TO GET A DECIMAL
-    scoreAverage = Int(Double(scoreAverage * 10)/totalRounds + 0.5)
-    fairwayAverage = Int(Double(fairwayAverage * 10)/totalRounds + 0.5)
-    penaltyAverage = Int(Double(penaltyAverage * 10)/totalRounds + 0.5)
-    puttAverage = Int(Double(puttAverage * 10)/totalRounds + 0.5)
-    scoringClubAverage = Int(Double(scoringClubAverage * 10)/totalRounds + 0.5)
-    finishRankAverage = Int(Double(finishRankAverage * 10)/totalRounds + 0.5)
-    upDownCompTotal = upDownCompTotal * 1000
+    if totalRounds != 0 {
+        scoreAverage = Int(Double(scoreAverage * 10)/totalRounds + 0.5)
+        fairwayAverage = Int(Double(fairwayAverage * 10)/totalRounds + 0.5)
+        penaltyAverage = Int(Double(penaltyAverage * 10)/totalRounds + 0.5)
+        puttAverage = Int(Double(puttAverage * 10)/totalRounds + 0.5)
+        scoringClubAverage = Int(Double(scoringClubAverage * 10)/totalRounds + 0.5)
+        finishRankAverage = Int(Double(finishRankAverage * 10)/totalRounds + 0.5)
+        upDownCompTotal = upDownCompTotal * 1000
+    }
     
     averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, date: NSDate(), holesPlayed: true, isPracticeRound: false)
     

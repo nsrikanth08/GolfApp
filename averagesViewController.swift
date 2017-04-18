@@ -72,7 +72,12 @@ class averagesViewController: UIViewController {
         averagePenalties.text = String(Double(averages.penalties) / 10.0)
         averageScoreClub.text = String(Double(averages.scoringClub) / 10.0)
         averageFinishRank.text = String(Double(averages.finishRank) / 10.0)
-        upDownPerc.text = String(Double(Int(Double(averages.upDownComp)/Double(averages.upDownAtt)))/10.0) + "%"
+        if averages.upDownAtt != 0 {
+            upDownPerc.text = String(Double(Int(Double(averages.upDownComp)/Double(averages.upDownAtt)))/10.0) + "%"
+        }
+        else {
+            upDownPerc.text = "No Data"
+        }
     }
     
     override func didReceiveMemoryWarning() {
