@@ -24,6 +24,7 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
     @IBOutlet weak var finishData: UITextField!
     @IBOutlet weak var roundTypeData: UITextField!
     @IBOutlet weak var holesPlayedData: UITextField!
+    @IBOutlet weak var greensData: UITextField!
     
     
     override func viewDidLoad() {
@@ -46,6 +47,7 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
         upDownCompData.text = String(passedRound.upDownComp)
         scoringClubData.text = String(passedRound.scoringClub)
         finishData.text = String(passedRound.finishRank)
+        greensData.text = String(passedRound.greens)
         
         if (passedRound.isPracticeRound) {
             roundTypeData.text = "Competition"
@@ -68,7 +70,7 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
     }
     
     @IBAction func exportFile(_ sender: Any) {
-        let matchExport: [String] = [",First Name,Last Name,Date,Location,Weather,Score,Putts,Fairways,Penalties,UpDownAtt,UpDownComp,ScoringClub,Rank\r\n",passedRound.firstName.description,passedRound.lastName.description,passedRound.date.description,passedRound.location.description,weatherData.text!,scoreData.text!,puttData.text!,fairwayData.text!,penaltyData.text!,upDownAttData.text!,upDownCompData.text!,scoringClubData.text!,finishData.text!]
+        let matchExport: [String] = [",First Name,Last Name,Date,Location,Weather,Score,Putts,Fairways,Penalties,UpDownAtt,UpDownComp,ScoringClub,Rank\r\n",passedRound.firstName.description,passedRound.lastName.description,passedRound.date.description,passedRound.location.description,weatherData.text!,scoreData.text!,greensData.text!,puttData.text!,fairwayData.text!,penaltyData.text!,upDownAttData.text!,upDownCompData.text!,scoringClubData.text!,finishData.text!]
         
         let inputString = matchExport.joined(separator: ",")
         

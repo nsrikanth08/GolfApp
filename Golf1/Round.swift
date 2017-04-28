@@ -22,7 +22,7 @@ class Round: NSObject, NSCoding {
     
     var isPracticeRound, holesPlayed: Bool
     var firstName, lastName, weather, location: String
-    var score, fairways, penalties, putts, upDownAtt, upDownComp, finishRank, scoringClub: Int
+    var score, fairways, penalties, putts, upDownAtt, upDownComp, finishRank, scoringClub, greens: Int
     var date: NSDate
     
     //MARK: Archiving Paths
@@ -49,11 +49,12 @@ class Round: NSObject, NSCoding {
         static let finishRank = "finishRank"
         static let date = "date"
         static let scoringClub = "scoringClub"
+        static let greens = "greens"
     }
     
     //MARK: Initialization
     
-    init(firstName: String, lastName: String, weather: String, location: String, score: Int, fairways: Int, penalties: Int, putts: Int, upDownAtt: Int,upDownComp: Int, scoringClub: Int, finishRank: Int, date: NSDate, holesPlayed: Bool, isPracticeRound: Bool) {
+    init(firstName: String, lastName: String, weather: String, location: String, score: Int, fairways: Int, penalties: Int, putts: Int, upDownAtt: Int,upDownComp: Int, scoringClub: Int, finishRank: Int, greens: Int, date: NSDate, holesPlayed: Bool, isPracticeRound: Bool) {
         
         self.isPracticeRound = isPracticeRound
         self.holesPlayed = holesPlayed
@@ -71,6 +72,7 @@ class Round: NSObject, NSCoding {
         //self.upDownPerc = Int((Double(upDownComp) / Double(upDownAtt)) * 100.0)
         self.scoringClub = scoringClub
         self.finishRank = finishRank
+        self.greens = greens
         self.date = date
         
     }
@@ -94,6 +96,7 @@ class Round: NSObject, NSCoding {
         aCoder.encode(scoringClub, forKey: PropertyKey.scoringClub)
         aCoder.encode(finishRank, forKey: PropertyKey.finishRank)
         aCoder.encode(date, forKey: PropertyKey.date)
+        aCoder.encode(greens, forKey: PropertyKey.greens)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -122,9 +125,10 @@ class Round: NSObject, NSCoding {
         let holesPlayed = aDecoder.decodeBool(forKey: PropertyKey.holesPlayed)
         let date = aDecoder.decodeObject(forKey: PropertyKey.date) as! NSDate
         let isPracticeRound = aDecoder.decodeBool(forKey: PropertyKey.isPracticeRound)
+        let greens = aDecoder.decodeInteger(forKey: PropertyKey.greens)
         
         // Must call designated initializer.
-        self.init(firstName: firstName, lastName: lastName, weather: weather, location: location, score: score, fairways: fairways, penalties: penalties, putts: putts, upDownAtt: upDownAtt, upDownComp: upDownComp, scoringClub: scoringClub, finishRank: finishRank, date: date, holesPlayed: holesPlayed, isPracticeRound: isPracticeRound)
+        self.init(firstName: firstName, lastName: lastName, weather: weather, location: location, score: score, fairways: fairways, penalties: penalties, putts: putts, upDownAtt: upDownAtt, upDownComp: upDownComp, scoringClub: scoringClub, finishRank: finishRank, greens: greens, date: date, holesPlayed: holesPlayed, isPracticeRound: isPracticeRound)
         
     }
 }
