@@ -21,6 +21,7 @@ class averagesViewController: UIViewController {
     @IBOutlet weak var upDownPerc: UITextField!
     @IBOutlet weak var averageScoreClub: UITextField!
     @IBOutlet weak var averageFinishRank: UITextField!
+    @IBOutlet weak var averageGreens: UITextField!
     
     var averages: Round!
     
@@ -72,6 +73,7 @@ class averagesViewController: UIViewController {
         averagePenalties.text = String(Double(averages.penalties) / 10.0)
         averageScoreClub.text = String(Double(averages.scoringClub) / 10.0)
         averageFinishRank.text = String(Double(averages.finishRank) / 10.0)
+        averageGreens.text = String(Double(averages.greens) / 10.0)
         if averages.upDownAtt != 0 {
             upDownPerc.text = String(Double(Int(Double(averages.upDownComp)/Double(averages.upDownAtt)))/10.0) + "%"
         }

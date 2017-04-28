@@ -30,6 +30,7 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, 
     @IBOutlet weak var scoringClub: UITextField!
     @IBOutlet weak var finishRank: UITextField!
     @IBOutlet weak var score: UITextField!
+    @IBOutlet weak var greens: UITextField!
     
     @IBAction func submit1(_ sender: AnyObject) {
         if firstName.text == "" {
@@ -230,24 +231,11 @@ class seocndTrackRoundViewController: UIViewController, UIPickerViewDataSource, 
         }
             
         else {
-            currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: Int(scoringClub.text!)!, finishRank: Int(finishRank.text!)!, date: NSDate(), holesPlayed: is18Holes, isPracticeRound: isPracticeRound)
+            currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: Int(scoringClub.text!)!, finishRank: Int(finishRank.text!)!, greens: Int(greens.text!)!, date: NSDate(), holesPlayed: is18Holes, isPracticeRound: isPracticeRound)
             
             allRounds.append(currentInfo!)
             saveRounds()
             performSegue(withIdentifier: "showPreviousRoundsVC", sender: self)
-            //self.present(previousRoundsViewController(), animated: false, completion: nil)
         }
-        /*firstName.text = ""
-        lastName.text = ""
-        weather.text = ""
-        location.text = ""
-        score.text = ""
-        fairways.text = ""
-        penalties.text = ""
-        putts.text = ""
-        updownAttempts.text = ""
-        updownCompletes.text = ""
-        scoringClub.text = ""
-        finishRank.text = ""*/
     }
 }
