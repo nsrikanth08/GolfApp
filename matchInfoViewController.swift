@@ -100,6 +100,15 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
         if MFMailComposeViewController.canSendMail() {
             self.present(emailViewController, animated: true, completion: nil)
             Swift.print(MFMailComposeViewController.canSendMail())
+            func mailComposeController(controller: MFMailComposeViewController,
+                                       didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+                // Check the result or perform other tasks.
+                
+                // Dismiss the mail compose view controller.
+                controller.dismiss(animated: true, completion: nil)
+            }
+
         }
+       
     }
 }
