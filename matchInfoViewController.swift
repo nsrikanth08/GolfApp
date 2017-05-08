@@ -93,6 +93,15 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
             return emailController
         }
         
+        func showSendMailErrorAlert() {
+            let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: UIAlertControllerStyle.alert)
+            let OKAction = UIAlertAction(title: "OK", style: .default) { action in
+                // ...
+            }
+            sendMailErrorAlert.addAction(OKAction)
+            sendMailErrorAlert.present(sendMailErrorAlert, animated: true, completion: nil)
+        }
+        
         // If the view controller can send the email.
         // This will show an email-style popup that allows you to enter
         // Who to send the email to, the subject, the cc's and the message.
@@ -101,15 +110,14 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
         let emailViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
             self.present(emailViewController, animated: true, completion: nil)
-            Swift.print(MFMailComposeViewController.canSendMail())
-            /*func mailComposeController(controller: MFMailComposeViewController,
-                                       didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-                // Check the result or perform other tasks.
-                
-                // Dismiss the mail compose view controller.
-                controller.dismiss(animated: true, completion: nil)
-            }*/
-
+        }
+        else {
+            showSendMailErrorAlert()
+        }
+        
+        // MARK: MFMailComposeViewControllerDelegate Method
+        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+            controller.dismiss(animated: true, completion: nil)
         }
        
     }
