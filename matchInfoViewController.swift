@@ -93,6 +93,15 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
             return emailController
         }
         
+        func showSendMailErrorAlert() {
+            let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: UIAlertControllerStyle.alert)
+            let OKAction = UIAlertAction(title: "OK", style: .default) { action in
+                // ...
+            }
+            sendMailErrorAlert.addAction(OKAction)
+            sendMailErrorAlert.present(sendMailErrorAlert, animated: true, completion: nil)
+        }
+        
         // If the view controller can send the email.
         // This will show an email-style popup that allows you to enter
         // Who to send the email to, the subject, the cc's and the message.
