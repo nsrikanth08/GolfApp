@@ -110,8 +110,12 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
         let emailViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
             self.present(emailViewController, animated: true, completion: nil)
-            Swift.print(MFMailComposeViewController.canSendMail())
-            func mailComposeController(controller: MFMailComposeViewController,
+        }
+        else {
+            showSendMailErrorAlert()
+        }
+        
+        func mailComposeController(controller: MFMailComposeViewController,
                                        didFinishWithResult result: MFMailComposeResult, error: NSError?) {
                 // Check the result or perform other tasks.
                 
@@ -122,4 +126,4 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
         }
        
     }
-}
+
