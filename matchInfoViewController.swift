@@ -120,7 +120,7 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
                 // Check the result or perform other tasks.
                 
                 // Dismiss the mail compose view controller.
-                controller.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
             }
 
         }
