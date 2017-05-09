@@ -115,12 +115,12 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
             showSendMailErrorAlert()
         }
         
-        func mailComposeController(controller: MFMailComposeViewController,
+        func mailComposeController(_ controller: MFMailComposeViewController,
                                        didFinishWithResult result: MFMailComposeResult, error: NSError?) {
                 // Check the result or perform other tasks.
                 
                 // Dismiss the mail compose view controller.
-                self.dismiss(animated: true, completion: nil)
+                controller.dismiss(animated: true, completion: nil)
             }
 
         }
