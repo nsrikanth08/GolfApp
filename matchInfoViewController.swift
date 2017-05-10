@@ -77,7 +77,7 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
         let data = inputString.data(using: String.Encoding.utf8, allowLossyConversion: false)
         if let content = data {
             print("NSData: \(content)")
-        }
+        
         
         // Generating the email controller.
         func configuredMailComposeViewController() -> MFMailComposeViewController {
@@ -114,6 +114,7 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
         else {
             showSendMailErrorAlert()
         }
+    }
         
         func mailComposeController(_ controller: MFMailComposeViewController,
                                        didFinishWithResult result: MFMailComposeResult, error: NSError?) {
