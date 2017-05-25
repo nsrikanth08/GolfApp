@@ -85,7 +85,7 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
             emailController.mailComposeDelegate = self
             emailController.setSubject("Round Report for \(name.text!)")
             emailController.setMessageBody("Round Report for \(name.text!) golfing \(holesPlayedData.text!)\(courseData.text!)", isHTML: false)
-            emailController.setToRecipients(["brian.johnson@district196.org", "david.loeffler@district196.org"])
+            emailController.setToRecipients(["david.loeffler@district196.org"])
             
             // Attaching the .CSV file to the email.
             emailController.addAttachmentData(data!, mimeType: "text/csv", fileName: "Round.csv")
