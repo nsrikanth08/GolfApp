@@ -12,8 +12,9 @@ import os.log
 
 
 
-class seocndTrackRoundViewController: UIViewController {
+class secondTrackRoundViewController: UIViewController {
     
+    //MARK: Properties
     @IBOutlet weak var numHolesSwitch: UISwitch!
     @IBOutlet weak var numHolesLabel: UILabel!
     @IBOutlet weak var practiceSwitch: UISwitch!
@@ -31,12 +32,29 @@ class seocndTrackRoundViewController: UIViewController {
     @IBOutlet weak var finishRank: UITextField!
     @IBOutlet weak var score: UITextField!
     @IBOutlet weak var greens: UITextField!
+    @IBOutlet weak var scrollview: UIScrollView!
+    var height = UIScreen.main.bounds.height
+    var round: Round?
     
-    @IBAction func submit1(_ sender: AnyObject) {
-        if firstName.text == "" {
-            submit1Tapped()
-        }
+    //MARK: Life Cycle
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(secondTrackRoundViewController.dismissKeyboard)))
+        
+        scrollview.isScrollEnabled = true
+        scrollview.contentSize.height = height * 1.5
+        
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: Private Functions
     
     func submit1Tapped() {
         // create the alert
@@ -50,28 +68,7 @@ class seocndTrackRoundViewController: UIViewController {
         
         // show the alert
         self.present(alert, animated: true, completion: nil)
-
-    }
-    
-    
-    
-    @IBOutlet weak var scrollview: UIScrollView!
-    var height = UIScreen.main.bounds.height
-
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
         
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(seocndTrackRoundViewController.dismissKeyboard)))
-        
-        scrollview.isScrollEnabled = true
-        scrollview.contentSize.height = height * 1.5
-
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @objc func dismissKeyboard()
@@ -91,10 +88,6 @@ class seocndTrackRoundViewController: UIViewController {
         
     }
     
-    @IBAction func numHoleSwitchTapped(_ sender: AnyObject) {
-        updateNumHoleSwitch()
-    }
-    
     func updateNumHoleSwitch() {
         if numHolesSwitch.isOn {
             numHolesLabel.text = "18 Holes"
@@ -104,12 +97,6 @@ class seocndTrackRoundViewController: UIViewController {
             //passedRound.holesPlayed = false
         }
     }
-    
-    
-    @IBAction func practiceSwitchTapped(_ sender: AnyObject) {
-        updatePracticeSwitch()
-    }
-    
     
     func updatePracticeSwitch() {
         if practiceSwitch.isOn{
@@ -124,11 +111,21 @@ class seocndTrackRoundViewController: UIViewController {
         return Int(string) != nil
     }
     
+    //MARK: Actions
+    @IBAction func submit1(_ sender: AnyObject) {
+        if firstName.text == "" {
+            submit1Tapped()
+        }
+    }
     
     
+    @IBAction func numHoleSwitchTapped(_ sender: AnyObject) {
+        updateNumHoleSwitch()
+    }
     
-    //set the currentInfo to nil so that the variable can be changed inside the method.
-    var currentInfo: Round? = nil
+    @IBAction func practiceSwitchTapped(_ sender: AnyObject) {
+        updatePracticeSwitch()
+    }
     
     /*
      * This function puts all entered fields into an object and then appends that to the master array.
@@ -204,9 +201,9 @@ class seocndTrackRoundViewController: UIViewController {
         }
             
         else {
-            currentInfo = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: Int(scoringClub.text!)!, finishRank: Int(finishRank.text!)!, greens: Int(greens.text!)!, date: NSDate(), holesPlayed: is18Holes, isPracticeRound: isPracticeRound)
+            round = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: Int(scoringClub.text!)!, finishRank: Int(finishRank.text!)!, greens: Int(greens.text!)!, date: NSDate(), holesPlayed: is18Holes, isPracticeRound: isPracticeRound)
             
-            allRounds.append(currentInfo!)
+            allRounds.append(round!)
             saveRounds()
             performSegue(withIdentifier: "showPreviousRoundsVC", sender: self)
         }

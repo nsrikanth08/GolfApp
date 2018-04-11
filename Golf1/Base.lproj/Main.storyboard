@@ -113,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="-58.399999999999999" y="-1.3493253373313345"/>
         </scene>
-        <!--Seocnd Track Round View Controller-->
+        <!--Second Track Round View Controller-->
         <scene sceneID="7BG-6s-twL">
             <objects>
-                <viewController id="gVR-g9-r4n" customClass="seocndTrackRoundViewController" customModule="Golf1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gVR-g9-r4n" customClass="secondTrackRoundViewController" customModule="Golf1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Uap-rc-8gh"/>
                         <viewControllerLayoutGuide type="bottom" id="M0U-Kh-GcJ"/>
@@ -906,8 +906,8 @@
         <image name="M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GSu-gB-Hmh"/>
+        <segue reference="awC-Ko-hx5"/>
         <segue reference="tde-bJ-s6R"/>
-        <segue reference="VSW-It-D9J"/>
+        <segue reference="bFa-3a-KjP"/>
     </inferredMetricsTieBreakers>
 </document>
