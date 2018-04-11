@@ -35,6 +35,7 @@ class secondTrackRoundViewController: UIViewController {
     @IBOutlet weak var scrollview: UIScrollView!
     var height = UIScreen.main.bounds.height
     var round: Round?
+    var datePicker = UIDatePicker()
     
     //MARK: Life Cycle
     
@@ -46,6 +47,9 @@ class secondTrackRoundViewController: UIViewController {
         
         scrollview.isScrollEnabled = true
         scrollview.contentSize.height = height * 1.5
+        
+        //Date Picker Formatting
+        //date.inputView = datePicker
         
     }
     
