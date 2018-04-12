@@ -21,6 +21,7 @@ class secondTrackRoundViewController: UIViewController {
     @IBOutlet weak var practiceLabel: UILabel!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var date: UITextField!
     @IBOutlet weak var weather: UITextField!
     @IBOutlet weak var location: UITextField!
     @IBOutlet weak var putts: UITextField!
@@ -49,7 +50,26 @@ class secondTrackRoundViewController: UIViewController {
         scrollview.contentSize.height = height * 1.5
         
         //Date Picker Formatting
-        //date.inputView = datePicker
+        date.inputView = datePicker
+        datePicker.datePickerMode = UIDatePickerMode.date
+        datePicker.date = NSDate() as Date
+        
+        //set up to update textfield
+        datePicker.addTarget(self, action: #selector(self.datePickerValueChanged(datePicker:)), for: .valueChanged)
+    
+        //set min and max dates
+        let gregorian: NSCalendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)!
+        let currentDate: Date = Date()
+        let components: NSDateComponents = NSDateComponents()
+        
+        components.year = -2
+        let minDate: Date = gregorian.date(byAdding: components as DateComponents, to: currentDate, options: NSCalendar.Options(rawValue: 0))!
+        
+        components.year = 10
+        let maxDate: Date = gregorian.date(byAdding: components as DateComponents, to: currentDate, options: NSCalendar.Options(rawValue: 0))!
+        
+        self.datePicker.minimumDate = minDate
+        self.datePicker.maximumDate = maxDate
         
     }
     
@@ -90,6 +110,14 @@ class secondTrackRoundViewController: UIViewController {
         finishRank.resignFirstResponder()
         score.resignFirstResponder()
         
+    }
+    
+    @objc func datePickerValueChanged(datePicker: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .none
+        
+        date.text = dateFormatter.string(from: datePicker.date)
     }
     
     func updateNumHoleSwitch() {
