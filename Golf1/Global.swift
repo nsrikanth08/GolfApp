@@ -33,6 +33,14 @@ func loadRounds() -> [Round]? {
     return []
 }
 
+//Date information for averaging rounds
+var avgDate: String{
+    let currentDate = NSDate()
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = .short
+    return dateFormatter.string(from: currentDate as Date)
+}
+
 func average18Comp(roundArray: [Round]) -> Round {
     var averageRound: Round
     var scoreAverage = 0
@@ -72,7 +80,7 @@ func average18Comp(roundArray: [Round]) -> Round {
         upDownCompTotal = upDownCompTotal * 1000
     }
     
-    averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, greens: greensAverage, date: NSDate(), holesPlayed: true, isPracticeRound: true)
+    averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, greens: greensAverage, date: avgDate, holesPlayed: true, isPracticeRound: true)
     
     return averageRound
 }
@@ -115,7 +123,7 @@ func average9Comp(roundArray: [Round]) -> Round {
         upDownCompTotal = upDownCompTotal * 1000
     }
     
-    averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, greens: greensAverage, date: NSDate(), holesPlayed: false, isPracticeRound: true)
+    averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, greens: greensAverage, date: avgDate, holesPlayed: false, isPracticeRound: true)
     
     return averageRound
 }
@@ -158,7 +166,7 @@ func average9Prac(roundArray: [Round]) -> Round {
         upDownCompTotal = upDownCompTotal * 1000
     }
     
-    averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, greens: greensAverage, date: NSDate(), holesPlayed: false, isPracticeRound: false)
+    averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, greens: greensAverage, date: avgDate, holesPlayed: false, isPracticeRound: false)
     
     return averageRound
 }
@@ -201,7 +209,7 @@ func average18Prac(roundArray: [Round]) -> Round {
         upDownCompTotal = upDownCompTotal * 1000
     }
     
-    averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, greens: greensAverage, date: NSDate(), holesPlayed: true, isPracticeRound: false)
+    averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, greens: greensAverage, date: avgDate, holesPlayed: true, isPracticeRound: false)
     
     return averageRound
 }

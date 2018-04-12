@@ -21,9 +21,8 @@ class Round: NSObject, NSCoding {
     //MARK: Properties
     
     var isPracticeRound, holesPlayed: Bool
-    var firstName, lastName, weather, location: String
+    var firstName, lastName, weather, location, date: String
     var score, fairways, penalties, putts, upDownAtt, upDownComp, finishRank, scoringClub, greens: Int
-    var date: NSDate
     
     //MARK: Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -54,7 +53,7 @@ class Round: NSObject, NSCoding {
     
     //MARK: Initialization
     
-    init(firstName: String, lastName: String, weather: String, location: String, score: Int, fairways: Int, penalties: Int, putts: Int, upDownAtt: Int,upDownComp: Int, scoringClub: Int, finishRank: Int, greens: Int, date: NSDate, holesPlayed: Bool, isPracticeRound: Bool) {
+    init(firstName: String, lastName: String, weather: String, location: String, score: Int, fairways: Int, penalties: Int, putts: Int, upDownAtt: Int,upDownComp: Int, scoringClub: Int, finishRank: Int, greens: Int, date: String, holesPlayed: Bool, isPracticeRound: Bool) {
         
         self.isPracticeRound = isPracticeRound
         self.holesPlayed = holesPlayed
@@ -123,7 +122,7 @@ class Round: NSObject, NSCoding {
         let scoringClub = aDecoder.decodeInteger(forKey: PropertyKey.scoringClub)
         let finishRank = aDecoder.decodeInteger(forKey: PropertyKey.finishRank)
         let holesPlayed = aDecoder.decodeBool(forKey: PropertyKey.holesPlayed)
-        let date = aDecoder.decodeObject(forKey: PropertyKey.date) as! NSDate
+        let date = aDecoder.decodeObject(forKey: PropertyKey.date) as! String
         let isPracticeRound = aDecoder.decodeBool(forKey: PropertyKey.isPracticeRound)
         let greens = aDecoder.decodeInteger(forKey: PropertyKey.greens)
         

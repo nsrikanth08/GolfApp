@@ -53,6 +53,7 @@ class secondTrackRoundViewController: UIViewController {
         date.inputView = datePicker
         datePicker.datePickerMode = UIDatePickerMode.date
         datePicker.date = NSDate() as Date
+        date.text = avgDate
         
         //set up to update textfield
         datePicker.addTarget(self, action: #selector(self.datePickerValueChanged(datePicker:)), for: .valueChanged)
@@ -233,7 +234,7 @@ class secondTrackRoundViewController: UIViewController {
         }
             
         else {
-            round = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: Int(scoringClub.text!)!, finishRank: Int(finishRank.text!)!, greens: Int(greens.text!)!, date: NSDate(), holesPlayed: is18Holes, isPracticeRound: isPracticeRound)
+            round = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: Int(scoringClub.text!)!, finishRank: Int(finishRank.text!)!, greens: Int(greens.text!)!, date: date.text!, holesPlayed: is18Holes, isPracticeRound: isPracticeRound)
             
             allRounds.append(round!)
             saveRounds()
