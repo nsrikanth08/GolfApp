@@ -11,13 +11,23 @@ import Foundation
 import UIKit
 import os.log
 
-var passedRound: Round!
+//MARK:Constants
+//creates file name for saving rounds
+var fileFolder: String {
+    
+    let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    
+    return DocumentsDirectory.appendingPathComponent("Golf1SaveFolder").path
+}
 
-//SAVING FUNCTIONS AND DECLARATION
+var round: Round?
+
+//MARK: SAVING FUNCTIONS AND DECLARATION
 internal var allRounds: [Round] = []
 let defaults = UserDefaults.standard
 let kDataKey = "allRounds"
 
+//modify for codable
 func saveRounds() {
     let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: allRounds)
     defaults.set(encodedData, forKey: kDataKey)
@@ -33,6 +43,7 @@ func loadRounds() -> [Round]? {
     return []
 }
 
+//MARK: Functions
 //Date information for averaging rounds
 var avgDate: String{
     let currentDate = NSDate()
@@ -41,6 +52,7 @@ var avgDate: String{
     return dateFormatter.string(from: currentDate as Date)
 }
 
+//averaging functions
 func average18Comp(roundArray: [Round]) -> Round {
     var averageRound: Round
     var scoreAverage = 0

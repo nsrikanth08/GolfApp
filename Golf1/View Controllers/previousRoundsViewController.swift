@@ -11,9 +11,8 @@ import UIKit
 import os.log
 
 class previousRoundsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+    //MARK: Properties
     @IBOutlet weak var roundTableView: UITableView!
-    
     var roundList: [Round] = loadRounds()!
     
     func numberOfSections(in TableView: UITableView) -> Int {
@@ -25,8 +24,6 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return roundList.count
     }
-    
-    
     
     //what is in the table
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,7 +45,7 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let indexPath = tableView.indexPathForSelectedRow
         //Index value is manually set to 1 because the index value pressed on the table view is stored here
-        passedRound = roundList[(indexPath?[1])!]
+        round = roundList[(indexPath?[1])!]
         performSegue(withIdentifier: "showRound" , sender: self )
     }
     
@@ -78,18 +75,5 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
         
     }
     
-    
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

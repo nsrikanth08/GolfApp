@@ -35,7 +35,6 @@ class secondTrackRoundViewController: UIViewController {
     @IBOutlet weak var greens: UITextField!
     @IBOutlet weak var scrollview: UIScrollView!
     var height = UIScreen.main.bounds.height
-    var round: Round?
     var datePicker = UIDatePicker()
     
     //MARK: Life Cycle

@@ -10,7 +10,7 @@ import UIKit
 import MessageUI
 
 class matchInfoViewController: UIViewController, MFMailComposeViewControllerDelegate {
-
+    //MARK: Properties
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var courseData: UILabel!
     @IBOutlet weak var weatherData: UITextField!
@@ -26,34 +26,37 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
     @IBOutlet weak var holesPlayedData: UITextField!
     @IBOutlet weak var greensData: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Create the name of golfer to be displayed
-        name.text = "\(passedRound.firstName) \(passedRound.lastName)"
-        //Create the match information using the course and date
-        courseData.text = " at \(passedRound.location) on \(passedRound.date)"
-        //Set the text fields to the information from the passed round
-        weatherData.text = passedRound.weather
-        //Change the int variables back to a string
-        scoreData.text = String(passedRound.score)
-        puttData.text = String(passedRound.putts)
-        fairwayData.text = String(passedRound.fairways)
-        penaltyData.text = String(passedRound.penalties)
-        upDownAttData.text = String(passedRound.upDownAtt)
-        upDownCompData.text = String(passedRound.upDownComp)
-        scoringClubData.text = String(passedRound.scoringClub)
-        finishData.text = String(passedRound.finishRank)
-        greensData.text = String(passedRound.greens)
         
-        if (passedRound.isPracticeRound) {
+        // Create the name of golfer to be displayed
+        name.text = "\(round!.firstName) \(round!.lastName)"
+        
+        //Create the match information using the course and date
+        courseData.text = " at \(round!.location) on \(round!.date)"
+        
+        //Set the text fields to the information from the passed round
+        weatherData.text = round!.weather
+        
+        //Change the int variables back to a string
+        scoreData.text = String(round!.score)
+        puttData.text = String(round!.putts)
+        fairwayData.text = String(round!.fairways)
+        penaltyData.text = String(round!.penalties)
+        upDownAttData.text = String(round!.upDownAtt)
+        upDownCompData.text = String(round!.upDownComp)
+        scoringClubData.text = String(round!.scoringClub)
+        finishData.text = String(round!.finishRank)
+        greensData.text = String(round!.greens)
+        
+        if (round!.isPracticeRound) {
             roundTypeData.text = "Competition"
         }
         else {
             roundTypeData.text = "Practice"
         }
         
-        if (passedRound.holesPlayed) {
+        if (round!.holesPlayed) {
             holesPlayedData.text = "18 holes"
         }
         else {
@@ -67,61 +70,30 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
     }
     
     @IBAction func exportFile(_ sender: Any) {
-        let matchExport: [String] = [",First Name,Last Name,Date,Location,Weather,Score,Putts,Fairways,Penalties,UpDownAtt,UpDownComp,ScoringClub,Rank\r\n",passedRound.firstName.description,passedRound.lastName.description,passedRound.date.description,passedRound.location.description,weatherData.text!,scoreData.text!,greensData.text!,puttData.text!,fairwayData.text!,penaltyData.text!,upDownAttData.text!,upDownCompData.text!,scoringClubData.text!,finishData.text!]
+        let matchExport: [String] = [",First Name,Last Name,Date,Location,Weather,Score,Putts,Fairways,Penalties,UpDownAtt,UpDownComp,ScoringClub,Rank\r\n",round!.firstName.description,round!.lastName.description,round!.date.description,round!.location.description,weatherData.text!,scoreData.text!,greensData.text!,puttData.text!,fairwayData.text!,penaltyData.text!,upDownAttData.text!,upDownCompData.text!,scoringClubData.text!,finishData.text!]
         
-        let inputString = matchExport.joined(separator: ",")
+        let csvString = matchExport.joined(separator: ",")
         
-        let data = inputString.data(using: String.Encoding.utf8, allowLossyConversion: false)
-        if let content = data {
-            print("NSData: \(content)")
+        //Save file info
+        let fileName = "\(round?.location ?? "practice") \(round?.firstName ?? "") \(round?.lastName ?? "").csv"
+        let path = NSURL(fileURLWithPath:NSTemporaryDirectory()).appendingPathComponent(fileName)
         
-        
-        // Generating the email controller.
-        func configuredMailComposeViewController() -> MFMailComposeViewController {
-            let emailController = MFMailComposeViewController()
-            emailController.mailComposeDelegate = self
-            emailController.setSubject("Round Report for \(name.text!)")
-            emailController.setMessageBody("Round Report for \(name.text!) golfing \(holesPlayedData.text!)\(courseData.text!)", isHTML: false)
-            emailController.setToRecipients(["david.loeffler@district196.org"])
-            
-            // Attaching the .CSV file to the email.
-            emailController.addAttachmentData(data!, mimeType: "text/csv", fileName: "Round.csv")
-            
-            return emailController
+        //save the round csv file
+        do {
+            try csvString.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
+        }
+        catch {
+            print("Failed to create file")
+            print("\(error)")
         }
         
-        func showSendMailErrorAlert() {
-            let sendMailErrorAlert = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: UIAlertControllerStyle.alert)
-            let OKAction = UIAlertAction(title: "OK", style: .default) { action in
-                // ...
-            }
-            sendMailErrorAlert.addAction(OKAction)
-            sendMailErrorAlert.present(sendMailErrorAlert, animated: true, completion: nil)
-        }
-        
-        // If the view controller can send the email.
-        // This will show an email-style popup that allows you to enter
-        // Who to send the email to, the subject, the cc's and the message.
-        // As the .CSV is already attached, you can simply add an email
-        // and press send.
-        let emailViewController = configuredMailComposeViewController()
-        if MFMailComposeViewController.canSendMail() {
-            self.present(emailViewController, animated: true, completion: nil)
-        }
-        else {
-            showSendMailErrorAlert()
-        }
+        //create activity popover
+        let activityView = UIActivityViewController(activityItems: [path!], applicationActivities:[])
+        //modify activities
+        activityView.excludedActivityTypes = [UIActivityType.assignToContact,UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.postToFlickr,UIActivityType.postToVimeo,UIActivityType.postToTencentWeibo,UIActivityType.postToTwitter,UIActivityType.postToFacebook,UIActivityType.openInIBooks]
+        //present activity
+        present(activityView, animated: true, completion: nil)
     }
-        
-        func mailComposeController(_ controller: MFMailComposeViewController,
-                                       didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-                // Check the result or perform other tasks.
-                
-                // Dismiss the mail compose view controller.
-                controller.dismiss(animated: true, completion: nil)
-            }
-
-        }
        
-    }
+}
 
