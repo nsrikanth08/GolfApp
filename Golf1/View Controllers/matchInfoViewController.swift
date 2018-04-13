@@ -32,10 +32,7 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
         // Create the name of golfer to be displayed
         name.text = "\(passedRound.firstName) \(passedRound.lastName)"
         //Create the match information using the course and date
-        let matchDate = passedRound.date.description
-        let endVal = matchDate.index(matchDate.startIndex, offsetBy: 10)
-        let dateSub = matchDate.substring(to: endVal)
-        courseData.text = " at \(passedRound.location) on \(dateSub)"
+        courseData.text = " at \(passedRound.location) on \(passedRound.date)"
         //Set the text fields to the information from the passed round
         weatherData.text = passedRound.weather
         //Change the int variables back to a string

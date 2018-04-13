@@ -33,10 +33,7 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
         let cell = UITableViewCell()
         
         let locationName  = roundList[indexPath.row].location
-        var matchDate = roundList[indexPath.row].date.description
-        let endVal = matchDate.index(matchDate.startIndex, offsetBy: 10)
-        let dateSub = matchDate.substring(to: endVal)
-        matchDate = dateSub
+        let matchDate = roundList[indexPath.row].date
         let label1 = UILabel(frame: CGRect(x: 15, y: 0, width: cell.frame.width/2, height: cell.frame.height))
         let label2 = UILabel(frame: CGRect(x: cell.frame.width/2, y: 0, width: cell.frame.width/2, height: cell.frame.height))
         label1.text = locationName

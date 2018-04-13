@@ -188,7 +188,7 @@ class secondTrackRoundViewController: UIViewController {
         if (firstName.text == "" || lastName.text == "" || weather.text == "" || putts.text == "" || fairways.text == "" || penalties.text == "" || updownAttempts.text == "" || updownCompletes.text == "" || scoringClub.text == "" || finishRank.text == "" || score.text == "")
           {
             // create the alert
-            let alert = UIAlertController(title: "You have left a text field empty", message: "Make sure to completely fill statistics", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Blank Field", message: "Make sure to completely fill all statistics", preferredStyle: UIAlertControllerStyle.alert)
             
             // add an action (button)
             let OKAction = UIAlertAction(title: "OK", style: .default) { action in
@@ -203,7 +203,7 @@ class secondTrackRoundViewController: UIViewController {
         //Check if number is entered in letter value
         else if ((isAnInt(string: firstName.text!)) || (isAnInt(string: lastName.text!)) || (isAnInt(string: weather.text!))) {
             
-            let alert = UIAlertController(title: "You have entered the wrong data type", message: "Make sure to remove any numbers from names, weather descriptions and locations.", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Incompatible Data Type", message: "Make sure to remove any numbers from names, weather descriptions and locations.", preferredStyle: UIAlertControllerStyle.alert)
             let OKAction = UIAlertAction(title: "OK", style: .default) { action in
                 // ...
             }
@@ -214,7 +214,7 @@ class secondTrackRoundViewController: UIViewController {
         //Checks if letters are entered in numeric value
         else if (!(isAnInt(string: putts.text!)) || !(isAnInt(string: fairways.text!)) || !(isAnInt(string: penalties.text!)) || !(isAnInt(string: updownAttempts.text!)) || !(isAnInt(string: updownCompletes.text!)) || !(isAnInt(string: scoringClub.text!)) || !(isAnInt(string: finishRank.text!)) || !(isAnInt(string: score.text!))) {
             
-            let alert = UIAlertController(title: "You have entered the wrong data type", message: "Make sure to enter numeric values for all of the round statistics.", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Incompatible Data Type", message: "Make sure statistics are numeric values.", preferredStyle: UIAlertControllerStyle.alert)
             let OKAction = UIAlertAction(title: "OK", style: .default) { action in
                 // ...
             }
@@ -224,7 +224,7 @@ class secondTrackRoundViewController: UIViewController {
             
         //Checks if Up/Down attempts are greater than Up/Down completes
         else if (Int(updownAttempts.text!)! < Int(updownCompletes.text!)!) {
-            let alert = UIAlertController(title: "Data doesn't make sense", message: "Make sure attempts are not less than completes", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Data Error", message: "Make sure attempts are not less than completes", preferredStyle: UIAlertControllerStyle.alert)
             let OKAction = UIAlertAction(title: "OK", style: .default) { action in
                 // ...
             }
