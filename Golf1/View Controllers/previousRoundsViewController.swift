@@ -13,7 +13,7 @@ import os.log
 class previousRoundsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     //MARK: Properties
     @IBOutlet weak var roundTableView: UITableView!
-    var roundList: [Round] = loadRounds()!
+    var roundList: [Round] = allRounds
     
     func numberOfSections(in TableView: UITableView) -> Int {
         return 1
@@ -53,7 +53,6 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
         super.viewDidLoad()
         //roundTableView.reloadData()
         // Do any additional setup after loading the view.
-        roundList = loadRounds()!
 
     }
     

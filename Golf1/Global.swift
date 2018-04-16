@@ -23,24 +23,35 @@ var fileFolder: String {
 var round: Round?
 
 //MARK: SAVING FUNCTIONS AND DECLARATION
-internal var allRounds: [Round] = []
+var allRounds = [Round]()
 let defaults = UserDefaults.standard
 let kDataKey = "allRounds"
 
 //modify for codable
 func saveRounds() {
-    let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: allRounds)
-    defaults.set(encodedData, forKey: kDataKey)
-    defaults.synchronize()}
-
-func loadRounds() -> [Round]? {
-    if let _ = defaults.object(forKey: kDataKey)
-    {
-        let decoded = defaults.object(forKey: kDataKey) as! Data
-        let testAuth = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [Round]
-        return testAuth
+    let jsonEncoder = JSONEncoder()
+    do {
+        let jsonData = try jsonEncoder.encode(allRounds)
+        let jsonString = String(data: jsonData, encoding: .utf8)
+        print("JSON String : " + jsonString!)
+        //save data
+        NSKeyedArchiver.archiveRootObject(jsonData, toFile: fileFolder)
     }
-    return []
+    catch {
+    }
+    
+}
+
+func loadRounds() {
+    //load data
+    guard let jsonData = NSKeyedUnarchiver.unarchiveObject(withFile: fileFolder) as? Data else { return }
+    let jsonDecoder = JSONDecoder()
+    do {
+        //Decode data
+        allRounds = try jsonDecoder.decode([Round].self, from: jsonData)
+    }
+    catch {
+    }
 }
 
 //MARK: Functions
