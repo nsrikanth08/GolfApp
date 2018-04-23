@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJm-px-qOi">
-                                <rect key="frame" x="70" y="454" width="247" height="30"/>
+                                <rect key="frame" x="70" y="454" width="237" height="30"/>
                                 <color key="backgroundColor" red="0.81896875388768964" green="0.95016169117025406" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5eT-Xk-lPs"/>
@@ -49,7 +49,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button verifyAmbiguity="off" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mT-vd-Eet">
-                                <rect key="frame" x="67" y="551" width="252" height="30"/>
+                                <rect key="frame" x="67" y="551" width="238" height="30"/>
                                 <color key="backgroundColor" red="0.81896875388768964" green="0.95016169117025406" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="lXa-Xi-BE5"/>
@@ -64,7 +64,7 @@
                                 <rect key="frame" x="67" y="61" width="243" height="252"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAf-o7-2Ma">
-                                <rect key="frame" x="70" y="503" width="247" height="30"/>
+                                <rect key="frame" x="70" y="503" width="237" height="30"/>
                                 <color key="backgroundColor" red="0.81896875388768964" green="0.95016169117025406" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="o7H-TU-9vI"/>
@@ -745,8 +745,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Average Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHE-3Q-5P8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Average Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHE-3Q-5P8">
                                 <rect key="frame" x="106" y="40" width="163.5" height="25.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -902,9 +903,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.89803921568627454" green="0.94117647058823528" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="kHE-3Q-5P8" firstAttribute="centerX" secondItem="XY9-zj-idZ" secondAttribute="centerX" id="1Yz-fS-2LY"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="averageFairways" destination="dpf-eJ-zh7" id="fHp-5T-uJb"/>
@@ -926,6 +924,9 @@
             <point key="canvasLocation" x="677.60000000000002" y="1237.3313343328336"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png" width="16" height="16"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="awC-Ko-hx5"/>
         <segue reference="tde-bJ-s6R"/>

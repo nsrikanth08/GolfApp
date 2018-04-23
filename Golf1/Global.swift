@@ -22,20 +22,6 @@ var fileFolder: String {
 
 var round: Round?
 
-//Home Image Controls
-var homeImage: UIImage?
-func getHomeImage() {
-        let data = defaults.object(forKey: "Logo") as! Data
-        homeImage = UIImage(data: data as Data)
-}
-
-func setHomeImage(_ image: UIImage) {
-    let imageData:Data = UIImagePNGRepresentation(image)! as Data
-    defaults.set(imageData, forKey: "Logo")
-    homeImage = image
-}
-
-
 //MARK: SAVING FUNCTIONS AND DECLARATION
 var allRounds = [Round]()
 let defaults = UserDefaults.standard

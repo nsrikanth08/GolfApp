@@ -26,9 +26,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(false)
-        getHomeImage()
-        imageView.image = homeImage
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,10 +64,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
-        
-        // Set photoImageView to display the selected image.
-        imageView.image = selectedImage
-        setHomeImage(selectedImage)
         
         // Dismiss the picker.
         dismiss(animated: true, completion: nil)
