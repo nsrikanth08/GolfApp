@@ -15,46 +15,22 @@ import Foundation
 import UIKit
 import os.log
 
-class Round: NSObject, NSCoding {
+class Round: Codable {
     
     
     //MARK: Properties
     
     var isPracticeRound, holesPlayed: Bool
-    var firstName, lastName, weather, location: String
+    var firstName, lastName, weather, location, date: String
     var score, fairways, penalties, putts, upDownAtt, upDownComp, finishRank, scoringClub, greens: Int
-    var date: NSDate
     
     //MARK: Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
     static let ArchiveURL = DocumentsDirectory.appendingPathComponent("allRounds")
     
-    //MARK: Types
-    
-    struct PropertyKey {
-        static let isPracticeRound = "isPracticeRound"
-        static let holesPlayed = "holesPlayed"
-        static let firstName = "firstName"
-        static let lastName = "lastName"
-        static let weather = "weather"
-        static let location = "location"
-        static let score = "score"
-        static let fairways = "fairways"
-        //static let fairwayPerc = "fairwayPerc"
-        static let penalties = "penalties"
-        static let putts = "putts"
-        static let upDownAtt = "upDownAtt"
-        static let upDownComp = "upDownComp"
-        //static let upDownPerc = "upDownPerc"
-        static let finishRank = "finishRank"
-        static let date = "date"
-        static let scoringClub = "scoringClub"
-        static let greens = "greens"
-    }
-    
     //MARK: Initialization
     
-    init(firstName: String, lastName: String, weather: String, location: String, score: Int, fairways: Int, penalties: Int, putts: Int, upDownAtt: Int,upDownComp: Int, scoringClub: Int, finishRank: Int, greens: Int, date: NSDate, holesPlayed: Bool, isPracticeRound: Bool) {
+    init(firstName: String, lastName: String, weather: String, location: String, score: Int, fairways: Int, penalties: Int, putts: Int, upDownAtt: Int,upDownComp: Int, scoringClub: Int, finishRank: Int, greens: Int, date: String, holesPlayed: Bool, isPracticeRound: Bool) {
         
         self.isPracticeRound = isPracticeRound
         self.holesPlayed = holesPlayed
@@ -76,59 +52,6 @@ class Round: NSObject, NSCoding {
         self.date = date
         
     }
-    //MARK: NSCoding
     
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(holesPlayed, forKey: PropertyKey.holesPlayed)
-        aCoder.encode(isPracticeRound, forKey: PropertyKey.isPracticeRound)
-        aCoder.encode(firstName, forKey: PropertyKey.firstName)
-        aCoder.encode(lastName, forKey: PropertyKey.lastName)
-        aCoder.encode(weather, forKey: PropertyKey.weather)
-        aCoder.encode(location, forKey: PropertyKey.location)
-        aCoder.encode(score, forKey: PropertyKey.score)
-        aCoder.encode(fairways, forKey: PropertyKey.fairways)
-        //aCoder.encode(fairwayPerc, forKey: PropertyKey.fairwayPerc)
-        aCoder.encode(penalties, forKey: PropertyKey.penalties)
-        aCoder.encode(putts, forKey: PropertyKey.putts)
-        aCoder.encode(upDownAtt, forKey: PropertyKey.upDownAtt)
-        aCoder.encode(upDownComp, forKey: PropertyKey.upDownComp)
-        //aCoder.encode(upDownPerc, forKey: PropertyKey.upDownPerc)
-        aCoder.encode(scoringClub, forKey: PropertyKey.scoringClub)
-        aCoder.encode(finishRank, forKey: PropertyKey.finishRank)
-        aCoder.encode(date, forKey: PropertyKey.date)
-        aCoder.encode(greens, forKey: PropertyKey.greens)
-    }
     
-    required convenience init?(coder aDecoder: NSCoder) {
-        
-        // This makes it fail if it can't decode the name.
-        guard let firstName = aDecoder.decodeObject(forKey: PropertyKey.firstName) as? String else {
-            os_log("Unable to decode the first name for a Round object.", log: OSLog.default, type: .debug)
-            return nil
-        }
-        
-        
-        let lastName = aDecoder.decodeObject(forKey: PropertyKey.lastName) as! String
-        let weather = aDecoder.decodeObject(forKey: PropertyKey.weather) as! String
-        let location = aDecoder.decodeObject(forKey: PropertyKey.location) as! String
-        
-        let score = aDecoder.decodeInteger(forKey: PropertyKey.score)
-        //let fairwayPerc = aDecoder.decodeInteger(forKey: PropertyKey.fairwayPerc)
-        let fairways = aDecoder.decodeInteger(forKey: PropertyKey.fairways)
-        let penalties = aDecoder.decodeInteger(forKey: PropertyKey.penalties)
-        let putts = aDecoder.decodeInteger(forKey: PropertyKey.putts)
-        let upDownAtt = aDecoder.decodeInteger(forKey: PropertyKey.upDownAtt)
-        let upDownComp = aDecoder.decodeInteger(forKey: PropertyKey.upDownComp)
-        //let upDownPerc = aDecoder.decodeInteger(forKey: PropertyKey.upDownPerc)
-        let scoringClub = aDecoder.decodeInteger(forKey: PropertyKey.scoringClub)
-        let finishRank = aDecoder.decodeInteger(forKey: PropertyKey.finishRank)
-        let holesPlayed = aDecoder.decodeBool(forKey: PropertyKey.holesPlayed)
-        let date = aDecoder.decodeObject(forKey: PropertyKey.date) as! NSDate
-        let isPracticeRound = aDecoder.decodeBool(forKey: PropertyKey.isPracticeRound)
-        let greens = aDecoder.decodeInteger(forKey: PropertyKey.greens)
-        
-        // Must call designated initializer.
-        self.init(firstName: firstName, lastName: lastName, weather: weather, location: location, score: score, fairways: fairways, penalties: penalties, putts: putts, upDownAtt: upDownAtt, upDownComp: upDownComp, scoringClub: scoringClub, finishRank: finishRank, greens: greens, date: date, holesPlayed: holesPlayed, isPracticeRound: isPracticeRound)
-        
-    }
 }

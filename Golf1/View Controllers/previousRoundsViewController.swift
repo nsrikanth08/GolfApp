@@ -11,10 +11,9 @@ import UIKit
 import os.log
 
 class previousRoundsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+    //MARK: Properties
     @IBOutlet weak var roundTableView: UITableView!
-    
-    var roundList: [Round] = loadRounds()!
+    var roundList: [Round] = allRounds
     
     func numberOfSections(in TableView: UITableView) -> Int {
         return 1
@@ -26,17 +25,12 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
         return roundList.count
     }
     
-    
-    
     //what is in the table
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
         let locationName  = roundList[indexPath.row].location
-        var matchDate = roundList[indexPath.row].date.description
-        let endVal = matchDate.index(matchDate.startIndex, offsetBy: 10)
-        let dateSub = matchDate.substring(to: endVal)
-        matchDate = dateSub
+        let matchDate = roundList[indexPath.row].date
         let label1 = UILabel(frame: CGRect(x: 15, y: 0, width: cell.frame.width/2, height: cell.frame.height))
         let label2 = UILabel(frame: CGRect(x: cell.frame.width/2, y: 0, width: cell.frame.width/2, height: cell.frame.height))
         label1.text = locationName
@@ -51,7 +45,7 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let indexPath = tableView.indexPathForSelectedRow
         //Index value is manually set to 1 because the index value pressed on the table view is stored here
-        passedRound = roundList[(indexPath?[1])!]
+        round = roundList[(indexPath?[1])!]
         performSegue(withIdentifier: "showRound" , sender: self )
     }
     
@@ -59,7 +53,6 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
         super.viewDidLoad()
         //roundTableView.reloadData()
         // Do any additional setup after loading the view.
-        roundList = loadRounds()!
 
     }
     
@@ -81,18 +74,5 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
         
     }
     
-    
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

@@ -11,28 +11,73 @@ import Foundation
 import UIKit
 import os.log
 
-var passedRound: Round!
+//MARK:Constants
+//creates file name for saving rounds
+var fileFolder: String {
+    
+    let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    
+    return DocumentsDirectory.appendingPathComponent("Golf1SaveFolder").path
+}
 
-//SAVING FUNCTIONS AND DECLARATION
-internal var allRounds: [Round] = []
+var round: Round?
+
+//Home Image Controls
+var homeImage: UIImage?
+func getHomeImage() {
+        let data = defaults.object(forKey: "Logo") as! Data
+        homeImage = UIImage(data: data as Data)
+}
+
+func setHomeImage(_ image: UIImage) {
+    let imageData:Data = UIImagePNGRepresentation(image)! as Data
+    defaults.set(imageData, forKey: "Logo")
+    homeImage = image
+}
+
+
+//MARK: SAVING FUNCTIONS AND DECLARATION
+var allRounds = [Round]()
 let defaults = UserDefaults.standard
 let kDataKey = "allRounds"
 
+//modify for codable
 func saveRounds() {
-    let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: allRounds)
-    defaults.set(encodedData, forKey: kDataKey)
-    defaults.synchronize()}
-
-func loadRounds() -> [Round]? {
-    if let _ = defaults.object(forKey: kDataKey)
-    {
-        let decoded = defaults.object(forKey: kDataKey) as! Data
-        let testAuth = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! [Round]
-        return testAuth
+    let jsonEncoder = JSONEncoder()
+    do {
+        let jsonData = try jsonEncoder.encode(allRounds)
+        let jsonString = String(data: jsonData, encoding: .utf8)
+        print("JSON String : " + jsonString!)
+        //save data
+        NSKeyedArchiver.archiveRootObject(jsonData, toFile: fileFolder)
     }
-    return []
+    catch {
+    }
+    
 }
 
+func loadRounds() {
+    //load data
+    guard let jsonData = NSKeyedUnarchiver.unarchiveObject(withFile: fileFolder) as? Data else { return }
+    let jsonDecoder = JSONDecoder()
+    do {
+        //Decode data
+        allRounds = try jsonDecoder.decode([Round].self, from: jsonData)
+    }
+    catch {
+    }
+}
+
+//MARK: Functions
+//Date information for averaging rounds
+var avgDate: String{
+    let currentDate = NSDate()
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = .short
+    return dateFormatter.string(from: currentDate as Date)
+}
+
+//averaging functions
 func average18Comp(roundArray: [Round]) -> Round {
     var averageRound: Round
     var scoreAverage = 0
@@ -72,7 +117,7 @@ func average18Comp(roundArray: [Round]) -> Round {
         upDownCompTotal = upDownCompTotal * 1000
     }
     
-    averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, greens: greensAverage, date: NSDate(), holesPlayed: true, isPracticeRound: true)
+    averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, greens: greensAverage, date: avgDate, holesPlayed: true, isPracticeRound: true)
     
     return averageRound
 }
@@ -115,7 +160,7 @@ func average9Comp(roundArray: [Round]) -> Round {
         upDownCompTotal = upDownCompTotal * 1000
     }
     
-    averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, greens: greensAverage, date: NSDate(), holesPlayed: false, isPracticeRound: true)
+    averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, greens: greensAverage, date: avgDate, holesPlayed: false, isPracticeRound: true)
     
     return averageRound
 }
@@ -158,7 +203,7 @@ func average9Prac(roundArray: [Round]) -> Round {
         upDownCompTotal = upDownCompTotal * 1000
     }
     
-    averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, greens: greensAverage, date: NSDate(), holesPlayed: false, isPracticeRound: false)
+    averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, greens: greensAverage, date: avgDate, holesPlayed: false, isPracticeRound: false)
     
     return averageRound
 }
@@ -201,7 +246,7 @@ func average18Prac(roundArray: [Round]) -> Round {
         upDownCompTotal = upDownCompTotal * 1000
     }
     
-    averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, greens: greensAverage, date: NSDate(), holesPlayed: true, isPracticeRound: false)
+    averageRound = Round(firstName: "", lastName: "", weather: "", location: "", score: scoreAverage, fairways: fairwayAverage, penalties: penaltyAverage, putts: puttAverage, upDownAtt: upDownAttTotal, upDownComp: upDownCompTotal, scoringClub: scoringClubAverage, finishRank: finishRankAverage, greens: greensAverage, date: avgDate, holesPlayed: true, isPracticeRound: false)
     
     return averageRound
 }
