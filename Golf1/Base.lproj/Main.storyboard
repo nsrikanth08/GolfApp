@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJm-px-qOi">
-                                <rect key="frame" x="70" y="454" width="238" height="30"/>
+                                <rect key="frame" x="70" y="454" width="247" height="30"/>
                                 <color key="backgroundColor" red="0.81896875388768964" green="0.95016169117025406" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="5eT-Xk-lPs"/>
@@ -49,7 +49,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button verifyAmbiguity="off" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mT-vd-Eet">
-                                <rect key="frame" x="67" y="551" width="238" height="30"/>
+                                <rect key="frame" x="67" y="551" width="252" height="30"/>
                                 <color key="backgroundColor" red="0.81896875388768964" green="0.95016169117025406" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="lXa-Xi-BE5"/>
@@ -64,7 +64,7 @@
                                 <rect key="frame" x="67" y="61" width="243" height="252"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAf-o7-2Ma">
-                                <rect key="frame" x="70" y="503" width="238" height="30"/>
+                                <rect key="frame" x="70" y="503" width="247" height="30"/>
                                 <color key="backgroundColor" red="0.81896875388768964" green="0.95016169117025406" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="o7H-TU-9vI"/>
@@ -97,10 +97,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="8eK-K8-YV5" id="HOa-fc-vhP"/>
                         <outlet property="trackRound" destination="jJm-px-qOi" id="b8l-vw-UFj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="L7e-qb-maq">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="6MC-Ma-brF"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-58.399999999999999" y="-1.3493253373313345"/>
         </scene>
@@ -920,9 +926,6 @@
             <point key="canvasLocation" x="677.60000000000002" y="1237.3313343328336"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png" width="1024" height="1024"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="awC-Ko-hx5"/>
         <segue reference="tde-bJ-s6R"/>

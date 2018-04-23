@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		90625ABB1E54B848008D8C9D /* matchInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90625ABA1E54B848008D8C9D /* matchInfoViewController.swift */; };
 		90E3F20F1E005F1C008BFEFE /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3F20E1E005F1C008BFEFE /* Round.swift */; };
-		BD12CF0B1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = BD12CF0A1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png */; };
 		BD4648B11E9D2C0700FF5D47 /* averagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4648B01E9D2C0700FF5D47 /* averagesViewController.swift */; };
 		BDE6914D1E044C250010D32B /* secondTrackRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6914C1E044C250010D32B /* secondTrackRoundViewController.swift */; };
 		BDE6914F1E0454CA0010D32B /* previousRoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE6914E1E0454CA0010D32B /* previousRoundsViewController.swift */; };
+		DE09E15B208E4132006E0E69 /* 2.PNG in Resources */ = {isa = PBXBuildFile; fileRef = DE09E15A208E4132006E0E69 /* 2.PNG */; };
 		F405620F1E005D8F00010B32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405620E1E005D8F00010B32 /* AppDelegate.swift */; };
 		F40562111E005D8F00010B32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40562101E005D8F00010B32 /* ViewController.swift */; };
 		F40562141E005D8F00010B32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40562121E005D8F00010B32 /* Main.storyboard */; };
@@ -43,10 +43,10 @@
 /* Begin PBXFileReference section */
 		90625ABA1E54B848008D8C9D /* matchInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = matchInfoViewController.swift; sourceTree = "<group>"; };
 		90E3F20E1E005F1C008BFEFE /* Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
-		BD12CF0A1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png"; sourceTree = "<group>"; };
 		BD4648B01E9D2C0700FF5D47 /* averagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = averagesViewController.swift; sourceTree = "<group>"; };
 		BDE6914C1E044C250010D32B /* secondTrackRoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = secondTrackRoundViewController.swift; sourceTree = "<group>"; };
 		BDE6914E1E0454CA0010D32B /* previousRoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = previousRoundsViewController.swift; sourceTree = "<group>"; };
+		DE09E15A208E4132006E0E69 /* 2.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.PNG; sourceTree = "<group>"; };
 		F405620B1E005D8F00010B32 /* Golf1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Golf1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F405620E1E005D8F00010B32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F40562101E005D8F00010B32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,7 +124,6 @@
 		F405620D1E005D8F00010B32 /* Golf1 */ = {
 			isa = PBXGroup;
 			children = (
-				BD12CF0A1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png */,
 				DEA448AB2077DD1C00988D24 /* View Controllers */,
 				90E3F20E1E005F1C008BFEFE /* Round.swift */,
 				F405620E1E005D8F00010B32 /* AppDelegate.swift */,
@@ -133,6 +132,7 @@
 				F40562151E005D8F00010B32 /* Assets.xcassets */,
 				F40562171E005D8F00010B32 /* LaunchScreen.storyboard */,
 				F405621A1E005D8F00010B32 /* Info.plist */,
+				DE09E15A208E4132006E0E69 /* 2.PNG */,
 			);
 			path = Golf1;
 			sourceTree = "<group>";
@@ -267,8 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F40562191E005D8F00010B32 /* LaunchScreen.storyboard in Resources */,
-				BD12CF0B1E01AF460060E136 /* M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png in Resources */,
 				F40562161E005D8F00010B32 /* Assets.xcassets in Resources */,
+				DE09E15B208E4132006E0E69 /* 2.PNG in Resources */,
 				F40562141E005D8F00010B32 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
