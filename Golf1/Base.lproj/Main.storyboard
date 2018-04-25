@@ -60,7 +60,7 @@
                                     <segue destination="4Q2-Ca-Qrk" kind="show" animates="NO" id="mXt-IA-WEM"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="8eK-K8-YV5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="8eK-K8-YV5">
                                 <rect key="frame" x="67" y="61" width="243" height="252"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAf-o7-2Ma">
@@ -925,11 +925,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="M-EAGAN_WILDCATS_ksu_for_website-01_1024x1024.png" width="16" height="16"/>
+        <image name="2.PNG" width="494" height="490"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="awC-Ko-hx5"/>
-        <segue reference="tde-bJ-s6R"/>
+        <segue reference="5XR-AV-wgl"/>
+        <segue reference="7KA-CI-V5s"/>
         <segue reference="0Rf-GA-Gjj"/>
     </inferredMetricsTieBreakers>
 </document>
