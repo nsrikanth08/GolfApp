@@ -53,8 +53,9 @@ func loadRounds() {
     }
 }
 
-//MARK: Functions
+//MARK: Averaging functions
 //Date information for averaging rounds
+
 var avgDate: String{
     let currentDate = NSDate()
     let dateFormatter = DateFormatter()
@@ -62,7 +63,6 @@ var avgDate: String{
     return dateFormatter.string(from: currentDate as Date)
 }
 
-//averaging functions
 func average18Comp(roundArray: [Round]) -> Round {
     var averageRound: Round
     var scoreAverage = 0
