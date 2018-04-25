@@ -235,7 +235,7 @@ class secondTrackRoundViewController: UIViewController {
         else {
             round = Round(firstName: firstName.text!, lastName: lastName.text!, weather: weather.text!, location: location.text!, score: Int(score.text!)!,fairways: Int(fairways.text!)!, penalties: Int(penalties.text!)!, putts: Int(putts.text!)!, upDownAtt: Int(updownAttempts.text!)!, upDownComp: Int(updownCompletes.text!)!, scoringClub: Int(scoringClub.text!)!, finishRank: Int(finishRank.text!)!, greens: Int(greens.text!)!, date: date.text!, holesPlayed: is18Holes, isPracticeRound: isPracticeRound)
             
-            allRounds.append(round!)
+            allRounds.insert(round!, at: 0)
             saveRounds()
             performSegue(withIdentifier: "showPreviousRoundsVC", sender: self)
         }

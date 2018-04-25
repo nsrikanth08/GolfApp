@@ -10,7 +10,7 @@ import UIKit
 import os.log
 
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController {
 
     //MARK: Properties
     @IBOutlet weak var trackRound: UIButton!
