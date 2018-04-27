@@ -61,16 +61,13 @@
                                     <segue destination="4Q2-Ca-Qrk" kind="show" animates="NO" id="mXt-IA-WEM"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="243" placeholderIntrinsicHeight="252" image="2.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="8eK-K8-YV5">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="243" placeholderIntrinsicHeight="252" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="8eK-K8-YV5">
                                 <rect key="frame" x="67" y="61" width="252" height="252"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8eK-K8-YV5" secondAttribute="height" multiplier="1:1" id="c4A-9s-mVd"/>
                                     <constraint firstAttribute="height" constant="252" id="nib-iW-mvm"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="L7e-qb-maq" appends="YES" id="CAk-1R-qpz"/>
-                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAf-o7-2Ma">
                                 <rect key="frame" x="70" y="503" width="246" height="30"/>
@@ -111,11 +108,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="L7e-qb-maq">
-                    <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="6MC-Ma-brF"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-58.399999999999999" y="-1.3493253373313345"/>
         </scene>
@@ -950,11 +942,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="2.PNG" width="494" height="490"/>
+        <image name="Logo" width="768" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="awC-Ko-hx5"/>
-        <segue reference="tde-bJ-s6R"/>
+        <segue reference="5XR-AV-wgl"/>
+        <segue reference="7KA-CI-V5s"/>
         <segue reference="0Rf-GA-Gjj"/>
     </inferredMetricsTieBreakers>
 </document>
