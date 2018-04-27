@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,7 +49,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button verifyAmbiguity="off" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mT-vd-Eet">
-                                <rect key="frame" x="71" y="908" width="623" height="30"/>
+                                <rect key="frame" x="74" y="908" width="620" height="30"/>
                                 <color key="backgroundColor" red="0.81896875388768964" green="0.95016169117025406" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="lXa-Xi-BE5"/>
@@ -132,6 +131,9 @@
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ddF-7T-mLi">
                                         <rect key="frame" x="232" y="720" width="51" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="numHoleSwitchTapped:" destination="gVR-g9-r4n" eventType="valueChanged" id="rLC-OC-UEj"/>
+                                        </connections>
                                     </switch>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ucz-Nw-ox4">
                                         <rect key="frame" x="425" y="70" width="290" height="43"/>
@@ -340,6 +342,9 @@
                                         <rect key="frame" x="666" y="720" width="51" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                        <connections>
+                                            <action selector="practiceSwitchTapped:" destination="gVR-g9-r4n" eventType="valueChanged" id="jSR-Nx-lvJ"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                             </scrollView>
@@ -365,6 +370,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
+                                    <action selector="submit1:" destination="gVR-g9-r4n" eventType="touchUpInside" id="btC-da-HCJ"/>
                                     <segue destination="5pP-hR-fwn" kind="show" animates="NO" id="ezy-nx-ucc"/>
                                 </connections>
                             </button>
@@ -882,6 +888,17 @@
                                     <action selector="pracPress:" destination="4Q2-Ca-Qrk" eventType="valueChanged" id="wpq-Ko-p1A"/>
                                 </connections>
                             </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C8H-T5-R1h">
+                                <rect key="frame" x="506" y="794" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last 10 Rounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oY4-WK-XhM">
+                                <rect key="frame" x="189" y="789" width="300" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.89803921568627454" green="0.94117647058823528" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -895,8 +912,8 @@
                         <outlet property="averageScores" destination="Pfu-0k-T1q" id="50s-0b-0HZ"/>
                         <outlet property="holeSwitch" destination="lJz-6B-X8u" id="2Rv-fL-z9D"/>
                         <outlet property="holesLabel" destination="0ZL-RQ-vfu" id="Ui3-7H-yfa"/>
-                        <outlet property="last10Label" destination="CMH-s7-tQL" id="yDD-is-ylr"/>
-                        <outlet property="last10Switch" destination="mVq-xt-vDa" id="t1M-zy-Onn"/>
+                        <outlet property="last10Label" destination="oY4-WK-XhM" id="FEE-Og-ITT"/>
+                        <outlet property="last10Switch" destination="C8H-T5-R1h" id="a6e-XS-Gza"/>
                         <outlet property="practiceLabel" destination="QeF-ss-R6W" id="DgE-Z2-lvW"/>
                         <outlet property="practiceSwitch" destination="HrW-vk-b4d" id="UQd-jQ-7on"/>
                         <outlet property="upDownPerc" destination="sfM-UL-V0H" id="qcT-YG-QV9"/>
