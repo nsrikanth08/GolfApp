@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -88,7 +89,7 @@
                             <constraint firstItem="QTW-yC-adP" firstAttribute="top" secondItem="8eK-K8-YV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Sdu-7n-5IM"/>
                             <constraint firstItem="QAf-o7-2Ma" firstAttribute="top" secondItem="jJm-px-qOi" secondAttribute="bottom" constant="19" id="U4v-Df-irq"/>
                             <constraint firstItem="QTW-yC-adP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-14" id="VwM-hl-ZLb"/>
-                            <constraint firstItem="8eK-K8-YV5" firstAttribute="leading" secondItem="4mT-vd-Eet" secondAttribute="leading" id="Wad-Is-UYL"/>
+                            <constraint firstItem="jJm-px-qOi" firstAttribute="leading" secondItem="4mT-vd-Eet" secondAttribute="leading" id="Wad-Is-UYL"/>
                             <constraint firstItem="4mT-vd-Eet" firstAttribute="top" secondItem="QAf-o7-2Ma" secondAttribute="bottom" constant="18" id="X6B-wY-3wr"/>
                             <constraint firstItem="8eK-K8-YV5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="41" id="n0i-Ka-cbU"/>
                             <constraint firstItem="jJm-px-qOi" firstAttribute="trailing" secondItem="QAf-o7-2Ma" secondAttribute="trailing" id="q9J-9u-i2l"/>
@@ -102,11 +103,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="L7e-qb-maq">
-                    <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="6MC-Ma-brF"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-58.399999999999999" y="-1.3493253373313345"/>
         </scene>
@@ -899,6 +895,8 @@
                         <outlet property="averageScores" destination="Pfu-0k-T1q" id="50s-0b-0HZ"/>
                         <outlet property="holeSwitch" destination="lJz-6B-X8u" id="2Rv-fL-z9D"/>
                         <outlet property="holesLabel" destination="0ZL-RQ-vfu" id="Ui3-7H-yfa"/>
+                        <outlet property="last10Label" destination="CMH-s7-tQL" id="yDD-is-ylr"/>
+                        <outlet property="last10Switch" destination="mVq-xt-vDa" id="t1M-zy-Onn"/>
                         <outlet property="practiceLabel" destination="QeF-ss-R6W" id="DgE-Z2-lvW"/>
                         <outlet property="practiceSwitch" destination="HrW-vk-b4d" id="UQd-jQ-7on"/>
                         <outlet property="upDownPerc" destination="sfM-UL-V0H" id="qcT-YG-QV9"/>

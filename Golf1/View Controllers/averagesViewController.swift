@@ -23,6 +23,8 @@ class averagesViewController: UIViewController {
     @IBOutlet weak var averageFinishRank: UITextField!
     @IBOutlet weak var averageGreens: UITextField!
     
+    @IBOutlet weak var last10Label: UILabel!
+    @IBOutlet weak var last10Switch: UISwitch!
     var averages: Round!
     
     
@@ -30,6 +32,12 @@ class averagesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(false)
+        last10Switch.isOn = false
+        last10Label.text = "All Rounds"
         average()
     }
     
@@ -53,18 +61,28 @@ class averagesViewController: UIViewController {
         average()
     }
     
+    @IBAction func last10Press(_ sender: Any) {
+        if last10Switch.isOn{
+            last10Label.text = "Last 10 Rounds"
+        }
+        else{
+            last10Label.text = "All Rounds"
+        }
+        average()
+    }
+    
     func average() {
         if practiceSwitch.isOn && holeSwitch.isOn {
-            averages = average18Comp(roundArray: allRounds)
+            averages = average18Comp(last10: last10Switch.isOn)
         }
         else if practiceSwitch.isOn && !holeSwitch.isOn{
-            averages = average9Comp(roundArray: allRounds)
+            averages = average9Comp(last10: last10Switch.isOn)
         }
         else if !practiceSwitch.isOn && !holeSwitch.isOn{
-            averages = average9Prac(roundArray: allRounds)
+            averages = average9Prac(last10: last10Switch.isOn)
         }
         else {
-            averages = average18Prac(roundArray: allRounds)
+            averages = average18Prac(last10: last10Switch.isOn)
         }
         
         averageScores.text = String(Double(averages.score) / 10.0)
