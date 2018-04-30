@@ -95,6 +95,7 @@ class matchInfoViewController: UIViewController {
         present(activityView, animated: true, completion: nil)
         let popOver = activityView.popoverPresentationController
         popOver?.sourceView = sender
+        popOver?.permittedArrowDirections = []
     }
        
 }

@@ -370,6 +370,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
+                                    <action selector="storeData:" destination="gVR-g9-r4n" eventType="touchUpInside" id="IWA-Bn-mBG"/>
                                     <action selector="submit1:" destination="gVR-g9-r4n" eventType="touchUpInside" id="btC-da-HCJ"/>
                                     <segue destination="5pP-hR-fwn" kind="show" animates="NO" id="ezy-nx-ucc"/>
                                 </connections>
