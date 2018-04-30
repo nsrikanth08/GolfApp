@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import MessageUI
 
-class matchInfoViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class matchInfoViewController: UIViewController {
     //MARK: Properties
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var courseData: UILabel!
@@ -69,7 +68,7 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func exportFile(_ sender: Any) {
+    @IBAction func exportFile(_ sender: UIButton) {
         let matchExport: [String] = [",First Name,Last Name,Date,Location,Weather,Score,Putts,Fairways,Penalties,UpDownAtt,UpDownComp,ScoringClub,Rank\r\n",round!.firstName.description,round!.lastName.description,round!.date.description,round!.location.description,weatherData.text!,scoreData.text!,greensData.text!,puttData.text!,fairwayData.text!,penaltyData.text!,upDownAttData.text!,upDownCompData.text!,scoringClubData.text!,finishData.text!]
         
         let csvString = matchExport.joined(separator: ",")
@@ -91,8 +90,11 @@ class matchInfoViewController: UIViewController, MFMailComposeViewControllerDele
         let activityView = UIActivityViewController(activityItems: [path!], applicationActivities:[])
         //modify activities
         activityView.excludedActivityTypes = [UIActivityType.assignToContact,UIActivityType.assignToContact,UIActivityType.saveToCameraRoll,UIActivityType.postToFlickr,UIActivityType.postToVimeo,UIActivityType.postToTencentWeibo,UIActivityType.postToTwitter,UIActivityType.postToFacebook,UIActivityType.openInIBooks]
-        //present activity
+        //present popover
+        activityView.modalPresentationStyle = UIModalPresentationStyle.popover
         present(activityView, animated: true, completion: nil)
+        let popOver = activityView.popoverPresentationController
+        popOver?.sourceView = sender
     }
        
 }

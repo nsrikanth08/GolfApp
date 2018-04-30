@@ -60,7 +60,7 @@
                                     <segue destination="4Q2-Ca-Qrk" kind="show" animates="NO" id="mXt-IA-WEM"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="8eK-K8-YV5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="8eK-K8-YV5">
                                 <rect key="frame" x="71" y="61" width="627" height="609"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAf-o7-2Ma">
@@ -925,10 +925,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="2.PNG" width="494" height="490"/>
+        <image name="Logo" width="768" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ezy-nx-ucc"/>
+        <segue reference="5XR-AV-wgl"/>
         <segue reference="7KA-CI-V5s"/>
         <segue reference="Ink-ce-exI"/>
     </inferredMetricsTieBreakers>
