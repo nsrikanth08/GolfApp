@@ -892,6 +892,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C8H-T5-R1h">
                                 <rect key="frame" x="506" y="794" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="last10Press:" destination="4Q2-Ca-Qrk" eventType="valueChanged" id="gKb-eJ-zlb"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last 10 Rounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oY4-WK-XhM">
                                 <rect key="frame" x="189" y="789" width="300" height="43"/>
@@ -931,6 +934,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="5XR-AV-wgl"/>
         <segue reference="7KA-CI-V5s"/>
-        <segue reference="Ink-ce-exI"/>
+        <segue reference="0Rf-GA-Gjj"/>
     </inferredMetricsTieBreakers>
 </document>
