@@ -372,7 +372,7 @@
                                 <connections>
                                     <action selector="storeData:" destination="gVR-g9-r4n" eventType="touchUpInside" id="IWA-Bn-mBG"/>
                                     <action selector="submit1:" destination="gVR-g9-r4n" eventType="touchUpInside" id="btC-da-HCJ"/>
-                                    <segue destination="5pP-hR-fwn" kind="show" animates="NO" id="ezy-nx-ucc"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" animates="NO" id="QPf-Tf-fVg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -418,7 +418,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Rounds " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEW-NF-trn">
-                                <rect key="frame" x="237" y="17.5" width="294" height="48"/>
+                                <rect key="frame" x="237" y="18" width="294" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -431,13 +431,10 @@
                                     <outlet property="delegate" destination="5pP-hR-fwn" id="KmN-eu-CWQ"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="en1-3i-gEv">
-                                <rect key="frame" x="672" y="20" width="86" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="86" id="Sis-6V-t9s"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="en1-3i-gEv">
+                                <rect key="frame" x="586" y="20" width="172" height="49"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="Export All"/>
                                 <connections>
                                     <segue destination="gVR-g9-r4n" kind="show" animates="NO" id="tde-bJ-s6R"/>
                                 </connections>
@@ -454,15 +451,16 @@
                         <color key="backgroundColor" red="0.94509803921568625" green="0.98039215686274506" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="3xj-rl-L5I" firstAttribute="top" secondItem="2dw-Sk-oSV" secondAttribute="bottom" constant="9" id="0GE-bA-uE4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="en1-3i-gEv" secondAttribute="trailing" constant="-10" id="0cP-YG-aJ9"/>
                             <constraint firstItem="3xj-rl-L5I" firstAttribute="leading" secondItem="pan-e2-QjS" secondAttribute="leadingMargin" id="83A-kA-bO0"/>
                             <constraint firstItem="npg-rc-I0s" firstAttribute="bottom" secondItem="mJM-cd-MGY" secondAttribute="top" id="9Lg-yB-2aS"/>
-                            <constraint firstItem="oEW-NF-trn" firstAttribute="baseline" secondItem="en1-3i-gEv" secondAttribute="baseline" id="DJ0-uh-HKd"/>
+                            <constraint firstItem="oEW-NF-trn" firstAttribute="centerX" secondItem="npg-rc-I0s" secondAttribute="centerX" id="Dm4-qU-5In"/>
+                            <constraint firstItem="en1-3i-gEv" firstAttribute="top" secondItem="2dw-Sk-oSV" secondAttribute="bottom" id="OZ7-5r-zfS"/>
                             <constraint firstAttribute="trailing" secondItem="npg-rc-I0s" secondAttribute="trailing" id="SoK-Kg-3xn"/>
-                            <constraint firstItem="npg-rc-I0s" firstAttribute="top" secondItem="en1-3i-gEv" secondAttribute="bottom" constant="7" id="VYs-Qc-m9N"/>
-                            <constraint firstItem="oEW-NF-trn" firstAttribute="centerX" secondItem="npg-rc-I0s" secondAttribute="centerX" id="mQc-I2-Dub"/>
+                            <constraint firstItem="en1-3i-gEv" firstAttribute="leading" secondItem="oEW-NF-trn" secondAttribute="trailing" constant="55" id="dTR-SF-IRe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="en1-3i-gEv" secondAttribute="trailing" constant="-10" id="drg-Rg-lxa"/>
+                            <constraint firstItem="npg-rc-I0s" firstAttribute="top" secondItem="en1-3i-gEv" secondAttribute="bottom" constant="7" id="eqj-vf-7RQ"/>
                             <constraint firstItem="npg-rc-I0s" firstAttribute="leading" secondItem="pan-e2-QjS" secondAttribute="leading" id="oCP-pD-4Dr"/>
-                            <constraint firstItem="en1-3i-gEv" firstAttribute="top" secondItem="2dw-Sk-oSV" secondAttribute="bottom" id="uVG-4E-dqM"/>
+                            <constraint firstItem="npg-rc-I0s" firstAttribute="top" secondItem="oEW-NF-trn" secondAttribute="bottom" constant="10" id="zI5-bW-cc9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -487,7 +485,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4o-uQ-3I5">
-                                <rect key="frame" x="50" y="73" width="194" height="40"/>
+                                <rect key="frame" x="50" y="73" width="483" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
@@ -929,8 +927,8 @@
         <image name="Logo" width="768" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5XR-AV-wgl"/>
-        <segue reference="7KA-CI-V5s"/>
-        <segue reference="Ink-ce-exI"/>
+        <segue reference="awC-Ko-hx5"/>
+        <segue reference="tde-bJ-s6R"/>
+        <segue reference="VSW-It-D9J"/>
     </inferredMetricsTieBreakers>
 </document>
