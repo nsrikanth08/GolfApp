@@ -63,7 +63,7 @@ var avgDate: String{
     return dateFormatter.string(from: currentDate as Date)
 }
 
-func average18Comp(roundArray: [Round]) -> Round {
+func average18Comp(last10: Bool) -> Round {
     var averageRound: Round
     var scoreAverage = 0
     var fairwayAverage = 0
@@ -75,8 +75,9 @@ func average18Comp(roundArray: [Round]) -> Round {
     var finishRankAverage = 0
     var greensAverage = 0
     var totalRounds = 0.0
+    var upTo10 = 0
     
-    for currentRound in roundArray {
+    for currentRound in allRounds {
         if currentRound.holesPlayed && currentRound.isPracticeRound {
             totalRounds += 1
             scoreAverage += currentRound.score
@@ -88,8 +89,16 @@ func average18Comp(roundArray: [Round]) -> Round {
             scoringClubAverage += currentRound.scoringClub
             finishRankAverage += currentRound.finishRank
             greensAverage += currentRound.greens
+            
+            if last10 {
+                upTo10 += 1
+            }
+        }
+        if upTo10 >= 10 {
+            break
         }
     }
+    
     //MUST DIVIDE BY 10 ON THE AVERAGES GUI TO GET A DECIMAL
     if totalRounds != 0 {
         scoreAverage = Int(Double(scoreAverage * 10)/totalRounds + 0.5)
@@ -107,7 +116,7 @@ func average18Comp(roundArray: [Round]) -> Round {
     return averageRound
 }
 
-func average9Comp(roundArray: [Round]) -> Round {
+func average9Comp(last10: Bool) -> Round {
     var averageRound: Round
     var scoreAverage = 0
     var fairwayAverage = 0
@@ -119,8 +128,9 @@ func average9Comp(roundArray: [Round]) -> Round {
     var finishRankAverage = 0
     var greensAverage = 0
     var totalRounds = 0.0
+    var upTo10 = 0
     
-    for currentRound in roundArray {
+    for currentRound in allRounds {
         if !currentRound.holesPlayed && currentRound.isPracticeRound {
             totalRounds += 1
             scoreAverage += currentRound.score
@@ -131,8 +141,16 @@ func average9Comp(roundArray: [Round]) -> Round {
             upDownCompTotal += currentRound.upDownComp
             scoringClubAverage += currentRound.scoringClub
             finishRankAverage += currentRound.finishRank
+            
+            if last10 {
+                upTo10 += 1
+            }
+        }
+        if upTo10 >= 10 {
+            break
         }
     }
+    
     //MUST DIVIDE BY 10 ON THE AVERAGES GUI TO GET A DECIMAL
     if totalRounds != 0 {
         scoreAverage = Int(Double(scoreAverage * 10)/totalRounds + 0.5)
@@ -150,7 +168,7 @@ func average9Comp(roundArray: [Round]) -> Round {
     return averageRound
 }
 
-func average9Prac(roundArray: [Round]) -> Round {
+func average9Prac(last10: Bool) -> Round {
     var averageRound: Round
     var scoreAverage = 0
     var fairwayAverage = 0
@@ -162,8 +180,9 @@ func average9Prac(roundArray: [Round]) -> Round {
     var finishRankAverage = 0
     var greensAverage = 0
     var totalRounds = 0.0
+    var upTo10 = 0
     
-    for currentRound in roundArray {
+    for currentRound in allRounds {
         if !currentRound.holesPlayed && !currentRound.isPracticeRound {
             totalRounds += 1
             scoreAverage += currentRound.score
@@ -174,8 +193,16 @@ func average9Prac(roundArray: [Round]) -> Round {
             upDownCompTotal += currentRound.upDownComp
             scoringClubAverage += currentRound.scoringClub
             finishRankAverage += currentRound.finishRank
+            
+            if last10 {
+                upTo10 += 1
+            }
+        }
+        if upTo10 >= 10 {
+            break
         }
     }
+    
     //MUST DIVIDE BY 10 ON THE AVERAGES GUI TO GET A DECIMAL
     if totalRounds != 0 {
         scoreAverage = Int(Double(scoreAverage * 10)/totalRounds + 0.5)
@@ -193,7 +220,7 @@ func average9Prac(roundArray: [Round]) -> Round {
     return averageRound
 }
 
-func average18Prac(roundArray: [Round]) -> Round {
+func average18Prac(last10: Bool) -> Round {
     var averageRound: Round
     var scoreAverage = 0
     var fairwayAverage = 0
@@ -205,8 +232,9 @@ func average18Prac(roundArray: [Round]) -> Round {
     var finishRankAverage = 0
     var greensAverage = 0
     var totalRounds = 0.0
+    var upTo10 = 0
     
-    for currentRound in roundArray {
+    for currentRound in allRounds {
         if currentRound.holesPlayed && !currentRound.isPracticeRound {
             totalRounds += 1
             scoreAverage += currentRound.score
@@ -217,8 +245,16 @@ func average18Prac(roundArray: [Round]) -> Round {
             upDownCompTotal += currentRound.upDownComp
             scoringClubAverage += currentRound.scoringClub
             finishRankAverage += currentRound.finishRank
+            
+            if last10 {
+                upTo10 += 1
+            }
+        }
+        if upTo10 >= 10 {
+            break
         }
     }
+    
     //MUST DIVIDE BY 10 ON THE AVERAGES GUI TO GET A DECIMAL
     if totalRounds != 0 {
         scoreAverage = Int(Double(scoreAverage * 10)/totalRounds + 0.5)
