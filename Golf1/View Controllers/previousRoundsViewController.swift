@@ -33,7 +33,7 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
         let locationName  = roundList[indexPath.row].location
         let matchDate = roundList[indexPath.row].date
         let label1 = UILabel(frame: CGRect(x: 30, y: 0, width: cell.frame.width/2, height: cell.frame.height))
-        let label2 = UILabel(frame: CGRect(x: cell.frame.width/2, y: 0, width: cell.frame.width/3, height: cell.frame.height))
+        let label2 = UILabel(frame: CGRect(x: cell.frame.width/2, y: 0, width: cell.frame.width/2 - 30, height: cell.frame.height))
         label1.text = locationName
         label2.text = matchDate
         label2.textAlignment = .right
