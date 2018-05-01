@@ -426,6 +426,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="npg-rc-I0s">
                                 <rect key="frame" x="0.0" y="76" width="768" height="948"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="AiB-jb-7cd">
+                                        <rect key="frame" x="0.0" y="28" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AiB-jb-7cd" id="LFZ-r7-jPa">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="5pP-hR-fwn" id="1lX-Qk-XZ7"/>
                                     <outlet property="delegate" destination="5pP-hR-fwn" id="KmN-eu-CWQ"/>
@@ -933,7 +943,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5XR-AV-wgl"/>
-        <segue reference="7KA-CI-V5s"/>
-        <segue reference="0Rf-GA-Gjj"/>
+        <segue reference="tde-bJ-s6R"/>
+        <segue reference="VSW-It-D9J"/>
     </inferredMetricsTieBreakers>
 </document>
