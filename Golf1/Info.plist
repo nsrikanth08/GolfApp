@@ -38,9 +38,5 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Allows you to add your own logo.</string>
-	<key>Logo Image</key>
-	<data></data>
 </dict>
 </plist>
