@@ -27,12 +27,12 @@ class previousRoundsViewController: UIViewController, UITableViewDataSource, UIT
     
     //what is in the table
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         
         let locationName  = roundList[indexPath.row].location
         let matchDate = roundList[indexPath.row].date
         let label1 = UILabel(frame: CGRect(x: 15, y: 0, width: cell.frame.width/2, height: cell.frame.height))
-        let label2 = UILabel(frame: CGRect(x: cell.frame.width/2, y: 0, width: cell.frame.width/2, height: cell.frame.height))
+        let label2 = UILabel(frame: CGRect(x: cell.frame.width/2, y: 0, width: cell.frame.width/2 - 20, height: cell.frame.height))
         label1.text = locationName
         label2.text = matchDate
         label2.textAlignment = .right
