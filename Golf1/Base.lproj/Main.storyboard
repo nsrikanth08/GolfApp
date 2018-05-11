@@ -98,11 +98,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="L7e-qb-maq">
-                    <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="6MC-Ma-brF"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-60" y="-2.112676056338028"/>
         </scene>
@@ -1075,7 +1070,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="2.PNG" width="494" height="490"/>
+        <image name="Logo" width="768" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="GSu-gB-Hmh"/>
