@@ -131,16 +131,30 @@ func average9Comp(last10: Bool) -> Round {
     var upTo10 = 0
     
     for currentRound in allRounds {
-        if !currentRound.holesPlayed && currentRound.isPracticeRound {
-            totalRounds += 1
-            scoreAverage += currentRound.score
-            fairwayAverage += currentRound.fairways
-            penaltyAverage += currentRound.penalties
-            puttAverage += currentRound.putts
-            upDownAttTotal += currentRound.upDownAtt
-            upDownCompTotal += currentRound.upDownComp
-            scoringClubAverage += currentRound.scoringClub
-            finishRankAverage += currentRound.finishRank
+        if currentRound.isPracticeRound {
+            if currentRound.holesPlayed{
+                totalRounds += 1
+                scoreAverage += currentRound.score / 2
+                fairwayAverage += currentRound.fairways / 2
+                penaltyAverage += currentRound.penalties / 2
+                puttAverage += currentRound.putts / 2
+                upDownAttTotal += currentRound.upDownAtt / 2
+                upDownCompTotal += currentRound.upDownComp / 2
+                scoringClubAverage += currentRound.scoringClub / 2
+                finishRankAverage += currentRound.finishRank / 2
+            }
+            else{
+                totalRounds += 1
+                scoreAverage += currentRound.score
+                fairwayAverage += currentRound.fairways
+                penaltyAverage += currentRound.penalties
+                puttAverage += currentRound.putts
+                upDownAttTotal += currentRound.upDownAtt
+                upDownCompTotal += currentRound.upDownComp
+                scoringClubAverage += currentRound.scoringClub
+                finishRankAverage += currentRound.finishRank
+            }
+            
             
             if last10 {
                 upTo10 += 1
@@ -183,16 +197,29 @@ func average9Prac(last10: Bool) -> Round {
     var upTo10 = 0
     
     for currentRound in allRounds {
-        if !currentRound.holesPlayed && !currentRound.isPracticeRound {
-            totalRounds += 1
-            scoreAverage += currentRound.score
-            fairwayAverage += currentRound.fairways
-            penaltyAverage += currentRound.penalties
-            puttAverage += currentRound.putts
-            upDownAttTotal += currentRound.upDownAtt
-            upDownCompTotal += currentRound.upDownComp
-            scoringClubAverage += currentRound.scoringClub
-            finishRankAverage += currentRound.finishRank
+        if  !currentRound.isPracticeRound {
+            if currentRound.holesPlayed{
+                totalRounds += 1
+                scoreAverage += currentRound.score / 2
+                fairwayAverage += currentRound.fairways / 2
+                penaltyAverage += currentRound.penalties / 2
+                puttAverage += currentRound.putts / 2
+                upDownAttTotal += currentRound.upDownAtt / 2
+                upDownCompTotal += currentRound.upDownComp / 2
+                scoringClubAverage += currentRound.scoringClub / 2
+                finishRankAverage += currentRound.finishRank / 2
+            }
+            else{
+                totalRounds += 1
+                scoreAverage += currentRound.score
+                fairwayAverage += currentRound.fairways
+                penaltyAverage += currentRound.penalties
+                puttAverage += currentRound.putts
+                upDownAttTotal += currentRound.upDownAtt
+                upDownCompTotal += currentRound.upDownComp
+                scoringClubAverage += currentRound.scoringClub
+                finishRankAverage += currentRound.finishRank
+            }
             
             if last10 {
                 upTo10 += 1
