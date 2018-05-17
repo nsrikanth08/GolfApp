@@ -298,3 +298,37 @@ func average18Prac(last10: Bool) -> Round {
     
     return averageRound
 }
+
+//MARK: CSV Information
+func convertToCSV(roundArray: [Round]) -> String {
+    var csv = "Round Export\n"
+    
+    for round in roundArray {
+        let pracComp:String
+        let holes:String
+        if round.isPracticeRound{
+            pracComp = "Practice"
+        }
+        else{
+            pracComp = "Competition"
+        }
+        
+        if round.holesPlayed{
+            holes = "18"
+        }
+        else{
+            holes = "18"
+        }
+        
+        let roundDescription = "\(round.date),\(round.firstName) \(round.lastName), \(round.location), \(pracComp), \(holes), \(round.weather)\n"
+        csv.append(roundDescription)
+        
+        csv.append("Score,Greens,Putts,Fairways,Penalties,Up/Down Attempts, Up/Down Completions, Scoring Club, Finish Rank\n")
+        
+        let stats = "\(round.score),\(round.greens),\(round.putts),\(round.fairways),\(round.penalties),\(round.upDownAtt),\(round.upDownComp),\(round.scoringClub),\(round.finishRank)"
+        csv.append(stats)
+    }
+    
+    return csv
+}
+
