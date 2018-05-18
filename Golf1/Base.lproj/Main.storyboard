@@ -423,7 +423,7 @@
                                     <constraint firstAttribute="width" constant="90" id="00e-3O-0u9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Select"/>
+                                <state key="normal" title="Export"/>
                                 <connections>
                                     <action selector="exportBatch:" destination="5pP-hR-fwn" eventType="touchUpInside" id="Saz-v1-yha"/>
                                 </connections>
@@ -759,37 +759,37 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Competition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeF-ss-R6W">
-                                <rect key="frame" x="156" y="427.5" width="102" height="21"/>
+                                <rect key="frame" x="156" y="428" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HrW-vk-b4d">
-                                <rect key="frame" x="266" y="422.5" width="51" height="31"/>
+                                <rect key="frame" x="266" y="423" width="51" height="31"/>
                                 <connections>
                                     <action selector="pracPress:" destination="4Q2-Ca-Qrk" eventType="valueChanged" id="wpq-Ko-p1A"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJz-6B-X8u">
-                                <rect key="frame" x="91" y="422.5" width="51" height="31"/>
+                                <rect key="frame" x="91" y="423" width="51" height="31"/>
                                 <connections>
                                     <action selector="holePress:" destination="4Q2-Ca-Qrk" eventType="valueChanged" id="1GY-b5-Rjy"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18 Holes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZL-RQ-vfu">
-                                <rect key="frame" x="11" y="427.5" width="85" height="21"/>
+                                <rect key="frame" x="11" y="428" width="85" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mVq-xt-vDa">
-                                <rect key="frame" x="184" y="472.5" width="51" height="31"/>
+                                <rect key="frame" x="184" y="473" width="51" height="31"/>
                                 <connections>
                                     <action selector="last10Press:" destination="4Q2-Ca-Qrk" eventType="valueChanged" id="53Z-CR-NWV"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last 10 Rounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMH-s7-tQL">
-                                <rect key="frame" x="42" y="477.5" width="150" height="21"/>
+                                <rect key="frame" x="42" y="478" width="150" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="k8o-5f-D2N"/>
                                 </constraints>
@@ -798,91 +798,91 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Putts:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZU-ga-AMr">
-                                <rect key="frame" x="11" y="140.5" width="150" height="21"/>
+                                <rect key="frame" x="11" y="141" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fairways:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsD-mm-fe1">
-                                <rect key="frame" x="11" y="217.5" width="150" height="21"/>
+                                <rect key="frame" x="11" y="218" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Penalty Strokes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dza-rr-L5u">
-                                <rect key="frame" x="11" y="255.5" width="150" height="21"/>
+                                <rect key="frame" x="11" y="256" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Up/Down %:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCr-Pf-1DC">
-                                <rect key="frame" x="11" y="292.5" width="150" height="21"/>
+                                <rect key="frame" x="11" y="293" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scoring Club:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnI-2Q-5DM">
-                                <rect key="frame" x="11" y="330.5" width="150" height="21"/>
+                                <rect key="frame" x="11" y="331" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish Rank:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9J7-OH-CAP">
-                                <rect key="frame" x="11" y="368.5" width="150" height="21"/>
+                                <rect key="frame" x="11" y="369" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Average Putts" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qQ5-XA-cOV">
-                                <rect key="frame" x="195" y="135.5" width="115" height="30"/>
+                                <rect key="frame" x="195" y="136" width="115" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Average Fairways" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dpf-eJ-zh7">
-                                <rect key="frame" x="195" y="212.5" width="115" height="30"/>
+                                <rect key="frame" x="195" y="213" width="115" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Average Penalties" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FHn-eo-vyZ">
-                                <rect key="frame" x="195" y="250.5" width="115" height="30"/>
+                                <rect key="frame" x="195" y="251" width="115" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Up/Down %" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sfM-UL-V0H">
-                                <rect key="frame" x="195" y="287.5" width="115" height="30"/>
+                                <rect key="frame" x="195" y="288" width="115" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Average Finish Rank" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0GM-65-0di">
-                                <rect key="frame" x="195" y="363.5" width="115" height="30"/>
+                                <rect key="frame" x="195" y="364" width="115" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Average Scoring Club" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b2A-pz-xw7">
-                                <rect key="frame" x="195" y="325.5" width="115" height="30"/>
+                                <rect key="frame" x="195" y="326" width="115" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greens:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUb-5q-ool">
-                                <rect key="frame" x="11" y="178.5" width="150" height="21"/>
+                                <rect key="frame" x="11" y="179" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Average Greens" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OqJ-X4-srf">
-                                <rect key="frame" x="195" y="173.5" width="115" height="30"/>
+                                <rect key="frame" x="195" y="174" width="115" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Average Score" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pfu-0k-T1q">
-                                <rect key="frame" x="195" y="94" width="115" height="32.5"/>
+                                <rect key="frame" x="195" y="94" width="115" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="115" id="oLW-ay-s3L"/>
                                 </constraints>
@@ -1009,6 +1009,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5XR-AV-wgl"/>
-        <segue reference="VSW-It-D9J"/>
+        <segue reference="0Rf-GA-Gjj"/>
     </inferredMetricsTieBreakers>
 </document>
